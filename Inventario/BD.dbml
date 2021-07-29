@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Inventario" Class="BDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.128.245\TASQLEXPRESS;Initial Catalog=Inventario;User ID=sa" SettingsObjectName="Inventario.Properties.Settings" SettingsPropertyName="InventarioConnectionString2" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa" SettingsObjectName="Inventario.Properties.Settings" SettingsPropertyName="InventarioConnectionString3" Provider="System.Data.SqlClient" />
   <Table Name="dbo.catProductos" Member="catProductos">
     <Type Name="catProducto">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -150,6 +150,25 @@
       <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Prepack" Member="Prepack">
+    <Type Name="Prepack">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PrepackDetalle" Member="PrepackDetalle">
+    <Type Name="PrepackDetalle">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idPrepack" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idusuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="size" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.BajaCaja2" Method="BajaCaja2">
     <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
@@ -242,16 +261,6 @@
     <ElementType Name="ConsultaTipoCajaResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaUsuario" Method="ConsultaUsuario">
-    <Parameter Name="usuario" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="password" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaUsuarioResult">
-      <Column Name="nombre" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="password" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="perfil" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.GuardarInventario" Method="GuardarInventario">
@@ -536,24 +545,6 @@
       <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaProductosNuevo" Method="ConsultaProductosNuevo">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="sizederecho" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaProductosNuevoResult">
-      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CartonNumber" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="UPC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="CartonType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.ubicacion_Entrada_ConsultaUbicacionID" Method="ubicacion_Entrada_ConsultaUbicacionID">
     <Parameter Name="id" Type="System.Int32" DbType="Int" />
     <ElementType Name="ubicacion_Entrada_ConsultaUbicacionIDResult">
@@ -688,5 +679,49 @@
       <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUsuario" Method="ConsultaUsuario">
+    <Parameter Name="usuario" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="password" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaUsuarioResult">
+      <Column Name="nombre" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="perfil" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosNuevo" Method="ConsultaProductosNuevo">
+    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizederecho" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaProductosNuevoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CartonType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarPrePack" Method="GuardarPrePack">
+    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="GuardarPrePackResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarPrePackDetalle" Method="GuardarPrePackDetalle">
+    <Parameter Name="idPrepack" Type="System.Int32" DbType="Int" />
+    <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>

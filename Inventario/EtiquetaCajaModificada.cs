@@ -10,7 +10,7 @@ namespace Inventario
         public EtiquetaCajaModificada()
         {
         }
-        public int id { get; set; }
+        public int? id { get; set; }
 
         public int id_cliente { get; set; }
 

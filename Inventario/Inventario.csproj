@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>164</ApplicationRevision>
+    <ApplicationRevision>179</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

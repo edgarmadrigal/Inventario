@@ -34,6 +34,9 @@ namespace Inventario
         int? CantidadDividir = 0;
         int po = 0;
         int po2 = 0;
+        DataTable tablaPrepack = new DataTable();
+        int RengloSelecionado ;
+        int Tabpage = 0;
 
         public Escaneo(List<ConsultaUsuarioResult> usuario)
         {
@@ -63,6 +66,12 @@ namespace Inventario
 
                 f.ConsultaTallas(this.cmbSizeA);
                 cmbSizeA.SelectedIndex = 0;
+
+
+                f.ConsultaTallas(this.cmbTallaPrepack);
+                cmbTallaPrepack.SelectedIndex = 0;
+
+
                 f.ConsultaTipoCaja(this.cmbTipoCajaA);
                 cmbTipoCajaA.SelectedIndex = 15;
 
@@ -222,6 +231,9 @@ namespace Inventario
                 f.ConsultaPO(this.cmbPO);
                 cmbPO.SelectedIndex = -1;
                 iniciando = false;
+
+
+
             }
             catch (Exception ex)
             {
@@ -290,163 +302,172 @@ namespace Inventario
             {
                 if (id != 0 && Convert.ToInt32(txtUnitsScan.Text) > 0 && dgvEscan.RowCount > 0)
                 {
-                    txtUPCScann.Text = string.Empty;
-                    txtUPCScann.Focus();
-                    List<ConsultaEtiquetaResult> consulta = f.ConsultaEtiqueta(id);
-
-
-                    List<EtiquetaCajaModificada> listClase = new List<EtiquetaCajaModificada>();
-                    EtiquetaCajaModificada clase = new EtiquetaCajaModificada();
-
-                    clase.id = consulta[0].id;
-                    clase.po = consulta[0].po;
-                    clase.poInCompleto = consulta[0].poInCompleto;
-                    clase.poItem = consulta[0].poItem;
-                    clase.ProductCode = consulta[0].ProductCode;
-                    clase.Size = consulta[0].Size;
-                    clase.size_derecho = consulta[0].size_derecho;
-                    clase.size_izquierdo = consulta[0].size_izquierdo;
-                    clase.TipoCarton = consulta[0].TipoCarton;
-                    clase.upc = consulta[0].upc;
-                    clase.Fecha = DateTime.Now;
-                    clase.CartonLeft = consulta[0].CartonLeft;
-                    clase.CartonRight = consulta[0].CartonRight;
-                    clase.Cantidad = Convert.ToInt32(txtUnitsScan.Text);
-                    clase.Carton = consulta[0].Carton;
-                    clase.usuario = usu[0].nombre;
-                    clase.id_cliente = cmbCliente.Text == "NA" ? 1 : Convert.ToInt32(cmbCliente.SelectedValue);
-                    clase.id_factura = cmbFactura.Text == "NA" ? 1 : Convert.ToInt32(cmbFactura.SelectedValue);
-                    clase.id_terminado = cmbTerminado.Text == "NA" ? 1 : Convert.ToInt32(cmbTerminado.SelectedValue);
-                    clase.cliente = cmbCliente.Text;
-                    clase.factura = cmbFactura.Text;
-                    clase.terminado = cmbTerminado.Text;
-
-
-                    if (clase.poItem == "1000")
+                    if (cmbPOItem.Text != "99")
                     {
-                        try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Captura Numero de Carton", "Carton", "", 5, 5));
+                        txtUPCScann.Text = string.Empty;
+                        txtUPCScann.Focus();
+                        List<ConsultaEtiquetaResult> consulta = f.ConsultaEtiqueta(id);
 
-                        } catch (Exception ex)
-                        { clase.Carton = 0; MessageBox.Show("Favor de ingresar correctamente el numero de carton ya que no se ha guardado"); };
 
-                    }
-                    if (clase.Carton == 0 && clase.poItem == "1000")
-                    {
-                        try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5));
+                        List<EtiquetaCajaModificada> listClase = new List<EtiquetaCajaModificada>();
+                        EtiquetaCajaModificada clase = new EtiquetaCajaModificada();
 
-                        } catch (Exception ex) { clase.Carton = 0; };
-                        if (clase.Carton == 0)
+                        clase.id = consulta[0].id;
+                        clase.po = consulta[0].po;
+                        clase.poInCompleto = consulta[0].poInCompleto;
+                        clase.poItem = consulta[0].poItem;
+                        clase.ProductCode = consulta[0].ProductCode;
+                        clase.Size = consulta[0].Size;
+                        clase.size_derecho = consulta[0].size_derecho;
+                        clase.size_izquierdo = consulta[0].size_izquierdo;
+                        clase.TipoCarton = consulta[0].TipoCarton;
+                        clase.upc = consulta[0].upc;
+                        clase.Fecha = DateTime.Now;
+                        clase.CartonLeft = consulta[0].CartonLeft;
+                        clase.CartonRight = consulta[0].CartonRight;
+                        clase.Cantidad = Convert.ToInt32(txtUnitsScan.Text);
+                        clase.Carton = consulta[0].Carton;
+                        clase.usuario = usu[0].nombre;
+                        clase.id_cliente = cmbCliente.Text == "NA" ? 1 : Convert.ToInt32(cmbCliente.SelectedValue);
+                        clase.id_factura = cmbFactura.Text == "NA" ? 1 : Convert.ToInt32(cmbFactura.SelectedValue);
+                        clase.id_terminado = cmbTerminado.Text == "NA" ? 1 : Convert.ToInt32(cmbTerminado.SelectedValue);
+                        clase.cliente = cmbCliente.Text;
+                        clase.factura = cmbFactura.Text;
+                        clase.terminado = cmbTerminado.Text;
+
+
+                        if (clase.poItem == "1000")
                         {
-                            MessageBox.Show("No se guardo, Favor de volver a escanear");
+                            try
+                            {
+                                clase.Carton = Convert.ToInt64(Interaction.InputBox("Captura Numero de Carton", "Carton", "", 5, 5));
+
+                            }
+                            catch (Exception ex)
+                            { clase.Carton = 0; MessageBox.Show("Favor de ingresar correctamente el numero de carton ya que no se ha guardado"); };
+
+                        }
+                        if (clase.Carton == 0 && clase.poItem == "1000")
+                        {
+                            try
+                            {
+                                clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5));
+
+                            }
+                            catch (Exception ex) { clase.Carton = 0; };
+                            if (clase.Carton == 0)
+                            {
+                                MessageBox.Show("No se guardo, Favor de volver a escanear");
+                                txtUnitsScan.Text = (0).ToString();
+                                txtUnitsRemai.Text = cantidad.ToString();
+                                txtUPCScann.Text = string.Empty;
+                                txtUPCScann.Focus();
+                            }
+                        }
+                        else if ((clase.poItem != "1000") || (clase.poItem == "1000" && clase.Carton != 0))
+                        {
+
+                            clase.assembly = consulta[0].Assembly;
+                            clase.Vendor = consulta[0].Vendor;
+                            clase.ShipTo = consulta[0].ShipTo;
+                            clase.id_Inventario = f.GuardaInventario(clase, this.usu[0].id);
+
+                            if (clase.poItem != "1000")
+                            {
+                                //clase.id_Inventario = 116;
+                                QRCodeGenerator qrGenerator = new QRCodeGenerator();
+                                QRCodeData qrCodeData = qrGenerator.CreateQrCode("?id=" + clase.id_Inventario +
+                                                                                  "&po=" + consulta[0].po +
+                                                                                  "&cl=" + cmbCliente.Text +
+                                                                                  "&fa=" + cmbFactura.Text +
+                                                                                  "&te=" + cmbTerminado.Text +
+                                                                                  "&u=" + clase.usuario +
+                                                                                  "&pc=" + consulta[0].ProductCode +
+                                                                                  "&c=" + Convert.ToInt32(txtUnitsScan.Text) +
+                                                                                  "&sz=" + consulta[0].Size +
+                                                                                  "&fe=" + DateTime.Now,
+                                                                                  QRCodeGenerator.ECCLevel.Q);
+                                QRCode qrCode = new QRCode(qrCodeData);
+                                cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
+                                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                                Codigo.IncludeLabel = true;
+                                Image codigoBarras = Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.id_Inventario.ToString(), Color.Black, Color.White, 200, 100);
+                                clase.qr = qrCode.GetGraphic(20);
+                                clase.codigoBarras = codigoBarras;
+                                listClase.Add(clase);
+                                id_InventarioAnt = clase.id_Inventario;
+
+                                ReporteCaja report = new ReporteCaja();
+                                report.DataSource = listClase;
+                                // Disable margins warning. 
+                                report.PrintingSystem.ShowMarginsWarning = false;
+                                ReportPrintTool tool = new ReportPrintTool(report);
+                                //tool.ShowPreview();
+                                //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
+                                //tool.PrintDialog(); //muestra a que impresora se va a mandar
+                                tool.Print(); //imprime de golpe
+                            }
+                            else if (clase.poItem == "1000")
+                            {
+                                if (consulta[0].upc.Length > 14)
+                                {
+
+                                    clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 9);
+                                    clase.numeroEtiqueta2 = consulta[0].upc.Substring(9, 7);
+                                    clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 5) + " - " + consulta[0].upc.Substring(6, 2);
+                                    clase.upc = "0" + consulta[0].upc.Substring(0, 8).ToString() + clase.numeroEtiqueta2;
+                                }
+                                else
+                                {
+
+
+                                    clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 7);
+                                    clase.numeroEtiqueta2 = consulta[0].upc.Substring(7, 7);
+                                    clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 4) + " - " + consulta[0].upc.Substring(4, 2);
+                                    clase.upc = "0" + consulta[0].upc.Substring(0, 6).ToString() + clase.numeroEtiqueta2;
+                                }
+
+                                cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
+                                BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                                Codigo.IncludeLabel = true;
+                                Codigo.RotateFlipType = RotateFlipType.Rotate90FlipY;
+                                Image codigoBarras =
+                                Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.Carton.ToString(), Color.Black, Color.White, 270, 180);
+                                // Codigo.Alignment=BarcodeLib.AlignmentPositions.CENTER;
+
+                                clase.codigoBarras = codigoBarras;
+                                listClase.Add(clase);
+                                id_InventarioAnt = clase.id_Inventario;
+
+                                ReporteCintas report = new ReporteCintas();
+                                report.DataSource = listClase;
+                                // Disable margins warning. 
+                                report.PrintingSystem.ShowMarginsWarning = false;
+                                ReportPrintTool tool = new ReportPrintTool(report);
+                                //tool.ShowPreview();
+                                //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
+                                //tool.PrintDialog(); //muestra a que impresora se va a mandar
+                                //tool.Print(); //imprime de golpe
+                            }
+
+
+
+                            contador = 0;
+                            dgvEscan.Rows[0].Selected = true;
+                            dgvEscan.FirstDisplayedScrollingRowIndex = 0;
                             txtUnitsScan.Text = (0).ToString();
                             txtUnitsRemai.Text = cantidad.ToString();
                             txtUPCScann.Text = string.Empty;
                             txtUPCScann.Focus();
                         }
+
                     }
-                    else if ((clase.poItem != "1000") || (clase.poItem == "1000" && clase.Carton != 0))
+                    else
                     {
-
-                        clase.assembly = consulta[0].Assembly;
-                        clase.Vendor = consulta[0].Vendor;
-                        clase.ShipTo = consulta[0].ShipTo;
-                        clase.id_Inventario = f.GuardaInventario(clase, this.usu[0].id);
-
-                        if (clase.poItem != "1000")
-                        {
-                            //clase.id_Inventario = 116;
-                            QRCodeGenerator qrGenerator = new QRCodeGenerator();
-                            QRCodeData qrCodeData = qrGenerator.CreateQrCode("?id=" + clase.id_Inventario +
-                                                                              "&po=" + consulta[0].po +
-                                                                              "&cl=" + cmbCliente.Text +
-                                                                              "&fa=" + cmbFactura.Text +
-                                                                              "&te=" + cmbTerminado.Text +
-                                                                              "&u=" + clase.usuario +
-                                                                              "&pc=" + consulta[0].ProductCode +
-                                                                              "&c=" + Convert.ToInt32(txtUnitsScan.Text) +
-                                                                              "&sz=" + consulta[0].Size +
-                                                                              "&fe=" + DateTime.Now,
-                                                                              QRCodeGenerator.ECCLevel.Q);
-                            QRCode qrCode = new QRCode(qrCodeData);
-                            cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
-                            BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
-                            Codigo.IncludeLabel = true;
-                            Image codigoBarras = Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.id_Inventario.ToString(), Color.Black, Color.White, 200, 100);
-                            clase.qr = qrCode.GetGraphic(20);
-                            clase.codigoBarras = codigoBarras;
-                            listClase.Add(clase);
-                            id_InventarioAnt = clase.id_Inventario;
-
-                            ReporteCaja report = new ReporteCaja();
-                            report.DataSource = listClase;
-                            // Disable margins warning. 
-                            report.PrintingSystem.ShowMarginsWarning = false;
-                            ReportPrintTool tool = new ReportPrintTool(report);
-                            //tool.ShowPreview();
-                            //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
-                            //tool.PrintDialog(); //muestra a que impresora se va a mandar
-                            tool.Print(); //imprime de golpe
-                        }
-                        else if (clase.poItem == "1000")
-                        {
-                            if (consulta[0].upc.Length > 14)
-                            {
-
-                                clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 9);
-                                clase.numeroEtiqueta2 = consulta[0].upc.Substring(9, 7);
-                                clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 5) + " - " + consulta[0].upc.Substring(6, 2);
-                                clase.upc = "0" + consulta[0].upc.Substring(0, 8).ToString() + clase.numeroEtiqueta2;
-                            }
-                            else
-                            {
-
-
-                                clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 7);
-                                clase.numeroEtiqueta2 = consulta[0].upc.Substring(7, 7);
-                                clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 4) + " - " + consulta[0].upc.Substring(4, 2);
-                                clase.upc = "0" + consulta[0].upc.Substring(0, 6).ToString() + clase.numeroEtiqueta2;
-                            }
-
-                            cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
-                            BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
-                            Codigo.IncludeLabel = true;
-                            Codigo.RotateFlipType = RotateFlipType.Rotate90FlipY;
-                            Image codigoBarras = 
-                            Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.Carton.ToString(), Color.Black, Color.White, 270, 180);
-                            // Codigo.Alignment=BarcodeLib.AlignmentPositions.CENTER;
-
-                            clase.codigoBarras = codigoBarras;
-                            listClase.Add(clase);
-                            id_InventarioAnt = clase.id_Inventario;
-
-                            ReporteCintas report = new ReporteCintas();
-                            report.DataSource = listClase;
-                            // Disable margins warning. 
-                            report.PrintingSystem.ShowMarginsWarning = false;
-                            ReportPrintTool tool = new ReportPrintTool(report);
-                            //tool.ShowPreview();
-                            //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
-                            //tool.PrintDialog(); //muestra a que impresora se va a mandar
-                            //tool.Print(); //imprime de golpe
-                        }
-
-
-
-                        contador = 0;
-                        dgvEscan.Rows[0].Selected = true;
-                        dgvEscan.FirstDisplayedScrollingRowIndex = 0;
-                        txtUnitsScan.Text = (0).ToString();
-                        txtUnitsRemai.Text = cantidad.ToString();
-                        txtUPCScann.Text = string.Empty;
-                        txtUPCScann.Focus();
+                        sonido.URL = Application.StartupPath + @"\mp3\error.mp3";
+                        sonido.controls.play();
+                        MessageBox.Show("Favor de escanear");
                     }
-
-                }
-                else
-                {
-                    sonido.URL = Application.StartupPath + @"\mp3\error.mp3";
-                    sonido.controls.play();
-                    MessageBox.Show("Favor de escanear");
                 }
             }
             catch (Exception ex)
@@ -486,30 +507,58 @@ namespace Inventario
                     separadas = cmbSizes.Text.Split('x');
 
                     List<ConsultaProductosNuevoResult> x = f.ConsultaProductos(cmbPO.Text, cmbPOItem.Text, cmbProductCode.Text, separadas[0].ToString(),separadas[1].ToString());
-                    if (x.Count > 0)
+
+                    if (cmbPOItem.Text == "99")
                     {
-                        contador = 0;
-                        dgvEscan.DataSource = x;
-                        txtCartonNumber.Text = x[0].CartonNumber.ToString();
-                        txtCartonSize.Text = x[0].Size.ToString();
-                        dgvEscan.Columns["Cantidad"].Visible = false;
-                        dgvEscan.Columns["ProductCode"].Visible = false;
-                        dgvEscan.Columns["ProductCode1"].Visible = false;
-                        dgvEscan.Columns["id"].Visible = false;
-                        txtSize.Text = x[0].Size.ToString();
-                        txtProductCode.Text = x[0].ProductCode.ToString();
-                        id = x[0].id;
-                        anterior.Add(id);
-                        upc = x[0].UPC.ToString();
-                        ///po = Convert.ToInt32(cmbPO.Text);
-                        cantidad = x[0].cantidad;
-                        txtUnitsReq.Text = cantidad.ToString();
-                        txtUnitsScan.Text = "0";
+                            dgvEscan.DataSource = x;
+                        foreach (ConsultaProductosNuevoResult a in x)
+                        {
+                            contador = 0;
+                            txtCartonNumber.Text = a.CartonNumber.ToString();
+                            txtCartonSize.Text ="";
+                            txtSize.Text = "";
+                            txtProductCode.Text = a.ProductCode.ToString();
+                            id = a.id;
+                            anterior.Add(id);
+                            upc = cmbPOItem.Text;
+                            ///po = Convert.ToInt32(cmbPO.Text);
+                        }
+                        cantidad = x.Count.ToString();
                         txtUnitsRemai.Text = cantidad.ToString();
-                        txtCartonRq.Text = "1";
-                        txtCartonsPacked.Text = "0";
-                        txtCartonsReamaining.Text = "1";
-                        txtUPCScann.Focus();
+                            txtUnitsReq.Text = cantidad.ToString();
+                            txtUnitsScan.Text = "0";
+                            txtCartonRq.Text = "1";
+                            txtCartonsPacked.Text = "0";
+                            txtCartonsReamaining.Text = "1";
+                            txtUPCScann.Focus();
+                    }
+                    else
+                    {
+                        if (x.Count > 0)
+                        {
+                            contador = 0;
+                            dgvEscan.DataSource = x;
+                            txtCartonNumber.Text = x[0].CartonNumber.ToString();
+                            txtCartonSize.Text = x[0].Size.ToString();
+                            dgvEscan.Columns["Cantidad"].Visible = false;
+                            dgvEscan.Columns["ProductCode"].Visible = false;
+                            dgvEscan.Columns["ProductCode1"].Visible = false;
+                            dgvEscan.Columns["id"].Visible = false;
+                            txtSize.Text = x[0].Size.ToString();
+                            txtProductCode.Text = x[0].ProductCode.ToString();
+                            id = x[0].id;
+                            anterior.Add(id);
+                            upc = x[0].UPC.ToString();
+                            ///po = Convert.ToInt32(cmbPO.Text);
+                            cantidad = x[0].cantidad;
+                            txtUnitsReq.Text = cantidad.ToString();
+                            txtUnitsScan.Text = "0";
+                            txtUnitsRemai.Text = cantidad.ToString();
+                            txtCartonRq.Text = "1";
+                            txtCartonsPacked.Text = "0";
+                            txtCartonsReamaining.Text = "1";
+                            txtUPCScann.Focus();
+                        }
                     }
                 }
             }
@@ -526,7 +575,124 @@ namespace Inventario
                 if ((int)e.KeyChar == (int)Keys.Enter)
                 {
                     
-                    if (Convert.ToInt64(txtUnitsScan.Text) < Convert.ToInt64(txtUnitsReq.Text) && Convert.ToInt64(txtUnitsRemai.Text) != 0 && txtUPCScann.Text.ToUpper() == upc)
+                        DataGridViewRow newDatarow = dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))];
+                        upc = newDatarow.Cells[4].Value.ToString();
+                    if (upc == txtUPCScann.Text)
+                    {
+
+                        if (cmbPOItem.Text=="99")
+                        {
+                            /*UPC CORRECTO*/
+
+
+                            if (Convert.ToInt64(txtUnitsScan.Text) == Convert.ToInt64(txtUnitsReq.Text)-1)
+                            {
+                                /*TOTAL DE PRENDAS ESCANEADAS*/
+                                contador = 0;
+                                txtUPCScann.Text = string.Empty;
+                                txtUnitsReq.Text = txtUnitsReq.Text;
+                                txtUnitsScan.Text = "0";
+                                txtUnitsRemai.Text = txtUnitsReq.Text;
+                                dgvEscan.Rows[0].Selected = true;
+                                dgvEscan.FirstDisplayedScrollingRowIndex = (0);
+                                txtUnitsScan.Text = (0).ToString();
+                                txtCartonRq.Text = "1";
+                                txtCartonsPacked.Text = "0";
+                                txtCartonsReamaining.Text = "1";
+                                txtUPCScann.Focus();
+
+
+
+                                string[] separadas;
+
+                                separadas = cmbSizes.Text.Split('x');
+
+                                List<ConsultaProductosNuevoResult> x = f.ConsultaProductos(cmbPO.Text, cmbPOItem.Text, cmbProductCode.Text,separadas[0].ToString(), separadas[1].ToString());
+
+                                int prodNuevosCont = 0;
+                                int NumeroCarton = 0;
+                                //dgvEscan.DataSource = x;
+                                foreach (ConsultaProductosNuevoResult a in x)
+                                {
+                                    prodNuevosCont = prodNuevosCont + 1;
+                                    contador = 0;
+                                    txtCartonNumber.Text = a.CartonNumber.ToString();
+                                    txtCartonSize.Text = "";
+                                    txtSize.Text = "";
+                                    txtProductCode.Text = a.ProductCode.ToString();
+                                    
+                                    anterior.Add(id);
+                                    upc = cmbPOItem.Text;
+
+                                    EtiquetaCajaModificada clase = new EtiquetaCajaModificada();
+                                    clase.id = a.id;
+                                    clase.po = Convert.ToDecimal(cmbPO.Text);
+                                    clase.poInCompleto = Convert.ToDecimal(cmbPO.Text);
+                                    clase.poItem = "99";
+                                    clase.ProductCode = a.ProductCode;
+                                    clase.Size = a.Size;
+                                    separadas = a.Size.Split('x');
+
+                                    clase.size_derecho = separadas[1].ToString();
+                                    clase.size_izquierdo = separadas[0].ToString();
+                                    clase.TipoCarton = "0";
+                                    clase.upc = a.UPC;
+                                    clase.Fecha = DateTime.Now;
+                                    clase.CartonLeft = "";
+                                    clase.CartonRight ="";
+                                    clase.Cantidad = Convert.ToDecimal(a.cantidad);
+                                    if (prodNuevosCont == 1)
+                                    {
+                                        NumeroCarton = Convert.ToInt32(a.CartonNumber + '0' + Convert.ToInt32(a.id));
+                                        clase.TipoCarton = (1).ToString();
+                                    }
+                                    clase.Carton = NumeroCarton;
+                                    clase.usuario = usu[0].nombre;
+                                    clase.id_cliente = cmbCliente.Text == "NA" ? 1 : Convert.ToInt32(cmbCliente.SelectedValue);
+                                    clase.id_factura = cmbFactura.Text == "NA" ? 1 : Convert.ToInt32(cmbFactura.SelectedValue);
+                                    clase.id_terminado = cmbTerminado.Text == "NA" ? 1 : Convert.ToInt32(cmbTerminado.SelectedValue);
+                                    clase.cliente = cmbCliente.Text;
+                                    clase.factura = cmbFactura.Text;
+                                    clase.terminado = cmbTerminado.Text;
+                                    clase.assembly = "";
+                                    clase.Vendor = "";
+                                    clase.ShipTo = "";
+                                    clase.id_Inventario = f.GuardaInventario(clase, this.usu[0].id);
+                                }
+                                
+                            }
+                            else
+                            {
+                                /*ESCANEANDO X PRENDA AUN*/
+
+
+                                contador = contador + 1;
+                                dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text) + 1)].Selected = true;
+                                dgvEscan.FirstDisplayedScrollingRowIndex = (Convert.ToInt32(txtUnitsScan.Text) + 1);
+                                txtUnitsScan.Text = (Convert.ToInt64(txtUnitsScan.Text) + 1).ToString();
+                                txtUnitsRemai.Text = (Convert.ToInt64(txtUnitsRemai.Text) - 1).ToString();
+                                txtUPCScann.Text = string.Empty;
+                                txtUPCScann.Focus();
+                            }
+
+                        }
+                        else
+                        {
+                            /*UPC INCORRECTO*/
+
+                            sonido.URL = Application.StartupPath + @"\mp3\error.mp3";
+                            sonido.controls.play();
+                            txtUPCScann.Text = string.Empty;
+                            MessageBox.Show("Favor de Escanear la prenda correcta!");
+                        }
+
+
+                        
+                    }
+                    else
+                    {
+
+                        if (Convert.ToInt64(txtUnitsScan.Text) < Convert.ToInt64(txtUnitsReq.Text) && Convert.ToInt64(txtUnitsRemai.Text) != 0 && txtUPCScann.Text.ToUpper() == upc)
                         {
 
 
@@ -568,32 +734,10 @@ namespace Inventario
 
                                 if (clase.poItem == "1000")
                                 {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Captura Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; MessageBox.Show("Favor de ingresar correctamente el numero de carton ya que no se ha guardado"); };
+                                    try { 
+                                        clase.Carton = Convert.ToInt64(Interaction.InputBox("Captura Numero de Carton", "Carton", "", 5, 5)); 
+                                    } catch (Exception ex) { clase.Carton = 0; MessageBox.Show("Favor de ingresar correctamente el numero de carton ya que no se ha guardado"); };
 
-                                }
-                                if (clase.Carton == 0 && clase.poItem == "1000")
-                                {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; };
-                                    if (clase.Carton == 0)
-                                    {
-                                        MessageBox.Show("No se guardo, Favor de volver a escanear");
-                                        txtUnitsScan.Text = (0).ToString();
-                                        txtUnitsRemai.Text = cantidad.ToString();
-                                        txtUPCScann.Text = string.Empty;
-                                        txtUPCScann.Focus();
-                                    }
-                                }
-                                if (clase.Carton == 0 && clase.poItem == "1000")
-                                {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; };
-                                    if (clase.Carton == 0)
-                                    {
-                                        MessageBox.Show("No se guardo, Favor de volver a escanear");
-                                        txtUnitsScan.Text = (0).ToString();
-                                        txtUnitsRemai.Text = cantidad.ToString();
-                                        txtUPCScann.Text = string.Empty;
-                                        txtUPCScann.Focus();
-                                    }
                                 }
                                 if (clase.Carton == 0 && clase.poItem == "1000")
                                 {
@@ -634,46 +778,7 @@ namespace Inventario
                                     }
                                 }
 
-                                if (clase.Carton == 0 && clase.poItem == "1000")
-                                {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; };
-                                    if (clase.Carton == 0)
-                                    {
-                                        MessageBox.Show("No se guardo, Favor de volver a escanear");
-                                        txtUnitsScan.Text = (0).ToString();
-                                        txtUnitsRemai.Text = cantidad.ToString();
-                                        txtUPCScann.Text = string.Empty;
-                                        txtUPCScann.Focus();
-                                    }
-                                }
-
-                                if (clase.Carton == 0 && clase.poItem == "1000")
-                                {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; };
-                                    if (clase.Carton == 0)
-                                    {
-                                        MessageBox.Show("No se guardo, Favor de volver a escanear");
-                                        txtUnitsScan.Text = (0).ToString();
-                                        txtUnitsRemai.Text = cantidad.ToString();
-                                        txtUPCScann.Text = string.Empty;
-                                        txtUPCScann.Focus();
-                                    }
-                                }
-
-                                if (clase.Carton == 0 && clase.poItem == "1000")
-                                {
-                                    try { clase.Carton = Convert.ToInt64(Interaction.InputBox("Vuelve a capturar el Numero de Carton", "Carton", "", 5, 5)); } catch (Exception ex) { clase.Carton = 0; };
-                                    if (clase.Carton == 0)
-                                    {
-                                        MessageBox.Show("No se guardo, Favor de volver a escanear");
-                                        txtUnitsScan.Text = (0).ToString();
-                                        txtUnitsRemai.Text = cantidad.ToString();
-                                        txtUPCScann.Text = string.Empty;
-                                        txtUPCScann.Focus();
-                                    }
-                                }
-
-                                else if ((clase.poItem != "1000") || (clase.poItem == "1000" && clase.Carton != 0))
+                                else if ((clase.poItem != "1000" && clase.poItem != "99") || (clase.poItem == "1000" && clase.Carton != 0 && clase.poItem != "99"))
                                 {
 
                                     clase.assembly = consulta[0].Assembly;
@@ -681,7 +786,7 @@ namespace Inventario
                                     clase.ShipTo = consulta[0].ShipTo;
                                     clase.id_Inventario = f.GuardaInventario(clase, this.usu[0].id);
 
-                                    if (clase.poItem != "1000")
+                                    if (clase.poItem != "1000" && clase.poItem != "99")
                                     {
                                         //clase.id_Inventario = 116;
                                         QRCodeGenerator qrGenerator = new QRCodeGenerator();
@@ -759,25 +864,25 @@ namespace Inventario
                                 }
 
                             }
-                    }
+                        }
                         else
-                    if (Convert.ToInt64(txtUnitsScan.Text) == Convert.ToInt64(txtUnitsReq.Text) && txtUPCScann.Text.ToUpper() == upc)
+                        if (Convert.ToInt64(txtUnitsScan.Text) == Convert.ToInt64(txtUnitsReq.Text) && txtUPCScann.Text.ToUpper() == upc)
                         {
-                            
-                                contador = 0;
-                                txtUPCScann.Text = string.Empty;
-                                txtUnitsReq.Text = cantidad.ToString();
-                                txtUnitsScan.Text = "0";
-                                txtUnitsRemai.Text = cantidad.ToString();
-                                dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))].Selected = true;
-                                dgvEscan.FirstDisplayedScrollingRowIndex = (Convert.ToInt32(txtUnitsScan.Text));
-                                txtUnitsScan.Text = (Convert.ToInt64(txtUnitsScan.Text) + 1).ToString();
-                                txtUnitsRemai.Text = (Convert.ToInt64(txtUnitsRemai.Text) - 1).ToString();
-                                txtCartonRq.Text = "1";
-                                txtCartonsPacked.Text = "0";
-                                txtCartonsReamaining.Text = "1";
-                                txtUPCScann.Focus();
-                    }
+
+                            contador = 0;
+                            txtUPCScann.Text = string.Empty;
+                            txtUnitsReq.Text = cantidad.ToString();
+                            txtUnitsScan.Text = "0";
+                            txtUnitsRemai.Text = cantidad.ToString();
+                            dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))].Selected = true;
+                            dgvEscan.FirstDisplayedScrollingRowIndex = (Convert.ToInt32(txtUnitsScan.Text));
+                            txtUnitsScan.Text = (Convert.ToInt64(txtUnitsScan.Text) + 1).ToString();
+                            txtUnitsRemai.Text = (Convert.ToInt64(txtUnitsRemai.Text) - 1).ToString();
+                            txtCartonRq.Text = "1";
+                            txtCartonsPacked.Text = "0";
+                            txtCartonsReamaining.Text = "1";
+                            txtUPCScann.Focus();
+                        }
                         else if (txtUPCScann.Text.ToUpper() != upc)
                         {
                             sonido.URL = Application.StartupPath + @"\mp3\error.mp3";
@@ -786,6 +891,7 @@ namespace Inventario
                             MessageBox.Show("Favor de Escanear la prenda correcta!");
                         }
                     }
+                }
 
                 
                 ///aqui
@@ -799,64 +905,112 @@ namespace Inventario
 
         private void TabEsaneo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.TabEsaneo.SelectedTab.Text.Trim() == "BajaPO")
-            {
-                if (usu[0].perfil == "1" || usu[0].perfil == "4")
+            try { 
+                if (this.TabEsaneo.SelectedTab.Text.Trim() == "BajaPO")
                 {
-                    cmbPOB.Enabled = true;
-                    cmbClienteB.Enabled = true;
-                    cmbFacturacionB.Enabled = true;
-                    cmbTerminadoB.Enabled = true;
-                    btnBajaPO.Enabled = true;
+                    if (usu[0].perfil == "1" || usu[0].perfil == "4")
+                    {
+                        cmbPOB.Enabled = true;
+                        cmbClienteB.Enabled = true;
+                        cmbFacturacionB.Enabled = true;
+                        cmbTerminadoB.Enabled = true;
+                        btnBajaPO.Enabled = true;
+                    }
                 }
-            }
-            if (this.TabEsaneo.SelectedTab.Text.Trim() == "BajaCaja")
-            {
-                if (usu[0].perfil == "1" || usu[0].perfil == "4")
+                if (this.TabEsaneo.SelectedTab.Text.Trim() == "AltaPrePack")
                 {
-                    txtCaja.Enabled = true;
-                    btnBajaCaja.Enabled = true;
+                    if (Tabpage == 0)
+                    {
+                        tablaPrepack.Columns.Add("Talla", typeof(string));
+                        tablaPrepack.Columns.Add("Cantidad", typeof(Int64));
+                        tablaPrepack.Columns.Add("Codigo UPC", typeof(string));
+                        tablaPrepack.Columns.Add("idSize", typeof(int));
+                        Tabpage = Tabpage + 1;
+                    }
+                    else
+                    {
+
+                    }
                 }
-            }
-            if (this.TabEsaneo.SelectedTab.Text.Trim() == "ABC")
-            {
-                if (usu[0].perfil == "1" || usu[0].perfil == "4")
+
+                if (this.TabEsaneo.SelectedTab.Text.Trim() == "Escaneo")
                 {
-                    btnNuevo.Enabled = true;
-                    //btnEliminar.Enabled = true;
-                    //btnEditar.Enabled = true;
-                    //btnGuardarA.Enabled = true;
-                    btnVistaPrevia.Enabled = true;
-                    //
-                    txtCantidadA.Enabled = true;
-                    txtPoNA.Enabled = true;
-                    txtUPCA.Enabled = true;
-                   // txtPoItemNA.Enabled = true;
-                    cmbTipoCajaA.Enabled = true;
-                    //txtPCA.Enabled = true;
-                    cmbSizeA.Enabled = true;
-                    txtID.Enabled = false;
-                }
-                else
-                {
-                    btnNuevo.Enabled = false;
-                    btnEliminar.Enabled = false;
-                    btnEditar.Enabled = false;
-                    btnGuardarA.Enabled = false;
-                    btnVistaPrevia.Enabled = false;
-                    //
-                    txtCantidadA.Enabled = false;
-                    txtPoNA.Enabled = false;
-                    txtUPCA.Enabled = false;
-                    //txtPoItemNA.Enabled = false;
-                    cmbTipoCajaA.Enabled = false;
-                    //txtPCA.Enabled = false;
-                    cmbSizeA.Enabled = false;
-                    txtID.Enabled = false;
+
+                    //iniciando = true;
+                    //f.ConsultaPO(this.cmbPO);
+                    //iniciando = false;
+                    /*
+                    cmbPO.DataSource = null;
+                    cmbPO.Items.Clear();
+
+                    int count = cmbPO.Items.Count - 1;
+                    for (int i = count; i > 0; i--)
+                    {
+                        cmbPO.Items.RemoveAt(i);
+                    }
+
+                    cmbPO.BeginUpdate();
+                    cmbPO.EndUpdate();
+                    cmbPO.ResetText();
+                    cmbPO.SelectedIndex = -1;
+                    //iniciando = true;
+                    */
 
                 }
+
+                if (this.TabEsaneo.SelectedTab.Text.Trim() == "BajaCaja")
+                {
+                    if (usu[0].perfil == "1" || usu[0].perfil == "4")
+                    {
+                        txtCaja.Enabled = true;
+                        btnBajaCaja.Enabled = true;
+                    }
+                }
+                if (this.TabEsaneo.SelectedTab.Text.Trim() == "ABC")
+                {
+                    if (usu[0].perfil == "1" || usu[0].perfil == "4")
+                    {
+                        btnNuevo.Enabled = true;
+                        //btnEliminar.Enabled = true;
+                        //btnEditar.Enabled = true;
+                        //btnGuardarA.Enabled = true;
+                        btnVistaPrevia.Enabled = true;
+                        //
+                        txtCantidadA.Enabled = true;
+                        txtPoNA.Enabled = true;
+                        txtUPCA.Enabled = true;
+                       // txtPoItemNA.Enabled = true;
+                        cmbTipoCajaA.Enabled = true;
+                        //txtPCA.Enabled = true;
+                        cmbSizeA.Enabled = true;
+                        txtID.Enabled = false;
+                    }
+                    else
+                    {
+                        btnNuevo.Enabled = false;
+                        btnEliminar.Enabled = false;
+                        btnEditar.Enabled = false;
+                        btnGuardarA.Enabled = false;
+                        btnVistaPrevia.Enabled = false;
+                        //
+                        txtCantidadA.Enabled = false;
+                        txtPoNA.Enabled = false;
+                        txtUPCA.Enabled = false;
+                        //txtPoItemNA.Enabled = false;
+                        cmbTipoCajaA.Enabled = false;
+                        //txtPCA.Enabled = false;
+                        cmbSizeA.Enabled = false;
+                        txtID.Enabled = false;
+
+                    }
+                }
+
             }
-        }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
+}
 
         private void btnPrintLast_Click(object sender, EventArgs e)
         {
@@ -864,118 +1018,121 @@ namespace Inventario
             {
                 //id_InventarioAnt = 102;
                 //txtUnitsScan.Text = "5";
-                if (id_InventarioAnt != 0 && Convert.ToInt32(txtUnitsScan.Text) > 0)
+                if (cmbPOItem.Text != "99")
                 {
-                    txtUPCScann.Text = string.Empty;
-                    txtUPCScann.Focus();
-                    List<ConsultaInventarioIDResult> consulta = f.ConsultaInventarioID(id_InventarioAnt);
-                    QRCodeGenerator qrGenerator = new QRCodeGenerator();
-
-                    List<EtiquetaCajaModificada> listClase = new List<EtiquetaCajaModificada>();
-                    EtiquetaCajaModificada clase = new EtiquetaCajaModificada();
-
-                    clase.po = consulta[0].po;
-                    clase.poInCompleto = consulta[0].poInCompleto;
-                    clase.poItem = consulta[0].poItem;
-                    clase.ProductCode = consulta[0].ProductCode;
-                    clase.Size = consulta[0].Size;
-                    clase.size_derecho = consulta[0].size_derecho;
-                    clase.size_izquierdo = consulta[0].size_izquierdo;
-                    clase.TipoCarton = consulta[0].TipoCarton;
-                    clase.upc = consulta[0].upc;
-                    clase.Fecha = consulta[0].create_dtm;
-                    clase.CartonLeft = consulta[0].CartonLeft;
-                    clase.CartonRight = consulta[0].CartonRight;
-                    clase.Cantidad = consulta[0].Cantidad;
-                    clase.Carton = consulta[0].Carton;
-                    clase.usuario = consulta[0].usuario;
-                    clase.id_Inventario = consulta[0].id;
-                    clase.id_cliente = Convert.ToInt32(consulta[0].id_cliente);
-                    clase.id_factura = Convert.ToInt32(consulta[0].id_factura);
-                    clase.id_terminado = Convert.ToInt32(consulta[0].id_terminado);
-                    clase.cliente = consulta[0].cliente;
-                    clase.factura = consulta[0].factura;
-                    clase.terminado = consulta[0].terminado;
-                    if (clase.poItem == "1000")
+                    if (id_InventarioAnt != 0 && Convert.ToInt32(txtUnitsScan.Text) > 0)
                     {
-                        if (consulta[0].upc.Length > 14)
+                        txtUPCScann.Text = string.Empty;
+                        txtUPCScann.Focus();
+                        List<ConsultaInventarioIDResult> consulta = f.ConsultaInventarioID(id_InventarioAnt);
+                        QRCodeGenerator qrGenerator = new QRCodeGenerator();
+
+                        List<EtiquetaCajaModificada> listClase = new List<EtiquetaCajaModificada>();
+                        EtiquetaCajaModificada clase = new EtiquetaCajaModificada();
+
+                        clase.po = consulta[0].po;
+                        clase.poInCompleto = consulta[0].poInCompleto;
+                        clase.poItem = consulta[0].poItem;
+                        clase.ProductCode = consulta[0].ProductCode;
+                        clase.Size = consulta[0].Size;
+                        clase.size_derecho = consulta[0].size_derecho;
+                        clase.size_izquierdo = consulta[0].size_izquierdo;
+                        clase.TipoCarton = consulta[0].TipoCarton;
+                        clase.upc = consulta[0].upc;
+                        clase.Fecha = consulta[0].create_dtm;
+                        clase.CartonLeft = consulta[0].CartonLeft;
+                        clase.CartonRight = consulta[0].CartonRight;
+                        clase.Cantidad = consulta[0].Cantidad;
+                        clase.Carton = consulta[0].Carton;
+                        clase.usuario = consulta[0].usuario;
+                        clase.id_Inventario = consulta[0].id;
+                        clase.id_cliente = Convert.ToInt32(consulta[0].id_cliente);
+                        clase.id_factura = Convert.ToInt32(consulta[0].id_factura);
+                        clase.id_terminado = Convert.ToInt32(consulta[0].id_terminado);
+                        clase.cliente = consulta[0].cliente;
+                        clase.factura = consulta[0].factura;
+                        clase.terminado = consulta[0].terminado;
+                        if (clase.poItem == "1000")
                         {
+                            if (consulta[0].upc.Length > 14)
+                            {
 
-                            clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 9);
-                            clase.numeroEtiqueta2 = consulta[0].upc.Substring(9, 7);
-                            clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 5) + " - " + consulta[0].upc.Substring(6, 2);
-                            clase.upc = "0" + consulta[0].upc.Substring(0, 8).ToString() + clase.numeroEtiqueta2;
+                                clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 9);
+                                clase.numeroEtiqueta2 = consulta[0].upc.Substring(9, 7);
+                                clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 5) + " - " + consulta[0].upc.Substring(6, 2);
+                                clase.upc = "0" + consulta[0].upc.Substring(0, 8).ToString() + clase.numeroEtiqueta2;
+                            }
+                            else
+                            {
+
+
+                                clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 7);
+                                clase.numeroEtiqueta2 = consulta[0].upc.Substring(7, 7);
+                                clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 4) + " - " + consulta[0].upc.Substring(4, 2);
+                                clase.upc = "0" + consulta[0].upc.Substring(0, 6).ToString() + clase.numeroEtiqueta2;
+                            }
+
+                            cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
+                            BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                            Codigo.IncludeLabel = true;
+                            Codigo.RotateFlipType = RotateFlipType.Rotate90FlipY;
+                            clase.assembly = consulta[0].Assembly;
+                            clase.Vendor = consulta[0].Vendor;
+                            clase.ShipTo = consulta[0].ShipTo;
+                            Image codigoBarras =
+                            Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.Carton.ToString(), Color.Black, Color.White, 270, 180);
+                            // Codigo.Alignment=BarcodeLib.AlignmentPositions.CENTER;
+
+                            clase.codigoBarras = codigoBarras;
+                            listClase.Add(clase);
+                            id_InventarioAnt = clase.id_Inventario;
+
+                            ReporteCintas report = new ReporteCintas();
+                            report.DataSource = listClase;
+                            // Disable margins warning. 
+                            report.PrintingSystem.ShowMarginsWarning = false;
+                            ReportPrintTool tool = new ReportPrintTool(report);
+                            //tool.ShowPreview();
+                            //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
+                            //tool.PrintDialog(); //muestra a que impresora se va a mandar
+                            //tool.Print(); //imprime de golpe
+
                         }
-                        else
+                        else if (clase.poItem != "1000" && clase.poItem != "99")
                         {
+                            QRCodeData qrCodeData = qrGenerator.CreateQrCode("?id=" + clase.id_Inventario +
+                                                                              "&po=" + consulta[0].po +
+                                                                              "&cl=" + clase.cliente +
+                                                                              "&fa=" + clase.factura +
+                                                                              "&te=" + clase.terminado +
+                                                                              "&u=" + clase.usuario +
+                                                                              "&pc=" + consulta[0].ProductCode +
+                                                                              "&c=" + clase.Cantidad +
+                                                                              "&sz=" + consulta[0].Size +
+                                                                              "&fe=" + clase.Fecha, QRCodeGenerator.ECCLevel.Q);
+                            QRCode qrCode = new QRCode(qrCodeData);
+                            BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
+                            Codigo.IncludeLabel = true;
+                            Image codigoBarras = Codigo.Encode(BarcodeLib.TYPE.CODE39, consulta[0].id.ToString(), Color.Black, Color.White, 200, 100);
+                            clase.qr = qrCode.GetGraphic(20);
+                            clase.codigoBarras = codigoBarras;
+                            listClase.Add(clase);
+                            ReporteCaja report = new ReporteCaja();
+                            report.DataSource = listClase;
+                            // Disable margins warning. 
+                            report.PrintingSystem.ShowMarginsWarning = false;
+                            ReportPrintTool tool = new ReportPrintTool(report);
+                            //tool.ShowPreview();
+                            //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
+                            //tool.PrintDialog(); //muestra a que impresora se va a mandar
+                            tool.Print(); //imprime de golpe
 
-
-                            clase.numeroEtiqueta1 = consulta[0].upc.Substring(0, 7);
-                            clase.numeroEtiqueta2 = consulta[0].upc.Substring(7, 7);
-                            clase.numeroEtiqueta3 = consulta[0].upc.Substring(0, 4) + " - " + consulta[0].upc.Substring(4, 2);
-                            clase.upc = "0" + consulta[0].upc.Substring(0, 6).ToString() + clase.numeroEtiqueta2;
                         }
-
-                        cantidadAnterior = Convert.ToInt32(txtUnitsScan.Text);
-                        BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
-                        Codigo.IncludeLabel = true;
-                        Codigo.RotateFlipType = RotateFlipType.Rotate90FlipY;
-                        clase.assembly = consulta[0].Assembly;
-                        clase.Vendor = consulta[0].Vendor;
-                        clase.ShipTo = consulta[0].ShipTo;
-                        Image codigoBarras =
-                        Codigo.Encode(BarcodeLib.TYPE.CODE39, clase.Carton.ToString(), Color.Black, Color.White, 270, 180);
-                        // Codigo.Alignment=BarcodeLib.AlignmentPositions.CENTER;
-
-                        clase.codigoBarras = codigoBarras;
-                        listClase.Add(clase);
-                        id_InventarioAnt = clase.id_Inventario;
-
-                        ReporteCintas report = new ReporteCintas();
-                        report.DataSource = listClase;
-                        // Disable margins warning. 
-                        report.PrintingSystem.ShowMarginsWarning = false;
-                        ReportPrintTool tool = new ReportPrintTool(report);
-                        //tool.ShowPreview();
-                        //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
-                        //tool.PrintDialog(); //muestra a que impresora se va a mandar
-                        //tool.Print(); //imprime de golpe
-
                     }
-                    else if (clase.poItem != "1000")
+                    else
                     {
-                        QRCodeData qrCodeData = qrGenerator.CreateQrCode("?id=" + clase.id_Inventario +
-                                                                          "&po=" + consulta[0].po +
-                                                                          "&cl=" + clase.cliente +
-                                                                          "&fa=" + clase.factura +
-                                                                          "&te=" + clase.terminado +
-                                                                          "&u=" + clase.usuario +
-                                                                          "&pc=" + consulta[0].ProductCode +
-                                                                          "&c=" + clase.Cantidad +
-                                                                          "&sz=" + consulta[0].Size +
-                                                                          "&fe=" + clase.Fecha, QRCodeGenerator.ECCLevel.Q);
-                        QRCode qrCode = new QRCode(qrCodeData);
-                        BarcodeLib.Barcode Codigo = new BarcodeLib.Barcode();
-                        Codigo.IncludeLabel = true;
-                        Image codigoBarras = Codigo.Encode(BarcodeLib.TYPE.CODE39, consulta[0].id.ToString(), Color.Black, Color.White, 200, 100);
-                        clase.qr = qrCode.GetGraphic(20);
-                        clase.codigoBarras = codigoBarras;
-                        listClase.Add(clase);
-                        ReporteCaja report = new ReporteCaja();
-                        report.DataSource = listClase;
-                        // Disable margins warning. 
-                        report.PrintingSystem.ShowMarginsWarning = false;
-                        ReportPrintTool tool = new ReportPrintTool(report);
-                        //tool.ShowPreview();
-                        //tool.ShowRibbonPreviewDialog(); // muestra el disenio 
-                        //tool.PrintDialog(); //muestra a que impresora se va a mandar
-                        tool.Print(); //imprime de golpe
-
+                        MessageBox.Show("Favor de Escanear");
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Favor de Escanear");
                 }
             }
             catch (Exception ex)
@@ -1497,7 +1654,7 @@ namespace Inventario
                     clase.terminado = consulta[0].terminado == string.Empty ? "NA" : consulta[0].terminado;
 
 
-                    if (clase.poItem != "1000")
+                    if (clase.poItem != "1000" && clase.poItem != "99")
                     {
 
                         QRCodeData qrCodeData = qrGenerator.CreateQrCode("?id=" + clase.id_Inventario +
@@ -3109,7 +3266,7 @@ namespace Inventario
                         }
                         catch (Exception ex)
                         {
-                            //MessageBox.Show(ex.Message);
+                           // MessageBox.Show(ex.Message);
                         }
                     }
                 }
@@ -3250,5 +3407,325 @@ namespace Inventario
             }
         }
 
+        private void btnEditar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtCantidadPrepack_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            try
+            {
+                //Para obligar a que sólo se introduzcan números
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    //el resto de teclas pulsadas se desactivan
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtCodigoupcPrepack_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            try
+            {
+
+                //Para obligar a que sólo se introduzcan números
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    //el resto de teclas pulsadas se desactivan
+                    e.Handled = true;
+                }
+
+                if ((int)e.KeyChar == (int)Keys.Enter)
+                {
+                    AgregaTalla();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtPoPrepack_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            try
+            {
+                //Para obligar a que sólo se introduzcan números
+                if (Char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = false;
+                }
+                else
+              if (Char.IsControl(e.KeyChar)) //permitir teclas de control como retroceso
+                {
+                    e.Handled = false;
+                }
+                else
+                {
+                    //el resto de teclas pulsadas se desactivan
+                    e.Handled = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void AgregaTalla()
+        {
+
+            try
+            {
+                if(txtCantidadPrepack.Text!="" && txtCodigoupcPrepack.Text!="")
+                {
+                    tablaPrepack.Rows.Add(cmbTallaPrepack.Text, txtCantidadPrepack.Text, txtCodigoupcPrepack.Text,cmbTallaPrepack.SelectedValue.ToString());
+                    dgvPrePack2.DataSource = tablaPrepack;
+                    dgvPrePack2.Columns["idSize"].Visible = false;
+                    cmbTallaPrepack.SelectedIndex = 0;
+                    txtCodigoupcPrepack.Text = "";
+                }
+                else
+                {
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void btnAgregaTalla_Click(object sender, EventArgs e)
+        {
+            AgregaTalla();
+        }
+
+        private void cmbSizeA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnQuitaTalla_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvPrePack2.RowCount > 0)
+                {
+                    RengloSelecionado = dgvPrePack2.CurrentCell.RowIndex;
+                    dgvPrePack2.Rows.RemoveAt(RengloSelecionado);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnEditarPrePack_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvPrePack2.RowCount > 0)
+                {
+                    //RengloSelecionado = dgvPrePack2.CurrentCell.RowIndex;
+                    DataGridViewRow newDatarow = dgvPrePack2.Rows[RengloSelecionado];
+                    newDatarow.Cells[0].Value = cmbTallaPrepack.Text;
+                    newDatarow.Cells[1].Value = txtCantidadPrepack.Text;
+                    newDatarow.Cells[2].Value = txtCodigoupcPrepack.Text;
+                    newDatarow.Cells[3].Value = cmbTallaPrepack.SelectedValue.ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnGuardarPrepack_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (validar() == 1)
+                {
+                    if(dgvPrePack2.RowCount > 0){
+                        Prepack p = new Prepack();
+                        int idPrepack = 0;
+
+                        p.estilo = txtEstiloPrepack.Text;
+                        p.po_numero = Convert.ToDecimal(txtPoPrepack.Text);
+
+                        idPrepack = f.GuardarPrePack(p);
+
+                        foreach (DataGridViewRow renglon in dgvPrePack2.Rows)
+                        {
+                            int cantidad = Convert.ToInt32(renglon.Cells[1].Value.ToString());
+
+                             for (int i=cantidad;  i>0; i--) {
+                                PrepackDetalle pd = new PrepackDetalle();
+                                pd.idPrepack = idPrepack;
+                                pd.size = renglon.Cells[0].Value.ToString();
+                                pd.cantidad = 1;
+                                pd.upc = renglon.Cells[2].Value.ToString();
+                                pd.idusuario = this.usu[0].id;
+                                pd.idSize = Convert.ToInt32(renglon.Cells[3].Value.ToString());
+                                f.GuardarPrePackDetalle(pd);
+                            }
+                            
+                        }
+
+                        LimpiarCampos();
+
+                        MessageBox.Show("PREPACK: "+ idPrepack);
+                    }                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+
+        }
+        public void LimpiarCampos()
+        {
+            try { 
+                txtEstiloPrepack.Text = "";
+                txtPoPrepack.Text = "";
+                cmbTallaPrepack.SelectedIndex = 0;
+                txtCantidadPrepack.Text = "";
+                txtCodigoupcPrepack.Text = "";
+                for (int i = dgvPrePack2.Rows.Count - 1; i >= 0; i--)
+                {
+                    dgvPrePack2.Rows.RemoveAt(i);
+                }
+
+                foreach (DataGridViewRow item in dgvPrePack2.SelectedRows)
+                {
+                    dgvPrePack2.Rows.RemoveAt(item.Index);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public bool vacio; // Variable utilizada para saber si hay algún TextBox vacio.
+        public int  validar()
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(txtPoPrepack.Text) || string.IsNullOrEmpty(txtEstiloPrepack.Text) || dgvPrePack2.RowCount < 2)
+                {
+
+                    MessageBox.Show("Favor de llenar todos los campos.");
+
+                    return 0;
+
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return 0;
+            }
+        }
+
+        private void dgvPrePack2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                RengloSelecionado = e.RowIndex;
+                DataGridViewRow row = dgvPrePack2.Rows[RengloSelecionado];
+
+                cmbTallaPrepack.Text = row.Cells[0].Value.ToString();
+                txtCantidadPrepack.Text = row.Cells[1].Value.ToString();
+                txtCodigoupcPrepack.Text = row.Cells[2].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void cmbTallaPrepack_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtCodigoupcPrepack.Focus();
+        }
+
+        private void btnNuevoPrePack_Click(object sender, EventArgs e)
+        {
+
+            LimpiarCampos();
+        }
+
+        private void btnBorrarRenglonPrePack_Click(object sender, EventArgs e)
+        {
+
+            LimpiarCampos();
+        }
+
+        private void dgvPrePack2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtEstiloPrepack_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUPCScann_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Escan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvEscan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void tpApparelInternational_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -99,8 +99,12 @@ namespace Inventario
             {
 
                 var consulta = new BDDataContext();
+                var po = new List<ConsultaPOResult>();
 
-                var po = consulta.ConsultaPO().ToList();
+                combo.DataSource = null;
+                combo.Items.Clear(); 
+
+                 po = consulta.ConsultaPO().ToList();
 
                 combo.DisplayMember = "po_numero";
                 combo.ValueMember = "po_numero";
@@ -216,7 +220,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
 
                 return objusuario;
             }
@@ -631,7 +635,7 @@ namespace Inventario
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataAdapter miadapter = new SqlDataAdapter();
-            SqlConnection MiConexion = new SqlConnection(@"Data Source =AIN-MSSRV\TASQLEXPRESS;Initial Catalog=Inventario;uid=sa;pwd=TANet001");
+            SqlConnection MiConexion = new SqlConnection(@"Data Source =AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;uid=sa;pwd=SisAin03");
             DataTable dt = new DataTable();
             SqlDataAdapter da;
             try
@@ -954,6 +958,44 @@ namespace Inventario
 
         }
 
+        public int GuardarPrePack(Prepack p)
+        {
+            int respuesta = 0;
+            try
+            {
+                var consulta = new BDDataContext();
+
+                var insertInventario = consulta.GuardarPrePack(p.po_numero, p.estilo).FirstOrDefault();
+
+                consulta.SubmitChanges();
+                respuesta = Convert.ToInt32(insertInventario.Column1);
+            }
+            catch (Exception ex)
+            {
+                respuesta = 0;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public int GuardarPrePackDetalle(PrepackDetalle pd)
+        {
+            int respuesta = 0;
+            try
+            {
+                var consulta = new BDDataContext();
+
+                var insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size,pd.cantidad,pd.upc,pd.idusuario,pd.idSize);
+
+                consulta.SubmitChanges();
+               // respuesta = Convert.ToInt32(insertInventario.Column1);
+            }
+            catch (Exception ex)
+            {
+                respuesta = 0;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
 
     }
 }
