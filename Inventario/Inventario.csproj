@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>179</ApplicationRevision>
+    <ApplicationRevision>196</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -164,6 +164,12 @@
     <Compile Include="CodigoBarrasAlmacen.Designer.cs">
       <DependentUpon>CodigoBarrasAlmacen.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlProduccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlProduccion.Designer.cs">
+      <DependentUpon>ControlProduccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Escaneo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,12 @@
     </Compile>
     <Compile Include="PopUp.Designer.cs">
       <DependentUpon>PopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -233,11 +245,17 @@
     <EmbeddedResource Include="CodigoBarrasAlmacen.resx">
       <DependentUpon>CodigoBarrasAlmacen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ControlProduccion.resx">
+      <DependentUpon>ControlProduccion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formulario.resx">
       <DependentUpon>Formulario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopUp.resx">
       <DependentUpon>PopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteAlmacen.resx">
       <DependentUpon>ReporteAlmacen.cs</DependentUpon>

@@ -636,5 +636,7 @@ C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inve
 C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.application
 C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.exe
 C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
 C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ControlProduccion.resources
+C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Principal.resources
+C:\Users\SISTEMAS-EMADRIGAL\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache

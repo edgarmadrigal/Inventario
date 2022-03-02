@@ -303,6 +303,31 @@ namespace Inventario
             return respuesta;
         }
 
+        public int GuardaProductoLEVIS(EtiquetaCajaModificada et, int iduser)
+        {
+            int respuesta = 0;
+            try
+            {
+                var consulta = new BDDataContext();
+
+                                                            consulta.GuardarProductos2(et.po,
+                                                                                      et.Cantidad,
+                                                                                      et.size_izquierdo,
+                                                                                      et.size_derecho,
+                                                                                      et.assembly,
+                                                                                      et.upc,
+                                                                                      et.Carton,
+                                                                                      et.ProductCode, iduser).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta= 1;
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
         public List<ConsultaInventarioResult> ConsultaInventario(DateTime? fechaInicio, DateTime? fechaFin)
         {
             List<ConsultaInventarioResult> objInv = null;
