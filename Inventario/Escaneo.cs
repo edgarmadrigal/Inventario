@@ -583,17 +583,13 @@ namespace Inventario
             {
                 if ((int)e.KeyChar == (int)Keys.Enter)
                 {
-                    
-                        DataGridViewRow newDatarow = dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))];
-                        upc = newDatarow.Cells[4].Value.ToString();
+                    DataGridViewRow newDatarow = dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))];
+                    upc = newDatarow.Cells[4].Value.ToString();
                     if (upc == txtUPCScann.Text)
                     {
-
                         if (cmbPOItem.Text=="99")
                         {
                             /*UPC CORRECTO*/
-
-
                             if (Convert.ToInt64(txtUnitsScan.Text) == Convert.ToInt64(txtUnitsReq.Text)-1)
                             {
                                 /*TOTAL DE PRENDAS ESCANEADAS*/
@@ -609,9 +605,6 @@ namespace Inventario
                                 txtCartonsPacked.Text = "0";
                                 txtCartonsReamaining.Text = "1";
                                 txtUPCScann.Focus();
-
-
-
                                 string[] separadas;
 
                                 separadas = cmbSizes.Text.Split('x');
@@ -673,8 +666,6 @@ namespace Inventario
                             else
                             {
                                 /*ESCANEANDO X PRENDA AUN*/
-
-
                                 contador = contador + 1;
                                 dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text) + 1)].Selected = true;
                                 dgvEscan.FirstDisplayedScrollingRowIndex = (Convert.ToInt32(txtUnitsScan.Text) + 1);
@@ -685,12 +676,8 @@ namespace Inventario
                             }
 
                         }
-
-
                         if (upc == txtUPCScann.Text)
                         {
-
-
                             contador = contador + 1;
                             dgvEscan.Rows[(Convert.ToInt32(txtUnitsScan.Text))].Selected = true;
                             dgvEscan.FirstDisplayedScrollingRowIndex = (Convert.ToInt32(txtUnitsScan.Text));
