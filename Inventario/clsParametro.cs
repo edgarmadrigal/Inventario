@@ -12,7 +12,7 @@ namespace Inventario
         private int m_Tamaño;
         public String Nombre
         {
-            
+
             get { return m_Nombre; }
             set { m_Nombre = value; }
         }

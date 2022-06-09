@@ -1,6 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Linq;
+﻿using System.Drawing;
 
 namespace Inventario
 {
@@ -13,6 +11,7 @@ namespace Inventario
         public int? id { get; set; }
 
         public int id_cliente { get; set; }
+
 
         public int id_factura { get; set; }
 
@@ -44,6 +43,7 @@ namespace Inventario
         public string poItem { get; set; }
 
         public System.Nullable<decimal> Cantidad { get; set; }
+        public System.Nullable<int> Cant { get; set; }
 
         public string size_izquierdo { get; set; }
 
@@ -70,6 +70,11 @@ namespace Inventario
         public string TipoCarton { get; set; }
 
         public string usuario { get; set; }
+
+
+        public int idusuario { get; set; }
+
+        public System.Nullable<int> idSize { get; set; }
 
         public System.Nullable<System.DateTime> Fecha { get; set; }
     }

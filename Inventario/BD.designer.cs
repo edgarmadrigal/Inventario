@@ -560,13 +560,6 @@ namespace Inventario
 			return ((ISingleResult<ConsultaUsuarioResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaProductosNuevo")]
-		public ISingleResult<ConsultaProductosNuevoResult> ConsultaProductosNuevo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string poItem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prodCd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizeIzquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizederecho)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po, poItem, prodCd, sizeIzquierdo, sizederecho);
-			return ((ISingleResult<ConsultaProductosNuevoResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GuardarPrePack")]
 		public ISingleResult<GuardarPrePackResult> GuardarPrePack([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po_numero, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(MAX)")] string estilo)
 		{
@@ -579,6 +572,27 @@ namespace Inventario
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), idPrepack, size, cantidad, upc, idusuario, idSize);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GuardarAltaPOManual")]
+		public ISingleResult<GuardarAltaPOManualResult> GuardarAltaPOManual([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> cantidad, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string upc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idSize, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> idusuario)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po, cantidad, upc, idSize, idusuario);
+			return ((ISingleResult<GuardarAltaPOManualResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaProductosNuevo")]
+		public ISingleResult<ConsultaProductosNuevoResult> ConsultaProductosNuevo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string poItem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prodCd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizeIzquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizederecho)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po, poItem, prodCd, sizeIzquierdo, sizederecho);
+			return ((ISingleResult<ConsultaProductosNuevoResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GuardarProductosTARGET")]
+		public ISingleResult<GuardarProductosTARGETResult> GuardarProductosTARGET([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po_numero, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> cantidad, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string size_izquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string size_derecho, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string assembly, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Vendor", DbType="VarChar(MAX)")] string vendor, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ShipTo", DbType="VarChar(MAX)")] string shipTo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string upc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="BigInt")] System.Nullable<long> cn_tag_num, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prod_cd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> create_iduser)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po_numero, cantidad, size_izquierdo, size_derecho, assembly, vendor, shipTo, upc, cn_tag_num, prod_cd, create_iduser);
+			return ((ISingleResult<GuardarProductosTARGETResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -7831,6 +7845,58 @@ namespace Inventario
 		}
 	}
 	
+	public partial class GuardarPrePackResult
+	{
+		
+		private System.Nullable<decimal> _Column1;
+		
+		public GuardarPrePackResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="Decimal(38,0)")]
+		public System.Nullable<decimal> Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GuardarAltaPOManualResult
+	{
+		
+		private int _Column1;
+		
+		public GuardarAltaPOManualResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="Int NOT NULL")]
+		public int Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
+				}
+			}
+		}
+	}
+	
 	public partial class ConsultaProductosNuevoResult
 	{
 		
@@ -7843,6 +7909,8 @@ namespace Inventario
 		private string _Size;
 		
 		private string _UPC;
+		
+		private string _vendor;
 		
 		private System.Nullable<long> _TotalUnits;
 		
@@ -7936,6 +8004,22 @@ namespace Inventario
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendor", DbType="NVarChar(150)")]
+		public string vendor
+		{
+			get
+			{
+				return this._vendor;
+			}
+			set
+			{
+				if ((this._vendor != value))
+				{
+					this._vendor = value;
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUnits", DbType="BigInt")]
 		public System.Nullable<long> TotalUnits
 		{
@@ -8001,17 +8085,17 @@ namespace Inventario
 		}
 	}
 	
-	public partial class GuardarPrePackResult
+	public partial class GuardarProductosTARGETResult
 	{
 		
-		private System.Nullable<decimal> _Column1;
+		private int _Column1;
 		
-		public GuardarPrePackResult()
+		public GuardarProductosTARGETResult()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="Decimal(38,0)")]
-		public System.Nullable<decimal> Column1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="Int NOT NULL")]
+		public int Column1
 		{
 			get
 			{

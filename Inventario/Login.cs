@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Inventario
@@ -17,7 +11,7 @@ namespace Inventario
         {
             InitializeComponent();
         }
-        
+
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             try
@@ -56,6 +50,7 @@ namespace Inventario
                     {
                         if (objusuario[0].perfil == "7")
                         {
+                            this.Visible = false;
                             ReportesMicrosip es = new ReportesMicrosip();
                             es.ShowDialog();
                             this.Dispose();
@@ -63,6 +58,7 @@ namespace Inventario
                         }
                         else
                         {
+                            this.Visible = false;
                             Escaneo es = new Escaneo(objusuario);
                             es.ShowDialog();
                             this.Dispose();
@@ -102,23 +98,23 @@ namespace Inventario
         private void Login_KeyUp(object sender, KeyEventArgs e)
         {
             //txtUsuario.Text= e.KeyData.ToString();
-            if ("e.KeyData A | Shift | Control | Alt" == e.KeyData.ToString() 
-                || "A, Shift, Control, Alt" == e.KeyData.ToString() 
+            if ("e.KeyData A | Shift | Control | Alt" == e.KeyData.ToString()
+                || "A, Shift, Control, Alt" == e.KeyData.ToString()
                 || "A, SHIFT, CONTROL, ALT" == e.KeyData.ToString())
             {
                 txtUsuario.Visible = false;
                 txtUsuario.Text = @"EDGAR";
                 txtPass.Text = @"7931287";
-                InicarSession(); 
+                InicarSession();
             }
         }
 
         private void Login_KeyDown(object sender, KeyEventArgs e)
         {
-           /* if (e.KeyCode== Keys.P)
-            {
-                MessageBox.Show("presionaste control p + alt");
-            }*/
+            /* if (e.KeyCode== Keys.P)
+             {
+                 MessageBox.Show("presionaste control p + alt");
+             }*/
 
         }
     }
