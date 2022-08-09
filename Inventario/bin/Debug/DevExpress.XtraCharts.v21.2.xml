@@ -8663,7 +8663,7 @@ If null (Nothing in Visual Basic), then a <see cref="T:System.ArgumentNullExcept
     </member>
     <member name="P:DevExpress.XtraCharts.DateTimeScaleOptions.MeasureUnitMultiplier">
       <summary>
-        <para>Gets or sets the value specifying the factor on which the measurement unit multiplies to form a custom measurement unit.</para>
+        <para>Gets or sets the value specifying the factor on the measurement unit multiplies to form a custom measurement unit.</para>
       </summary>
       <value>The multiplier on which the measurement unit is multiplied to form a custom measurement unit.</value>
     </member>

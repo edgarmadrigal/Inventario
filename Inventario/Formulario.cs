@@ -22,26 +22,28 @@ namespace Inventario
             BaseLayoutItem aboutItem = flatList.First(e => e.Text == "About");
             aboutItem.TextLocation = DevExpress.Utils.Locations.Top;
         }
-        static List<Employee> GetDataSource()
+
+        private static List<Employee> GetDataSource()
         {
             List<Employee> result = new List<Employee>();
-            Employee employee = new Employee();
-
-            employee.AddressLine1 = "527 W 7th St, Los Angeles, CA";
-            employee.AddressLine2 = "3800 Homer St, Los Angeles, CA";
-            employee.BirthDate = new DateTime(1983, 11, 19);
-            employee.Email = "ameliah@dx-email.com";
-            employee.Skype = "ameliah_DX_skype";
-            employee.FirstName = "Amelia";
-            employee.Gender = Gender.Female;
-            employee.Group = "IT";
-            employee.Image = Base64ToImage(ImageBase64String);
-            employee.HireDate = new DateTime(2011, 10, 2);
-            employee.LastName = "Harper";
-            employee.Phone = "(213)555-3792";
-            employee.Salary = 25400;
-            employee.Title = "Manager";
-            employee.Description = @"Amelia is on probation for failure to follow-up on tasks.  We hope to see her back at her desk shortly. Please remember negligence of assigned tasks is not something we tolerate.";
+            Employee employee = new Employee
+            {
+                AddressLine1 = "527 W 7th St, Los Angeles, CA",
+                AddressLine2 = "3800 Homer St, Los Angeles, CA",
+                BirthDate = new DateTime(1983, 11, 19),
+                Email = "ameliah@dx-email.com",
+                Skype = "ameliah_DX_skype",
+                FirstName = "Amelia",
+                Gender = Gender.Female,
+                Group = "IT",
+                Image = Base64ToImage(ImageBase64String),
+                HireDate = new DateTime(2011, 10, 2),
+                LastName = "Harper",
+                Phone = "(213)555-3792",
+                Salary = 25400,
+                Title = "Manager",
+                Description = @"Amelia is on probation for failure to follow-up on tasks.  We hope to see her back at her desk shortly. Please remember negligence of assigned tasks is not something we tolerate."
+            };
 
             result.Add(employee);
             return result;
@@ -57,17 +59,17 @@ namespace Inventario
         public enum Gender { Male, Female }
         public class Employee
         {
-            const string RootGroup = "<Root>";
-            const string Photo = RootGroup + "/" + "<Photo->";
-            const string FirstNameAndLastName = Photo + "/" + "<FirstAndLastName>";
-            const string TabbedGroup = FirstNameAndLastName + "/" + "{Tabs}";
-            const string ContactGroup = TabbedGroup + "/" + "Contact";
-            const string BDateAndGender = ContactGroup + "/" + "<BDateAndGender->";
-            const string HomeAddressAndPhone = ContactGroup + "/" + "<HomeAddressAndPhone->";
-            const string JobGroup = TabbedGroup + "/" + "Job";
-            const string HDateAndSalary = JobGroup + "/" + "<HDateAndSalary->";
-            const string EmailAndSkype = JobGroup + "/" + "<EmailAndSkype->";
-            const string GroupAndTitle = JobGroup + "/" + "<GroupAndTitle->";
+            private const string RootGroup = "<Root>";
+            private const string Photo = RootGroup + "/" + "<Photo->";
+            private const string FirstNameAndLastName = Photo + "/" + "<FirstAndLastName>";
+            private const string TabbedGroup = FirstNameAndLastName + "/" + "{Tabs}";
+            private const string ContactGroup = TabbedGroup + "/" + "Contact";
+            private const string BDateAndGender = ContactGroup + "/" + "<BDateAndGender->";
+            private const string HomeAddressAndPhone = ContactGroup + "/" + "<HomeAddressAndPhone->";
+            private const string JobGroup = TabbedGroup + "/" + "Job";
+            private const string HDateAndSalary = JobGroup + "/" + "<HDateAndSalary->";
+            private const string EmailAndSkype = JobGroup + "/" + "<EmailAndSkype->";
+            private const string GroupAndTitle = JobGroup + "/" + "<GroupAndTitle->";
 
             [Key, Display(AutoGenerateField = false)]
             public int ID { get; set; }

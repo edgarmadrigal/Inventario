@@ -7,7 +7,7 @@ namespace Inventario
 {
     public partial class ReportesMicrosip : Form
     {
-        Funciones f = new Funciones();
+        private readonly Funciones f = new Funciones();
         public ReportesMicrosip()
         {
             InitializeComponent();
@@ -60,11 +60,12 @@ namespace Inventario
             }
             // Opens the Preview window. 
 
-            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem());
+            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem())
+            {
+                Component = grid,
 
-            link.Component = grid;
-
-            link.Landscape = true;
+                Landscape = true
+            };
 
             link.ShowPreview();
 

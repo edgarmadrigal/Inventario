@@ -24217,10 +24217,6 @@
       </summary>
       <value>A <see cref="T:System.String"/> value, specifying the data source serializer name.</value>
     </member>
-    <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.HasErrors">
-      <summary />
-      <value></value>
-    </member>
     <member name="P:DevExpress.XtraPrinting.WebClientUIControl.DataContracts.DataSourceInfo.HasParameters">
       <summary />
       <value></value>

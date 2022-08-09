@@ -11006,7 +11006,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Card.CardView">
       <summary>
-        <para>Displays data records as cards, arranged down and then across. Card fields are always arranged in a single column.</para>
+        <para>Presents data records as cards, arranged down and then across. Card fields are always arranged in a single column.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Card.CardView.#ctor">
@@ -15014,9 +15014,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.FixedLineWidth">
       <summary>
-        <para>Gets or sets the width of frozen panel separators. The value must be in the range from 1 to 12 pixels.</para>
+        <para>Gets or sets the width of frozen panel separators.</para>
       </summary>
-      <value>An integer value that specifies the width of vertical lines that separate anchored columns and bands from others. The maximum value is 12 pixels.</value>
+      <value>An integer value specifying the width of vertical lines that separate anchored columns and bands from others. The value is set in pixels.</value>
     </member>
     <member name="P:DevExpress.XtraGrid.Views.Grid.GridView.FocusRectStyle">
       <summary>
@@ -18035,7 +18035,7 @@ The <see cref="F:DevExpress.XtraGrid.GridControl.InvalidRowHandle"/> value if th
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Layout.LayoutView">
       <summary>
-        <para>Displays records as cards in one or more columns, in one or more rows, in an ellipse (carousel mode), or as a single card at a time. Supports complex card field layouts, built-in groups, tabbed groups, and labels.</para>
+        <para>Presents records as cards, which can be displayed in one or multiple columns, one or multiple rows, in an ellipse (carousel mode) or a single card at a time. Supports complex card field layouts, built-in groups, tabbed groups and labels.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Layout.LayoutView.#ctor">
@@ -20923,7 +20923,7 @@ This value is used to initialize the <see cref="P:DevExpress.XtraGrid.Views.Prin
     </member>
     <member name="T:DevExpress.XtraGrid.Views.Tile.TileView">
       <summary>
-        <para>Displays records as read-only tiles, using one of the following layout modes: default (standard table layout), list (tiles have no space between them), and Kanban. This View includes the Tile Template feature, which helps you arrange fields relative to other fields, specify absolute or relative field display bounds, etc.</para>
+        <para>Displays records as read-only tiles, using one of the following layout modes: default (standard table layout), list (tiles have no space between them) and Kanban. This View provides the Tile Template feature, which helps you arrange fields relative to other fields, specify absolute or relative field display bounds, etc.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraGrid.Views.Tile.TileView.#ctor">

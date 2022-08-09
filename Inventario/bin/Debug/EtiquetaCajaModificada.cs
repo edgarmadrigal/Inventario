@@ -9,17 +9,27 @@ namespace Inventario
         {
         }
         public int? id { get; set; }
+        public int? escaneado { get; set; }
 
         public int id_cliente { get; set; }
 
 
+        public int cn_tag_num { get; set; }
+        
         public int id_factura { get; set; }
 
         public int id_terminado { get; set; }
 
         public string cliente { get; set; }
 
+        public string itemDescription { get; set; }
+        public string color { get; set; }
+
         public string nivel { get; set; }
+
+
+        public string estilo { get; set; }
+
 
         public string factura { get; set; }
 
@@ -43,6 +53,7 @@ namespace Inventario
         public string poItem { get; set; }
 
         public System.Nullable<decimal> Cantidad { get; set; }
+        public System.Nullable<decimal> CantidadCajas { get; set; }
         public System.Nullable<int> Cant { get; set; }
 
         public string size_izquierdo { get; set; }

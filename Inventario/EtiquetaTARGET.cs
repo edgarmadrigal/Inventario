@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
+﻿using System.Drawing;
 
 namespace Inventario
 {
-   public class EtiquetaTARGET
+    public class EtiquetaTARGET
     {
 
         public EtiquetaTARGET()
@@ -85,6 +80,8 @@ namespace Inventario
 
         public string DPCI { get; set; }
 
+        public string color { get; set; }
+        public string itemDescription { get; set; }
 
 
     }

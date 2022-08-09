@@ -22678,7 +22678,7 @@
     </member>
     <member name="T:DevExpress.XtraReports.UI.XtraReport">
       <summary>
-        <para>A DevExpress report.</para>
+        <para>A base class for a report.</para>
       </summary>
     </member>
     <member name="M:DevExpress.XtraReports.UI.XtraReport.#ctor">

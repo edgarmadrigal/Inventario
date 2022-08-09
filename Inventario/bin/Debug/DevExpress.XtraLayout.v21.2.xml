@@ -5818,9 +5818,6 @@ is dependent on the type of control embedded in this layout item.</value>
       <param name="item">A <see cref="T:DevExpress.XtraLayout.LayoutGroup"/> object which represents the tab page to be removed from the collection.</param>
       <returns>true if the tab page has been removed; otherwise, false.</returns>
     </member>
-    <member name="E:DevExpress.XtraLayout.TabbedGroup.SelectedPageChangeAnimationCompleted">
-      <summary />
-    </member>
     <member name="E:DevExpress.XtraLayout.TabbedGroup.SelectedPageChanged">
       <summary>
         <para>Occurs when a tab page is activated.</para>

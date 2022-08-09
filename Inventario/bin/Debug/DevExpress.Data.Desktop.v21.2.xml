@@ -714,7 +714,7 @@
       <summary>
         <para>Specifies whether to use decoration panels to draw the <see cref="T:DevExpress.Xpf.Scheduling.SchedulerControl"/>‘s elements.</para>
       </summary>
-      <value>true to use the legacy mechanism affected by the CellControl’s customization properties; false to use decoration panels.</value>
+      <value>true, to use the legacy mechanism affected by the CellControl’s customization properties; false, to use decoration panels.</value>
     </member>
     <member name="P:DevExpress.Xpf.Core.CompatibilitySettings.UseLegacySchedulerTimelineViewMode">
       <summary>

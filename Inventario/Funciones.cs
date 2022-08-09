@@ -14,9 +14,9 @@ namespace Inventario
         {
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var po = consulta.ubicacion_Entrada_ConsultaUbicacion().ToList();
+                List<ubicacion_Entrada_ConsultaUbicacionResult> po = consulta.ubicacion_Entrada_ConsultaUbicacion().ToList();
 
                 combo.DisplayMember = "nombre";
                 combo.ValueMember = "id";
@@ -35,9 +35,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var po = consulta.ConsultaCliente().ToList();
+                List<ConsultaClienteResult> po = consulta.ConsultaCliente().ToList();
 
                 combo.DisplayMember = "descripcion";
                 combo.ValueMember = "numero";
@@ -56,9 +56,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var po = consulta.ConsultaTerminado().ToList();
+                List<ConsultaTerminadoResult> po = consulta.ConsultaTerminado().ToList();
 
                 combo.DisplayMember = "descripcion";
                 combo.ValueMember = "numero";
@@ -77,9 +77,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var po = consulta.ConsultaFactura().ToList();
+                List<ConsultaFacturaResult> po = consulta.ConsultaFactura().ToList();
 
                 combo.DisplayMember = "descripcion";
                 combo.ValueMember = "numero";
@@ -98,8 +98,8 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
-                var po = new List<ConsultaPOResult>();
+                BDDataContext consulta = new BDDataContext();
+                List<ConsultaPOResult> po = new List<ConsultaPOResult>();
 
                 combo.DataSource = null;
                 combo.Items.Clear();
@@ -124,9 +124,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var poItem = consulta.ConsultaPOItem(po);
+                System.Data.Linq.ISingleResult<ConsultaPOItemResult> poItem = consulta.ConsultaPOItem(po);
 
                 combo.DataSource = poItem;
                 combo.DisplayMember = "po_item";
@@ -136,7 +136,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
 
             }
         }
@@ -146,9 +146,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var productCode = consulta.ConsultaProductCode(po, poItem);
+                System.Data.Linq.ISingleResult<ConsultaProductCodeResult> productCode = consulta.ConsultaProductCode(po, poItem);
 
                 combo.DataSource = productCode;
                 combo.DisplayMember = "prod_cd";
@@ -158,7 +158,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+               // MessageBox.Show(ex.Message);
 
             }
         }
@@ -168,9 +168,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var size = consulta.ConsultaSizes(po, poItem, prodCd);
+                System.Data.Linq.ISingleResult<ConsultaSizesResult> size = consulta.ConsultaSizes(po, poItem, prodCd);
 
                 combo.DataSource = size;
                 combo.DisplayMember = "size";
@@ -180,7 +180,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
 
             }
         }
@@ -190,12 +190,48 @@ namespace Inventario
             List<ConsultaProductosNuevoResult> Productonull = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 List<ConsultaProductosNuevoResult> Producto = consulta.ConsultaProductosNuevo(Convert.ToInt64(po), poItem, prodCd, sizeIzquierdo, sizeDerecho).ToList();
 
                 return Producto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
 
+                return Productonull;
+            }
+        }
+        public List<ConsultaProductosZumiesResult> ConsultaProductosZumies(string po, string poItem, string prodCd, string size)
+        {
+            List<ConsultaProductosZumiesResult> Productonull = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaProductosZumiesResult> Producto = consulta.ConsultaProductosZumies(Convert.ToInt64(po), poItem, prodCd, size).ToList();
+
+                return Producto;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return Productonull;
+            }
+        }
+        public List<ConsultaProductosTargetResult> ConsultaProductosTarget(string po, string poItem, string prodCd, string size)
+        {
+            List<ConsultaProductosTargetResult> Productonull = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaProductosTargetResult> Producto = consulta.ConsultaProductosTarget(Convert.ToInt64(po), poItem, prodCd, size).ToList();
+
+                return Producto;
             }
 
             catch (Exception ex)
@@ -210,15 +246,17 @@ namespace Inventario
             List<ConsultaUsuarioResult> objusuario = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objusu = consulta.ConsultaUsuario(usuario, password).ToList();
+                List<ConsultaUsuarioResult> objusu = consulta.ConsultaUsuario(usuario, password).ToList();
 
                 return objusu;
 
             }
 
+#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             catch (Exception ex)
+#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
                 // MessageBox.Show(ex.Message);
 
@@ -231,9 +269,9 @@ namespace Inventario
             List<ConsultaEtiquetaResult> objusuario = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objusu = consulta.ConsultaEtiqueta(id).ToList();
+                List<ConsultaEtiquetaResult> objusu = consulta.ConsultaEtiqueta(id).ToList();
 
                 return objusu;
 
@@ -248,12 +286,14 @@ namespace Inventario
 
         }
 
+        
+
         public int GuardaInventario(EtiquetaCajaModificada et, int iduser)
         {
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 GuardarInventarioResult insertInventario = consulta.GuardarInventario(et.id,
                                                                                       et.po,
@@ -278,12 +318,44 @@ namespace Inventario
             }
             return respuesta;
         }
+
+        public int GuardaInventarioZumies(EtiquetaZUMIES et, int iduser)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                GuardarInventarioResult insertInventario = consulta.GuardarInventario(et.id,
+                                                                                      et.po,
+                                                                                      et.poItem,
+                                                                                      et.Cantidad,
+                                                                                      et.size_izquierdo,
+                                                                                      et.size_derecho,
+                                                                                      et.upc, 
+                                                                                      et.cn_tag_num,
+                                                                                      et.ProductCode,
+                                                                                      et.DESCRIPTION,
+                                                                                      iduser,
+                                                                                      et.id_cliente,
+                                                                                      et.id_factura,
+                                                                                      et.id_terminado).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = Convert.ToInt32(insertInventario.Column1);
+            }
+            catch (Exception ex)
+            {
+                respuesta = 0;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
         public int GuardaProducto(EtiquetaCajaModificada et, int iduser)
         {
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 GuardarProductos2Result insertInventario = consulta.GuardarProductos2(et.po,
                                                                                       et.Cantidad,
@@ -298,7 +370,7 @@ namespace Inventario
             }
             catch (Exception ex)
             {
-                // MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
             }
             return respuesta;
         }
@@ -307,7 +379,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 consulta.GuardarAltaPOManual(et.po,
                                           et.Cantidad,
@@ -319,7 +391,55 @@ namespace Inventario
             }
             catch (Exception ex)
             {
-                // MessageBox.Show(ex.Message);
+                 MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+         public int GuardaZumies(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                consulta.GuardarZumies(et.po,
+                                          et.estilo,
+                                          et.Cantidad,
+                                          et.upc,
+                                          et.idSize,
+                                          et.itemDescription ,
+                                          et.color ,
+                                          et.escaneado,
+                                          et.idusuario).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = 1;
+            }
+            catch (Exception ex)
+            {
+                 MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public int GuardarTarget(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                consulta.GuardarTarget(et.po,
+                                          et.Cantidad,
+                                          et.idSize,
+                                          et.escaneado,
+                                          et.idusuario,
+                                          et.assembly).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             return respuesta;
         }
@@ -328,7 +448,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 consulta.GuardarProductos2(et.po,
                                           et.Cantidad,
@@ -341,7 +461,9 @@ namespace Inventario
                 consulta.SubmitChanges();
                 respuesta = 1;
             }
+#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             catch (Exception ex)
+#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
                 // MessageBox.Show(ex.Message);
             }
@@ -352,7 +474,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
                 consulta.GuardarProductosTARGET(et.po,
                                           et.Cantidad,
@@ -367,7 +489,9 @@ namespace Inventario
                 consulta.SubmitChanges();
                 respuesta = 1;
             }
+#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             catch (Exception ex)
+#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
                 // MessageBox.Show(ex.Message);
             }
@@ -379,9 +503,9 @@ namespace Inventario
             List<ConsultaInventarioResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ConsultaInventario(fechaInicio, fechaFin).ToList();
+                List<ConsultaInventarioResult> objin = consulta.ConsultaInventario(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -400,9 +524,11 @@ namespace Inventario
             List<ConsultaAlmacenesResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenes(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesResult> objin = consulta.ConsultaAlmacenes(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -421,9 +547,11 @@ namespace Inventario
             List<ConsultaAlmacenesDTLResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenesDTL(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesDTLResult> objin = consulta.ConsultaAlmacenesDTL(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -443,9 +571,11 @@ namespace Inventario
             List<ConsultaAlmacenesFolioComprasResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenesFolioCompras(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesFolioComprasResult> objin = consulta.ConsultaAlmacenesFolioCompras(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -466,9 +596,11 @@ namespace Inventario
             List<ConsultaAlmacenesFolioComprasTBGResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenesFolioComprasTBG(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesFolioComprasTBGResult> objin = consulta.ConsultaAlmacenesFolioComprasTBG(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -489,9 +621,11 @@ namespace Inventario
             List<ConsultaAlmacenesFolioComprasDTLResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenesFolioComprasDTL(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesFolioComprasDTLResult> objin = consulta.ConsultaAlmacenesFolioComprasDTL(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -510,9 +644,11 @@ namespace Inventario
             List<ConsultaAlmacenesTBGResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                consulta.CommandTimeout = 2500;
-                var objin = consulta.ConsultaAlmacenesTBG(fechaInicio, fechaFin).ToList();
+                BDDataContext consulta = new BDDataContext
+                {
+                    CommandTimeout = 2500
+                };
+                List<ConsultaAlmacenesTBGResult> objin = consulta.ConsultaAlmacenesTBG(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -531,9 +667,9 @@ namespace Inventario
             List<ConsultaInventarioIDResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ConsultaInventarioID(id).ToList();
+                List<ConsultaInventarioIDResult> objin = consulta.ConsultaInventarioID(id).ToList();
 
                 return objin;
 
@@ -547,15 +683,56 @@ namespace Inventario
             }
 
         }
+        public List<ConsultaInventarioPOResult> ConsultaInventarioPO(string po_numero )
+        {
+            List<ConsultaInventarioPOResult> objInv = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaInventarioPOResult> objin = consulta.ConsultaInventarioPO(po_numero).ToList();
+
+                return objin;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return objInv;
+            }
+
+        }
+        public List<ConsultaUPCResult> ConsultaUPC(string po_numero , string upc)
+        {
+            List<ConsultaUPCResult> objInv = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaUPCResult> objin = consulta.ConsultaUPC(po_numero,upc).ToList();
+
+                return objin;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return objInv;
+            }
+        }
 
         public bool BajaPO(string po, int id_Cliente, int id_Facturacion, int id_Terminado, int iduser)
         {
             bool respuesta = false;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var respuesta1 = consulta.BajaPO(po, id_Cliente, id_Facturacion, id_Terminado, iduser).FirstOrDefault();
+                BajaPOResult respuesta1 = consulta.BajaPO(po, id_Cliente, id_Facturacion, id_Terminado, iduser).FirstOrDefault();
                 consulta.SubmitChanges();
                 if (respuesta1.Column1 == 0)
                 {
@@ -584,9 +761,9 @@ namespace Inventario
             bool respuesta = false;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var respuesta1 = consulta.BajaCaja2(po, iduser).FirstOrDefault();
+                BajaCaja2Result respuesta1 = consulta.BajaCaja2(po, iduser).FirstOrDefault();
                 consulta.SubmitChanges();
                 if (respuesta1.Column1 == 0)
                 {
@@ -613,9 +790,9 @@ namespace Inventario
             try
             {
 
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var poItem = consulta.ConsultaTallas();
+                System.Data.Linq.ISingleResult<ConsultaTallasResult> poItem = consulta.ConsultaTallas();
 
                 combo.DataSource = poItem;
                 combo.DisplayMember = "size";
@@ -629,13 +806,58 @@ namespace Inventario
 
             }
         }
+        public void ConsultaTallasXMarca(ComboBox combo,string marca)
+        {
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                System.Data.Linq.ISingleResult<ConsultaTallasXMarcaResult> poItem = consulta.ConsultaTallasXMarca(marca);
+
+                //Corregi el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "size";
+                combo.DataSource = poItem;
+                
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+
+            }
+        }
+        public void ConsultaTallasZumies(ComboBox combo)
+        {
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                System.Data.Linq.ISingleResult<ConsultaTallasZumiesResult> poItem = consulta.ConsultaTallasZumies();
+
+                combo.DataSource = poItem;
+                combo.DisplayMember = "size";
+                combo.ValueMember = "id";
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+            }
+        }
+        
         public void ConsultaTipoCaja(ComboBox combo)
         {
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var poItem = consulta.ConsultaTipoCaja();
+                System.Data.Linq.ISingleResult<ConsultaTipoCajaResult> poItem = consulta.ConsultaTipoCaja();
 
                 combo.DataSource = poItem;
                 combo.DisplayMember = "descripcion";
@@ -655,8 +877,8 @@ namespace Inventario
             List<ubicacion_Entrada_ConsultaUbicacionIDResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                var objin = consulta.ubicacion_Entrada_ConsultaUbicacionID(idUbicacion).ToList();
+                BDDataContext consulta = new BDDataContext();
+                List<ubicacion_Entrada_ConsultaUbicacionIDResult> objin = consulta.ubicacion_Entrada_ConsultaUbicacionID(idUbicacion).ToList();
                 return objin;
             }
             catch (Exception ex)
@@ -671,8 +893,8 @@ namespace Inventario
             List<ubicacion_Entrada_ConsultaUbicacionDetalleIDResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
-                var objin = consulta.ubicacion_Entrada_ConsultaUbicacionDetalleID(idUbicacion).ToList();
+                BDDataContext consulta = new BDDataContext();
+                List<ubicacion_Entrada_ConsultaUbicacionDetalleIDResult> objin = consulta.ubicacion_Entrada_ConsultaUbicacionDetalleID(idUbicacion).ToList();
                 return objin;
             }
             catch (Exception ex)
@@ -687,7 +909,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 ubicacion_Entrada_GuardarUbicacionResult insertInventario = consulta.ubicacion_Entrada_GuardarUbicacion(id, id_caja, po, id_Cliente, id_Facturacion, id_Terminado, iduser).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = insertInventario.Column1;
@@ -702,7 +924,7 @@ namespace Inventario
 
 
 
-        public DataTable ConsultaTablaGeneral(String NombreSP, List<clsParametro> lst)
+        public DataTable ConsultaTablaGeneral(string NombreSP, List<clsParametro> lst)
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataAdapter miadapter = new SqlDataAdapter();
@@ -733,7 +955,7 @@ namespace Inventario
         {
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 List<ConsultaTallasResult> Listtallas = consulta.ConsultaTallas().ToList();
 
                 foreach (ConsultaTallasResult talla in Listtallas)
@@ -754,9 +976,9 @@ namespace Inventario
             List<ubicacion_Salida_ConsultaPOTallasCantidadResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_Salida_ConsultaPOTallasCantidad(po, talla).ToList();
+                List<ubicacion_Salida_ConsultaPOTallasCantidadResult> objin = consulta.ubicacion_Salida_ConsultaPOTallasCantidad(po, talla).ToList();
 
                 return objin;
 
@@ -775,9 +997,9 @@ namespace Inventario
             ubicacion_Entrada_ComprobarCajaResult objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_Entrada_ComprobarCaja(idCaja).FirstOrDefault();
+                ubicacion_Entrada_ComprobarCajaResult objin = consulta.ubicacion_Entrada_ComprobarCaja(idCaja).FirstOrDefault();
 
                 return objin;
 
@@ -796,7 +1018,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 consulta.ubicacion_Salida_Guardar(id_caja, iduser);
                 consulta.SubmitChanges();
                 respuesta = 1;
@@ -815,7 +1037,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 consulta.ubicacion_Salida_Terminar(iduser);
                 consulta.SubmitChanges();
                 respuesta = 1;
@@ -834,7 +1056,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 ubicacion_MoverUbicacion_GuardarResult respuesta1 = consulta.ubicacion_MoverUbicacion_Guardar(iduser, idUbicacion, idCaja).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = respuesta1.Column1;
@@ -854,7 +1076,7 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 ubicacion_Entrada_ComprobarCajaPOResult respuesta1 = consulta.ubicacion_Entrada_ComprobarCajaPO(idCaja, po, cliente, factura, terminado, pOSolamente).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = respuesta1.Column1;
@@ -872,9 +1094,9 @@ namespace Inventario
             List<ubicacion_ReporteAlmacen_ConsultaResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_ReporteAlmacen_Consulta(fechaInicio, fechaFin).ToList();
+                List<ubicacion_ReporteAlmacen_ConsultaResult> objin = consulta.ubicacion_ReporteAlmacen_Consulta(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -894,9 +1116,9 @@ namespace Inventario
             List<ubicacion_Entrada_ConsultaUbicacionDetalleResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_Entrada_ConsultaUbicacionDetalle().ToList();
+                List<ubicacion_Entrada_ConsultaUbicacionDetalleResult> objin = consulta.ubicacion_Entrada_ConsultaUbicacionDetalle().ToList();
 
                 return objin;
 
@@ -916,9 +1138,9 @@ namespace Inventario
             List<ubicacion_ReporteEmbarques_ConsultaResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_ReporteEmbarques_Consulta(fechaInicio, fechaFin).ToList();
+                List<ubicacion_ReporteEmbarques_ConsultaResult> objin = consulta.ubicacion_ReporteEmbarques_Consulta(fechaInicio, fechaFin).ToList();
 
                 return objin;
             }
@@ -936,7 +1158,7 @@ namespace Inventario
             ubicacion_Dividir_CajaIDResult respuesta = new ubicacion_Dividir_CajaIDResult();
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 respuesta = consulta.ubicacion_Dividir_CajaID(idCaja, idUser, cantidad, restante).FirstOrDefault();
                 consulta.SubmitChanges();
             }
@@ -953,7 +1175,7 @@ namespace Inventario
             ubicacion_Dividir_ConsultaCajaIDResult respuesta = new ubicacion_Dividir_ConsultaCajaIDResult();
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
                 respuesta = consulta.ubicacion_Dividir_ConsultaCajaID(idCaja).FirstOrDefault();
                 consulta.SubmitChanges();
             }
@@ -970,9 +1192,9 @@ namespace Inventario
             List<ConsultaInventarioPorHoraResult> objInv = null;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ConsultaInventarioPorHora(fechaInicio, fechaFin).ToList();
+                List<ConsultaInventarioPorHoraResult> objin = consulta.ConsultaInventarioPorHora(fechaInicio, fechaFin).ToList();
 
                 return objin;
 
@@ -991,9 +1213,9 @@ namespace Inventario
             ubicacion_Salida_ConsultarSalidaResult objInv = new ubicacion_Salida_ConsultarSalidaResult();
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_Salida_ConsultarSalida(idCaja).FirstOrDefault();
+                ubicacion_Salida_ConsultarSalidaResult objin = consulta.ubicacion_Salida_ConsultarSalida(idCaja).FirstOrDefault();
 
                 return objin.Column1;
 
@@ -1012,9 +1234,9 @@ namespace Inventario
             ubicacion_Entrada_ConsultarEntradaResult objInv = new ubicacion_Entrada_ConsultarEntradaResult();
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var objin = consulta.ubicacion_Entrada_ConsultarEntrada(idCaja).FirstOrDefault();
+                ubicacion_Entrada_ConsultarEntradaResult objin = consulta.ubicacion_Entrada_ConsultarEntrada(idCaja).FirstOrDefault();
 
                 return objin.Column1;
 
@@ -1034,9 +1256,9 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var insertInventario = consulta.GuardarPrePack(p.po_numero, p.estilo).FirstOrDefault();
+                GuardarPrePackResult insertInventario = consulta.GuardarPrePack(p.po_numero, p.estilo).FirstOrDefault();
 
                 consulta.SubmitChanges();
                 respuesta = Convert.ToInt32(insertInventario.Column1);
@@ -1053,9 +1275,9 @@ namespace Inventario
             int respuesta = 0;
             try
             {
-                var consulta = new BDDataContext();
+                BDDataContext consulta = new BDDataContext();
 
-                var insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad, pd.upc, pd.idusuario, pd.idSize);
+                int insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad, pd.upc, pd.idusuario, pd.idSize);
 
                 consulta.SubmitChanges();
                 // respuesta = Convert.ToInt32(insertInventario.Column1);
@@ -1066,6 +1288,42 @@ namespace Inventario
                 MessageBox.Show(ex.Message);
             }
             return respuesta;
+        }
+
+
+        public string ConsultaCajasBaja(string po_numero, string talla)
+        {
+            string respuesta = "";
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaCajasBajaResult respuesta1 = consulta.ConsultaCajasBaja(po_numero,talla).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1.numeroCaja;
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public string ConsultaNumeroCajaPO(string po_numero, string NumeroCaja)
+        {
+            int? respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaNumeroCajaPOResult respuesta1 = consulta.ConsultaNumeroCajaPO(po_numero, NumeroCaja).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1.numeroCaja;
+            }
+            catch (Exception ex)
+            {
+                respuesta = 0;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta.ToString();
         }
 
     }

@@ -6,7 +6,7 @@ namespace Inventario
 {
     public partial class Login : Form
     {
-        Funciones f = new Funciones();
+        private readonly Funciones f = new Funciones();
         public Login()
         {
             InitializeComponent();
@@ -74,7 +74,9 @@ namespace Inventario
                     }
                 }
             }
+#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             catch (Exception ex)
+#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
                 /*MessageBox.Show(ex.Message.ToString());*/
             }

@@ -3435,7 +3435,7 @@
     </member>
     <member name="P:DevExpress.Pdf.PdfClearContentOptions.ClearGraphics">
       <summary>
-        <para>Gets or sets whether to clear graphics.</para>
+        <para>Gets or sets whether to clear graphics ().</para>
       </summary>
       <value>true to remove graphics; otherwise, false.</value>
     </member>

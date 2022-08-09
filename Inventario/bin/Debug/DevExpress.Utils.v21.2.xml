@@ -6184,13 +6184,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="point">A Point structure that specifies the coordinates for the drawn image.</param>
       <param name="svgPalette">An object that retrieves vector skin palettes. Vector image colors are slighly adjusted depending on the active palette.</param>
     </member>
-    <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawSvgImage(DevExpress.Utils.Svg.SvgImage,System.Drawing.Point,DevExpress.Utils.Design.ISvgPaletteProvider,System.Nullable{System.Single})">
-      <summary />
-      <param name="svgImage"></param>
-      <param name="point"></param>
-      <param name="svgPalette"></param>
-      <param name="forcedScaleFactor"></param>
-    </member>
     <member name="M:DevExpress.Utils.Drawing.GraphicsCache.DrawSvgImage(DevExpress.Utils.Svg.SvgImage,System.Drawing.Rectangle,DevExpress.Utils.Design.ISvgPaletteProvider)">
       <summary>
         <para>Draws a vector image</para>
@@ -17569,7 +17562,7 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.BackgroundSkinningMode">
       <summary>
-        <para>Gets or sets whether colors assigned to <see cref="P:DevExpress.Utils.AppearanceObject.BackColor"/> or <see cref="P:DevExpress.Utils.AppearanceObject.BorderColor"/> properties can blend with skin element bitmaps.</para>
+        <para>Gets or sets what colors assigned to <see cref="P:DevExpress.Utils.AppearanceObject.BackColor"/> or <see cref="P:DevExpress.Utils.AppearanceObject.BorderColor"/> properties can blend with skin element bitmaps.</para>
       </summary>
       <value>A DevExpress.XtraEditors.BackgroundSkinningMode object enumerator value that specifies what appearance colors can blend with skin element bitmaps.</value>
     </member>
@@ -17843,10 +17836,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
       <param name="rightToLeft">A default System.Windows.Forms.RightToLeft enumeration value that is returned if the <see cref="P:DevExpress.XtraEditors.WindowsFormsSettings.RightToLeft"/> property equals Default.</param>
       <returns>A System.Windows.Forms.RightToLeft enumeration value that specifies whether DevExpress controls are aligned to support locales using right-to-left fonts.</returns>
     </member>
-    <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetUseTextForAccessibility">
-      <summary />
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.XtraEditors.WindowsFormsSettings.GetUseUIAutomation(DevExpress.Utils.DefaultBoolean)">
       <summary />
       <param name="useUIAutomationInControl"></param>
@@ -18010,10 +17999,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Gets or sets whether DevExpress controls and components that display Open File, Save File and Folder Browser dialogs should display standard WinForms dialogs or their DevExpress counterparts (<see cref="T:DevExpress.XtraEditors.XtraOpenFileDialog"/>, <see cref="T:DevExpress.XtraEditors.XtraSaveFileDialog"/>, and <see cref="T:DevExpress.XtraEditors.XtraFolderBrowserDialog"/>).</para>
       </summary>
       <value>A <see cref="T:DevExpress.Utils.DefaultBoolean"/> enumeration value that specifies whether DevExpress controls and components should replace standard Open File, Save File and Folder Browser dialogs with skinnable DX Dialogs.</value>
-    </member>
-    <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.UseEditorTextAsAccessibleName">
-      <summary />
-      <value></value>
     </member>
     <member name="P:DevExpress.XtraEditors.WindowsFormsSettings.UseUIAutomation">
       <summary />

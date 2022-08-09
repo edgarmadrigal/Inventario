@@ -2713,9 +2713,6 @@
       </summary>
       <param name="itemIndex">An Int32 value that is the current node path’s index within a complete navigation journal.</param>
     </member>
-    <member name="M:DevExpress.XtraEditors.BreadCrumbEdit.ShowHistoryPopup">
-      <summary />
-    </member>
     <member name="P:DevExpress.XtraEditors.BreadCrumbEdit.Text">
       <summary>
         <para>This member supports the internal infrastructure, and is not intended to be used directly from your code.</para>
@@ -27095,11 +27092,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Copies the settings of the specified repository item.</para>
       </summary>
       <param name="item">A <see cref="T:DevExpress.XtraEditors.Repository.RepositoryItem"/> object representing the source of the operation.</param>
-    </member>
-    <member name="M:DevExpress.XtraEditors.Repository.RepositoryItemPopupBaseAutoSearchEdit.EnableCustomMaskTextInput(System.Action{DevExpress.Data.Mask.CustomTextMaskInputArgs},System.Object)">
-      <summary />
-      <param name="onTextInput"></param>
-      <param name="tag"></param>
     </member>
     <member name="P:DevExpress.XtraEditors.Repository.RepositoryItemPopupBaseAutoSearchEdit.ImmediatePopup">
       <summary>

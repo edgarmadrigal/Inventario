@@ -26463,16 +26463,6 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
         <para>Starts the runtime initialization of the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/> component.</para>
       </summary>
     </member>
-    <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcGallerySize">
-      <summary />
-      <returns></returns>
-    </member>
-    <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcGallerySize(System.Int32,System.Int32)">
-      <summary />
-      <param name="row"></param>
-      <param name="column"></param>
-      <returns></returns>
-    </member>
     <member name="M:DevExpress.XtraBars.Ribbon.GalleryControl.CalcHitInfo(System.Drawing.Point)">
       <summary>
         <para>Returns information on the <see cref="T:DevExpress.XtraBars.Ribbon.GalleryControl"/>‘s elements located at the specified point.</para>

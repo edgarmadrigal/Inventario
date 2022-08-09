@@ -534,7 +534,7 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.DrawPageContent(DevExpress.Pdf.PdfPage)">
       <summary>
-        <para>Draws the specified page content.</para>
+        <para>Draws the specified page’s content.</para>
       </summary>
       <param name="source">The source page from which content is drawn.</param>
     </member>
@@ -648,9 +648,9 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.IntersectClip(System.Drawing.RectangleF)">
       <summary>
-        <para>Assigns the clip region of the <see cref="T:DevExpress.Pdf.PdfGraphics"/> object to the intersection of the current clip region and the specified page region.</para>
+        <para>Updates the clip region of this <see cref="T:DevExpress.Pdf.PdfGraphics"/> object to the intersection of the current clip region and the specified RectangleF structure.</para>
       </summary>
-      <param name="rect">A <see cref="T:System.Drawing.RectangleF"/> structure that intersects the current clip region of the <see cref="T:DevExpress.Pdf.PdfGraphics"/> object (defined in world coordinate system).</param>
+      <param name="rect">A <see cref="T:System.Drawing.RectangleF"/> structure to intersect with the current clip region.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfGraphics.JpegImageQuality">
       <summary>
@@ -733,12 +733,12 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.RestoreGraphicsState">
       <summary>
-        <para>Restores the saved graphics state.</para>
+        <para>Restores the most recently saved graphics state.</para>
       </summary>
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.RotateTransform(System.Single)">
       <summary>
-        <para>Rotates the coordinate system clockwise to the specified angle relative to its origin.</para>
+        <para>Rotates the coordinate system  clockwise relative to its origin to the specified angle.</para>
       </summary>
       <param name="degree">Angle of rotation in degrees.</param>
     </member>
@@ -749,7 +749,7 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.ScaleTransform(System.Single,System.Single)">
       <summary>
-        <para>Scales the coordinate system by the specified scale factor.</para>
+        <para>Scales the coordinate system according to the specified scale factor.</para>
       </summary>
       <param name="sx">Scale factor in the x direction.</param>
       <param name="sy">Scale factor in the y direction.</param>
@@ -762,10 +762,10 @@
     </member>
     <member name="M:DevExpress.Pdf.PdfGraphics.TranslateTransform(System.Single,System.Single)">
       <summary>
-        <para>Translates the coordinate system origin to the specified point.</para>
+        <para>Translates the origin of the coordinate system to the specified point.</para>
       </summary>
-      <param name="x">The x-coordinate of the translation.</param>
-      <param name="y">The y-coordinate of the translation.</param>
+      <param name="x">A single structure that is the x-coordinate of the translation.</param>
+      <param name="y">A single structure that is the y-coordinate of the translation.</param>
     </member>
     <member name="P:DevExpress.Pdf.PdfGraphics.UseKerning">
       <summary>
@@ -1433,9 +1433,6 @@
       <summary>
         <para>DirectX rendering engine.</para>
       </summary>
-    </member>
-    <member name="F:DevExpress.Pdf.PdfRenderingEngine.DirectXSoftware">
-      <summary />
     </member>
     <member name="F:DevExpress.Pdf.PdfRenderingEngine.GdiPlus">
       <summary>

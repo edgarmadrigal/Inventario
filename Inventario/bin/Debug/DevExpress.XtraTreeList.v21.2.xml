@@ -9239,9 +9239,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.ExpandNodesOnFiltering">
       <summary>
-        <para>Gets or sets whether collapsed nodes are automatically expanded if they match the filter criteria.</para>
+        <para>Gets or sets whether the collapsed nodes are automatically expanded if they match the filter criteria.</para>
       </summary>
-      <value>true if collapsed nodes are automatically expanded if they match the filter criteria; otherwise, false.</value>
+      <value>true if the collapsed nodes are automatically expanded if match the filter criteria; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsBehavior.ExpandNodesOnIncrementalSearch">
       <summary>
@@ -9650,9 +9650,9 @@ The DefaultBoolean.Default value is equivalent to DefaultBoolean.True if the sta
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsFilter.ExpandNodesOnFiltering">
       <summary>
-        <para>Gets or sets whether collapsed nodes are automatically expanded if they match the filter criteria.</para>
+        <para>Gets or sets whether the collapsed nodes are automatically expanded if they match the filter criteria.</para>
       </summary>
-      <value>true if collapsed nodes are automatically expanded if they match the filter criteria; otherwise, false.</value>
+      <value>true if the collapsed nodes are automatically expanded if match the filter criteria; otherwise, false.</value>
     </member>
     <member name="P:DevExpress.XtraTreeList.TreeListOptionsFilter.FilterEditorAggregateEditing">
       <summary>

@@ -437,7 +437,7 @@
             // xrPictureBox1
             // 
             this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Image", "[codigoBarras]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[codigoBarras]")});
             this.xrPictureBox1.ImageAlignment = DevExpress.XtraPrinting.ImageAlignment.MiddleCenter;
             this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(132.72F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
@@ -446,8 +446,8 @@
             // xrPictureBox2
             // 
             this.xrPictureBox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Image", "[qr]")});
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(3.176928E-05F, 0F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[qr]")});
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0.5206747F, 0F);
             this.xrPictureBox2.Name = "xrPictureBox2";
             this.xrPictureBox2.SizeF = new System.Drawing.SizeF(132.72F, 120.3332F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
@@ -574,7 +574,7 @@
             this.RollPaper = true;
             this.ShowPrintMarginsWarning = false;
             this.SnapGridSize = 13.02083F;
-            this.Version = "18.1";
+            this.Version = "21.2";
             ((System.ComponentModel.ISupportInitialize)(this.objectDataSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

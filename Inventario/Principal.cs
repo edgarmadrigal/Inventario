@@ -14,8 +14,10 @@ namespace Inventario
         private void eSCANEOToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
-            Escaneo et = new Escaneo();
-            et.MdiParent = this;
+            Escaneo et = new Escaneo
+            {
+                MdiParent = this
+            };
             // et.Dock = DockStyle.Fill; ///MAXIMIZADO POR DEFAULT
             et.Show();
         }

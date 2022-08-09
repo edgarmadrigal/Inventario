@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 using System.Drawing;
 namespace Inventario
 {
@@ -15,7 +10,7 @@ namespace Inventario
         public int? id { get; set; }
 
         public int id_cliente { get; set; }
-
+        public int cn_tag_num { get; set; }        
 
         public int id_factura { get; set; }
 
@@ -33,7 +28,8 @@ namespace Inventario
 
         public string COUNTRY { get; set; }
 
-        public string CARTON_NUMBER { get; set; }
+        public string CARTON_NUMBER_INICIAL { get; set; }
+        public string CARTON_NUMBER_FINAL { get; set; }
 
         public string ESTILO { get; set; }
 
@@ -53,6 +49,7 @@ namespace Inventario
         public string Vendor { get; set; }
 
         public string ShipTo { get; set; }
+        public string DPCI { get; set; }
 
         public string poItem { get; set; }
 
@@ -69,6 +66,7 @@ namespace Inventario
         public string numeroEtiqueta3 { get; set; }
 
         public string Size { get; set; }
+        public string color { get; set; }
 
         public string upc { get; set; }
 
@@ -83,6 +81,9 @@ namespace Inventario
         public string TipoCarton { get; set; }
 
         public string usuario { get; set; }
+        public string itemDescription { get; set; }
+
+        
 
 
         public int idusuario { get; set; }
@@ -90,10 +91,6 @@ namespace Inventario
         public System.Nullable<int> idSize { get; set; }
 
         public System.Nullable<System.DateTime> Fecha { get; set; }
-
-
-        public string DPCI { get; set; }
-
 
     }
 }
