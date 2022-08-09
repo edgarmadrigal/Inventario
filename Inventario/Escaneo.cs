@@ -43,6 +43,7 @@ namespace Inventario
         /*99 ES PREPACK*/
         /*1000 ES LEVIS CINTAS IMPORTADO Y TODO LO QUE SE DE DE ALTA MANUAL */
         /*88  ES TARGET */
+        /*--------*/
         public void InicializarTablas()
         {
             tablaPrepack = new DataTable();
