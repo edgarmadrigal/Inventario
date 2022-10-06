@@ -567,13 +567,6 @@ namespace Inventario
 			return ((ISingleResult<GuardarAltaPOManualResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaProductosNuevo")]
-		public ISingleResult<ConsultaProductosNuevoResult> ConsultaProductosNuevo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string poItem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prodCd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizeIzquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizederecho)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po, poItem, prodCd, sizeIzquierdo, sizederecho);
-			return ((ISingleResult<ConsultaProductosNuevoResult>)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GuardarProductosTARGET")]
 		public ISingleResult<GuardarProductosTARGETResult> GuardarProductosTARGET([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po_numero, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> cantidad, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string size_izquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string size_derecho, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string assembly, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Vendor", DbType="VarChar(MAX)")] string vendor, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ShipTo", DbType="VarChar(MAX)")] string shipTo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string upc, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="BigInt")] System.Nullable<long> cn_tag_num, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prod_cd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> create_iduser)
 		{
@@ -663,6 +656,13 @@ namespace Inventario
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), id);
 			return ((ISingleResult<ConsultaInventarioIDResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ConsultaProductosNuevo")]
+		public ISingleResult<ConsultaProductosNuevoResult> ConsultaProductosNuevo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Decimal(18,0)")] System.Nullable<decimal> po, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string poItem, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string prodCd, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizeIzquierdo, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="VarChar(150)")] string sizederecho)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), po, poItem, prodCd, sizeIzquierdo, sizederecho);
+			return ((ISingleResult<ConsultaProductosNuevoResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -7105,194 +7105,6 @@ namespace Inventario
 		}
 	}
 	
-	public partial class ConsultaProductosNuevoResult
-	{
-		
-		private System.Nullable<int> _id;
-		
-		private string _CartonNumber;
-		
-		private string _ProductCode;
-		
-		private string _Size;
-		
-		private string _UPC;
-		
-		private string _vendor;
-		
-		private System.Nullable<long> _TotalUnits;
-		
-		private string _CartonType;
-		
-		private string _cantidad;
-		
-		private string _ProductCode1;
-		
-		public ConsultaProductosNuevoResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int")]
-		public System.Nullable<int> id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					this._id = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CartonNumber", DbType="NVarChar(150)")]
-		public string CartonNumber
-		{
-			get
-			{
-				return this._CartonNumber;
-			}
-			set
-			{
-				if ((this._CartonNumber != value))
-				{
-					this._CartonNumber = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCode", DbType="NVarChar(150)")]
-		public string ProductCode
-		{
-			get
-			{
-				return this._ProductCode;
-			}
-			set
-			{
-				if ((this._ProductCode != value))
-				{
-					this._ProductCode = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Size", DbType="NVarChar(150)")]
-		public string Size
-		{
-			get
-			{
-				return this._Size;
-			}
-			set
-			{
-				if ((this._Size != value))
-				{
-					this._Size = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UPC", DbType="NVarChar(150)")]
-		public string UPC
-		{
-			get
-			{
-				return this._UPC;
-			}
-			set
-			{
-				if ((this._UPC != value))
-				{
-					this._UPC = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendor", DbType="NVarChar(150)")]
-		public string vendor
-		{
-			get
-			{
-				return this._vendor;
-			}
-			set
-			{
-				if ((this._vendor != value))
-				{
-					this._vendor = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUnits", DbType="BigInt")]
-		public System.Nullable<long> TotalUnits
-		{
-			get
-			{
-				return this._TotalUnits;
-			}
-			set
-			{
-				if ((this._TotalUnits != value))
-				{
-					this._TotalUnits = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CartonType", DbType="NVarChar(150)")]
-		public string CartonType
-		{
-			get
-			{
-				return this._CartonType;
-			}
-			set
-			{
-				if ((this._CartonType != value))
-				{
-					this._CartonType = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="NVarChar(150)")]
-		public string cantidad
-		{
-			get
-			{
-				return this._cantidad;
-			}
-			set
-			{
-				if ((this._cantidad != value))
-				{
-					this._cantidad = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCode1", DbType="NVarChar(150)")]
-		public string ProductCode1
-		{
-			get
-			{
-				return this._ProductCode1;
-			}
-			set
-			{
-				if ((this._ProductCode1 != value))
-				{
-					this._ProductCode1 = value;
-				}
-			}
-		}
-	}
-	
 	public partial class GuardarProductosTARGETResult
 	{
 		
@@ -9552,6 +9364,194 @@ namespace Inventario
 				if ((this._ShipTo != value))
 				{
 					this._ShipTo = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ConsultaProductosNuevoResult
+	{
+		
+		private System.Nullable<int> _id;
+		
+		private string _CartonNumber;
+		
+		private string _ProductCode;
+		
+		private string _Size;
+		
+		private string _UPC;
+		
+		private string _vendor;
+		
+		private System.Nullable<long> _TotalUnits;
+		
+		private string _CartonType;
+		
+		private string _cantidad;
+		
+		private string _ProductCode1;
+		
+		public ConsultaProductosNuevoResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int")]
+		public System.Nullable<int> id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CartonNumber", DbType="NVarChar(150)")]
+		public string CartonNumber
+		{
+			get
+			{
+				return this._CartonNumber;
+			}
+			set
+			{
+				if ((this._CartonNumber != value))
+				{
+					this._CartonNumber = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCode", DbType="NVarChar(150)")]
+		public string ProductCode
+		{
+			get
+			{
+				return this._ProductCode;
+			}
+			set
+			{
+				if ((this._ProductCode != value))
+				{
+					this._ProductCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Size", DbType="NVarChar(150)")]
+		public string Size
+		{
+			get
+			{
+				return this._Size;
+			}
+			set
+			{
+				if ((this._Size != value))
+				{
+					this._Size = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_UPC", DbType="NVarChar(150)")]
+		public string UPC
+		{
+			get
+			{
+				return this._UPC;
+			}
+			set
+			{
+				if ((this._UPC != value))
+				{
+					this._UPC = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_vendor", DbType="NVarChar(150)")]
+		public string vendor
+		{
+			get
+			{
+				return this._vendor;
+			}
+			set
+			{
+				if ((this._vendor != value))
+				{
+					this._vendor = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalUnits", DbType="BigInt")]
+		public System.Nullable<long> TotalUnits
+		{
+			get
+			{
+				return this._TotalUnits;
+			}
+			set
+			{
+				if ((this._TotalUnits != value))
+				{
+					this._TotalUnits = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CartonType", DbType="NVarChar(150)")]
+		public string CartonType
+		{
+			get
+			{
+				return this._CartonType;
+			}
+			set
+			{
+				if ((this._CartonType != value))
+				{
+					this._CartonType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cantidad", DbType="NVarChar(150)")]
+		public string cantidad
+		{
+			get
+			{
+				return this._cantidad;
+			}
+			set
+			{
+				if ((this._cantidad != value))
+				{
+					this._cantidad = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProductCode1", DbType="NVarChar(150)")]
+		public string ProductCode1
+		{
+			get
+			{
+				return this._ProductCode1;
+			}
+			set
+			{
+				if ((this._ProductCode1 != value))
+				{
+					this._ProductCode1 = value;
 				}
 			}
 		}

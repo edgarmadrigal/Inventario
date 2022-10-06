@@ -192,7 +192,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaProductosNuevoResult> Producto = consulta.ConsultaProductosNuevo(Convert.ToInt64(po), poItem, prodCd, sizeIzquierdo, sizeDerecho).ToList();
+                List<ConsultaProductosNuevoResult> Producto = consulta.ConsultaProductosNuevo(Convert.ToInt64(po), poItem, prodCd, sizeIzquierdo.Trim(), sizeDerecho.Trim()).ToList();
 
                 return Producto;
             }

@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>316</ApplicationRevision>
+    <ApplicationRevision>333</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -236,6 +236,12 @@
     <Compile Include="ReporteCaja.Designer.cs">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCajaTargetAssorment.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteCajaTargetAssorment.Designer.cs">
+      <DependentUpon>ReporteCajaTargetAssorment.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteCajaZumines.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCaja.resx">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCajaTargetAssorment.resx">
+      <DependentUpon>ReporteCajaTargetAssorment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCajaZumines.resx">
       <DependentUpon>ReporteCajaZumines.cs</DependentUpon>
@@ -381,6 +390,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fondo1.jpeg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Presentación5.ico" />
   </ItemGroup>
   <ItemGroup>

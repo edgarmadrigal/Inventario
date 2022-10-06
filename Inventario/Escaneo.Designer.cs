@@ -181,6 +181,7 @@
             this.cmbPOItem = new System.Windows.Forms.ComboBox();
             this.cmbPO = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.btnPrendasExtra = new System.Windows.Forms.Button();
             this.lblAyuda = new System.Windows.Forms.Label();
             this.btnIncompleteCarton = new System.Windows.Forms.Button();
@@ -230,6 +231,8 @@
             this.label71 = new System.Windows.Forms.Label();
             this.dgvPrePack2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.cmbMarcaPrepack = new System.Windows.Forms.ComboBox();
             this.btnQuitaTalla = new System.Windows.Forms.Button();
             this.btnAgregaTalla = new System.Windows.Forms.Button();
             this.txtCodigoupcPrepack = new System.Windows.Forms.TextBox();
@@ -1903,6 +1906,7 @@
             this.tpEscan.AllowDrop = true;
             this.tpEscan.AutoScroll = true;
             this.tpEscan.BackColor = System.Drawing.Color.Silver;
+            this.tpEscan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tpEscan.Controls.Add(this.cmbTerminado);
             this.tpEscan.Controls.Add(this.cmbFactura);
             this.tpEscan.Controls.Add(this.cmbCliente);
@@ -1958,6 +1962,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.groupBox4.Controls.Add(this.button6);
             this.groupBox4.Controls.Add(this.btnPrendasExtra);
             this.groupBox4.Controls.Add(this.lblAyuda);
             this.groupBox4.Controls.Add(this.btnIncompleteCarton);
@@ -1976,6 +1982,17 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Last Item Scanned";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(6, 185);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(153, 87);
+            this.button6.TabIndex = 9995963;
+            this.button6.Text = "imprime Target Assorment";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // btnPrendasExtra
             // 
@@ -2042,7 +2059,7 @@
             // txtSize
             // 
             this.txtSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSize.Location = new System.Drawing.Point(181, 129);
+            this.txtSize.Location = new System.Drawing.Point(178, 88);
             this.txtSize.Name = "txtSize";
             this.txtSize.ReadOnly = true;
             this.txtSize.Size = new System.Drawing.Size(371, 44);
@@ -2054,7 +2071,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(90, 134);
+            this.label28.Location = new System.Drawing.Point(87, 93);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(85, 39);
             this.label28.TabIndex = 9999;
@@ -2074,7 +2091,7 @@
             // txtUPCScann
             // 
             this.txtUPCScann.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUPCScann.Location = new System.Drawing.Point(181, 61);
+            this.txtUPCScann.Location = new System.Drawing.Point(177, 35);
             this.txtUPCScann.Name = "txtUPCScann";
             this.txtUPCScann.Size = new System.Drawing.Size(371, 47);
             this.txtUPCScann.TabIndex = 5;
@@ -2085,11 +2102,11 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(8, 34);
+            this.label30.Location = new System.Drawing.Point(81, 38);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(167, 78);
+            this.label30.Size = new System.Drawing.Size(90, 39);
             this.label30.TabIndex = 9995959;
-            this.label30.Text = "Current \r\nItem UPC";
+            this.label30.Text = "UPC";
             // 
             // groupBox3
             // 
@@ -2486,6 +2503,7 @@
             this.btnzCancelar.Size = new System.Drawing.Size(83, 73);
             this.btnzCancelar.TabIndex = 207;
             this.btnzCancelar.UseVisualStyleBackColor = false;
+            this.btnzCancelar.Click += new System.EventHandler(this.btnzCancelar_Click);
             // 
             // label18
             // 
@@ -2651,6 +2669,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.cmbMarcaPrepack);
             this.groupBox2.Controls.Add(this.btnQuitaTalla);
             this.groupBox2.Controls.Add(this.btnAgregaTalla);
             this.groupBox2.Controls.Add(this.txtCodigoupcPrepack);
@@ -2670,6 +2690,34 @@
             this.groupBox2.TabIndex = 1000000016;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(74, 64);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(85, 29);
+            this.label14.TabIndex = 301;
+            this.label14.Text = "Marca:";
+            // 
+            // cmbMarcaPrepack
+            // 
+            this.cmbMarcaPrepack.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMarcaPrepack.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMarcaPrepack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarcaPrepack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMarcaPrepack.FormattingEnabled = true;
+            this.cmbMarcaPrepack.Items.AddRange(new object[] {
+            "LEVIS",
+            "ZUMIES",
+            "TARGET",
+            "CINTAS"});
+            this.cmbMarcaPrepack.Location = new System.Drawing.Point(168, 64);
+            this.cmbMarcaPrepack.Name = "cmbMarcaPrepack";
+            this.cmbMarcaPrepack.Size = new System.Drawing.Size(300, 37);
+            this.cmbMarcaPrepack.TabIndex = 302;
+            this.cmbMarcaPrepack.SelectedIndexChanged += new System.EventHandler(this.cmbMarcaPrepack_SelectedIndexChanged);
             // 
             // btnQuitaTalla
             // 
@@ -2701,7 +2749,7 @@
             // 
             this.txtCodigoupcPrepack.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodigoupcPrepack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoupcPrepack.Location = new System.Drawing.Point(168, 217);
+            this.txtCodigoupcPrepack.Location = new System.Drawing.Point(168, 226);
             this.txtCodigoupcPrepack.MaxLength = 15;
             this.txtCodigoupcPrepack.Name = "txtCodigoupcPrepack";
             this.txtCodigoupcPrepack.Size = new System.Drawing.Size(300, 35);
@@ -2724,7 +2772,7 @@
             // 
             this.label64.AutoSize = true;
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label64.Location = new System.Drawing.Point(84, 91);
+            this.label64.Location = new System.Drawing.Point(84, 122);
             this.label64.Name = "label64";
             this.label64.Size = new System.Drawing.Size(73, 29);
             this.label64.TabIndex = 198;
@@ -2734,7 +2782,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(8, 220);
+            this.label65.Location = new System.Drawing.Point(8, 229);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(154, 29);
             this.label65.TabIndex = 196;
@@ -2744,7 +2792,7 @@
             // 
             this.txtCantidadPrepack.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCantidadPrepack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadPrepack.Location = new System.Drawing.Point(168, 151);
+            this.txtCantidadPrepack.Location = new System.Drawing.Point(168, 176);
             this.txtCantidadPrepack.MaxLength = 2;
             this.txtCantidadPrepack.Name = "txtCantidadPrepack";
             this.txtCantidadPrepack.Size = new System.Drawing.Size(300, 35);
@@ -2755,7 +2803,7 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label66.Location = new System.Drawing.Point(47, 154);
+            this.label66.Location = new System.Drawing.Point(47, 179);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(115, 29);
             this.label66.TabIndex = 194;
@@ -2782,7 +2830,7 @@
             this.cmbTallaPrepack.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTallaPrepack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTallaPrepack.FormattingEnabled = true;
-            this.cmbTallaPrepack.Location = new System.Drawing.Point(168, 88);
+            this.cmbTallaPrepack.Location = new System.Drawing.Point(168, 119);
             this.cmbTallaPrepack.Name = "cmbTallaPrepack";
             this.cmbTallaPrepack.Size = new System.Drawing.Size(300, 37);
             this.cmbTallaPrepack.TabIndex = 3;
@@ -2804,7 +2852,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(13, 26);
+            this.label68.Location = new System.Drawing.Point(13, 22);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(149, 29);
             this.label68.TabIndex = 102;
@@ -2814,7 +2862,7 @@
             // 
             this.txtPoPrepack.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPoPrepack.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPoPrepack.Location = new System.Drawing.Point(168, 23);
+            this.txtPoPrepack.Location = new System.Drawing.Point(168, 19);
             this.txtPoPrepack.MaxLength = 12;
             this.txtPoPrepack.Name = "txtPoPrepack";
             this.txtPoPrepack.Size = new System.Drawing.Size(300, 35);
@@ -2991,7 +3039,7 @@
             this.tabAlmacen.Controls.Add(this.label51);
             this.tabAlmacen.Controls.Add(this.xtraTabControl1);
             this.tabAlmacen.Name = "tabAlmacen";
-            this.tabAlmacen.Size = new System.Drawing.Size(1130, 723);
+            this.tabAlmacen.Size = new System.Drawing.Size(1017, 711);
             // 
             // pictureBox2
             // 
@@ -4372,7 +4420,7 @@
             // 
             // ubicacionEntradaConsultaUbicacionDetalleResultBindingSource1
             // 
-            this.ubicacionEntradaConsultaUbicacionDetalleResultBindingSource1.DataSource = typeof(ubicacion_Entrada_ConsultaUbicacionDetalleResult);
+            this.ubicacionEntradaConsultaUbicacionDetalleResultBindingSource1.DataSource = typeof(Inventario.ubicacion_Entrada_ConsultaUbicacionDetalleResult);
             // 
             // gridView4
             // 
@@ -4581,7 +4629,7 @@
             // 
             // ubicacionEntradaConsultaUbicacionDetalleIDResultBindingSource
             // 
-            this.ubicacionEntradaConsultaUbicacionDetalleIDResultBindingSource.DataSource = typeof(ubicacion_Entrada_ConsultaUbicacionDetalleIDResult);
+            this.ubicacionEntradaConsultaUbicacionDetalleIDResultBindingSource.DataSource = typeof(Inventario.ubicacion_Entrada_ConsultaUbicacionDetalleIDResult);
             // 
             // gridView5
             // 
@@ -4716,7 +4764,7 @@
             // 
             // ubicacionEntradaConsultaUbicacionDetalleResultBindingSource
             // 
-            this.ubicacionEntradaConsultaUbicacionDetalleResultBindingSource.DataSource = typeof(ubicacion_Entrada_ConsultaUbicacionDetalleResult);
+            this.ubicacionEntradaConsultaUbicacionDetalleResultBindingSource.DataSource = typeof(Inventario.ubicacion_Entrada_ConsultaUbicacionDetalleResult);
             // 
             // gridView6
             // 
@@ -5196,5 +5244,8 @@
         private System.Windows.Forms.Button btnPrendasExtra;
         internal System.Windows.Forms.Label label73;
         private System.Windows.Forms.ComboBox cmbMarca;
+        internal System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbMarcaPrepack;
+        private System.Windows.Forms.Button button6;
     }
 }

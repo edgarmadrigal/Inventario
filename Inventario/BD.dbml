@@ -659,25 +659,6 @@
       <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaProductosNuevo" Method="ConsultaProductosNuevo">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="sizederecho" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaProductosNuevoResult">
-      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CartonNumber" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="UPC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="vendor" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="CartonType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.GuardarProductosTARGET" Method="GuardarProductosTARGET">
     <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
     <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
@@ -892,6 +873,25 @@
       <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosNuevo" Method="ConsultaProductosNuevo">
+    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizederecho" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaProductosNuevoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="vendor" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CartonType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

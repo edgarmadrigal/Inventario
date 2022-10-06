@@ -450,7 +450,6 @@ C:\resp\Inventario\Inventario\obj\Debug\Inventario.exe
 C:\resp\Inventario\Inventario\obj\Debug\Inventario.pdb
 C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
 C:\resp\Inventario\Inventario\obj\Debug\Inventario.exe.licenses
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
 C:\Inventario\Inventario\obj\Debug\Interop.WMPLib.dll
 C:\Inventario\Inventario\obj\Debug\Inventario.csproj.ResolveComReference.cache
 C:\Inventario\Inventario\obj\Debug\Inventario.CodigoBarrasAlmacen.resources
@@ -676,3 +675,6 @@ C:\Inventario\Inventario\obj\Debug\Inventario.TrustInfo.xml
 C:\Inventario\Inventario\obj\Debug\Inventario.exe.manifest
 C:\Inventario\Inventario\obj\Debug\Inventario.application
 C:\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
+C:\Inventario\Inventario\bin\Debug\fondo1.jpeg
+C:\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaTargetAssorment.resources
