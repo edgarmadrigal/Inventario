@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>333</ApplicationRevision>
+    <ApplicationRevision>386</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -340,6 +340,10 @@
       <LastGenOutput>BD.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="C39M72DM.TTF" />
+    <None Include="C39M90DM.TTF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\DataSources\ConsultaAlmacenesFolioComprasResult.datasource" />
@@ -390,9 +394,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fondo1.jpeg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Presentación5.ico" />
   </ItemGroup>
   <ItemGroup>

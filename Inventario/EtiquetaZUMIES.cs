@@ -10,7 +10,7 @@ namespace Inventario
         public int? id { get; set; }
 
         public int id_cliente { get; set; }
-        public int cn_tag_num { get; set; }        
+        public int cn_tag_num { get; set; }
 
         public int id_factura { get; set; }
 
@@ -83,7 +83,7 @@ namespace Inventario
         public string usuario { get; set; }
         public string itemDescription { get; set; }
 
-        
+
 
 
         public int idusuario { get; set; }

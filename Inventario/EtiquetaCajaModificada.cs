@@ -15,7 +15,7 @@ namespace Inventario
 
 
         public int cn_tag_num { get; set; }
-        
+
         public int id_factura { get; set; }
 
         public int id_terminado { get; set; }
@@ -81,6 +81,8 @@ namespace Inventario
         public string TipoCarton { get; set; }
 
         public string usuario { get; set; }
+        public string DPCI { get; set; }
+        public string barcode { get; set; }
 
 
         public int idusuario { get; set; }
