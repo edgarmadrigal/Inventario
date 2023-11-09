@@ -255,7 +255,7 @@ namespace Inventario
                 BDDataContext consulta = new BDDataContext();
 
                 decimal? po_numero = 0;
-                po_numero = Convert.ToDecimal(po);
+                po_numero = Convert.ToInt64(po);
                 List<ConsultaProductosZumiesResult> Producto = consulta.ConsultaProductosZumies(po_numero, poItem, prodCd, size).ToList();
 
                 return Producto;
@@ -302,7 +302,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                 MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
 
                 return objusuario;
             }
@@ -510,6 +510,33 @@ namespace Inventario
             }
             return respuesta;
         }
+
+        public int GuardaBENS(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                consulta.GuardarBens(et.po,
+                                          et.estilo,
+                                          et.Cantidad,
+                                          //et.CantidadCajas,
+                                          et.upc,
+                                          et.idSize,
+                                          et.itemDescription,
+                                          et.color,
+                                          et.escaneado,
+                                          et.idusuario).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
         public int GuardarTarget(EtiquetaCajaModificada et)
         {
             int respuesta = 0;
@@ -552,9 +579,7 @@ namespace Inventario
                 consulta.SubmitChanges();
                 respuesta = 1;
             }
-#pragma warning disable CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             catch (Exception ex)
-#pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
                 // MessageBox.Show(ex.Message);
             }
@@ -572,7 +597,11 @@ namespace Inventario
                                           et.size_derecho,
                                           et.upc,
                                           et.DPCI,
-                                          et.Cantidad, iduser).FirstOrDefault();
+                                          et.Cantidad,
+                                          et.CantidadCajas,
+                                          et.esprepack,
+                                          et.barcode,
+                                          iduser).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = 1;
             }
@@ -1392,7 +1421,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                int insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad, pd.upc, pd.idusuario, pd.idSize);
+                int insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad,pd.CantidadCajas, pd.upc, pd.idusuario, pd.idSize);
 
                 consulta.SubmitChanges();
                 // respuesta = Convert.ToInt32(insertInventario.Column1);

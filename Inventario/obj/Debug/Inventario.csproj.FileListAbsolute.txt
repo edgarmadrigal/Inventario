@@ -678,3 +678,4 @@ C:\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
 C:\Inventario\Inventario\obj\Debug\Inventario.exe
 C:\Inventario\Inventario\obj\Debug\Inventario.pdb
 C:\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaBens.resources

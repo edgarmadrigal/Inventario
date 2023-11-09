@@ -86,6 +86,7 @@ namespace Inventario
 
 
         public int idusuario { get; set; }
+        public int esprepack { get; set; }
 
         public System.Nullable<int> idSize { get; set; }
 

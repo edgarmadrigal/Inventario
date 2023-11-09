@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>386</ApplicationRevision>
+    <ApplicationRevision>402</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -99,6 +99,7 @@
     <Reference Include="DevExpress.Images.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Office.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Pdf.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v21.2.Drawing, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v21.2.Core, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -118,6 +119,7 @@
     <Reference Include="DevExpress.XtraPrinting.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraReports.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraReports.v21.2.Extensions, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v21.2, Version=21.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Excel">
       <HintPath>..\..\..\Inventario\Inventario\Excel.dll</HintPath>
     </Reference>
@@ -186,6 +188,7 @@
       <DependentUpon>Escaneo.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="EtiquetaBens.cs" />
     <Compile Include="EtiquetaCajaModificada.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
@@ -235,6 +238,12 @@
     </Compile>
     <Compile Include="ReporteCaja.Designer.cs">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteCajaBens.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteCajaBens.Designer.cs">
+      <DependentUpon>ReporteCajaBens.cs</DependentUpon>
     </Compile>
     <Compile Include="ReporteCajaTargetAssorment.cs">
       <SubType>Component</SubType>
@@ -296,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCaja.resx">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCajaBens.resx">
+      <DependentUpon>ReporteCajaBens.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteCajaTargetAssorment.resx">
       <DependentUpon>ReporteCajaTargetAssorment.cs</DependentUpon>

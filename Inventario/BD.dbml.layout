@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.625, 8.5" name="BD">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.625, 10" name="BD">
   <DataContextMoniker Name="/BDDataContext" />
   <nestedChildShapes>
     <classShape Id="ffa8b3c8-d1f7-41dd-9850-172f967201d2" absoluteBounds="0.5, 0.5, 2, 3.8862125651041666">
@@ -20,10 +20,10 @@
         <elementListCompartment Id="cde89f1b-b579-4f77-9ec4-7afa5fada117" absoluteBounds="2.765, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="adf352a3-4218-496f-9bcb-c51b3185dd9f" absoluteBounds="5, 0.625, 2, 4.6554182942708326">
+    <classShape Id="adf352a3-4218-496f-9bcb-c51b3185dd9f" absoluteBounds="5, 0.5, 2, 4.6554182942708326">
       <DataClassMoniker Name="/BDDataContext/Inventario" />
       <nestedChildShapes>
-        <elementListCompartment Id="968f28ee-90e3-49b2-a9e0-01366f9326ee" absoluteBounds="5.015, 1.085, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="968f28ee-90e3-49b2-a9e0-01366f9326ee" absoluteBounds="5.015, 0.96, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="496386ba-ba7a-4ec5-97d1-ed3311e52fa7" absoluteBounds="9.25, 4.875, 2, 1.1939925130208344">
@@ -98,23 +98,23 @@
         <elementListCompartment Id="595b3844-088a-4526-8ac5-3528dacb75b9" absoluteBounds="2.7649999999999997, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <classShape Id="71391b77-dd04-437a-85f4-21d99fabdfdf" absoluteBounds="9.25, 0.625, 2, 2.3478011067708335">
-      <DataClassMoniker Name="/BDDataContext/PrepackDetalle" />
-      <nestedChildShapes>
-        <elementListCompartment Id="11f4a51a-5371-4748-adaa-718e64a96a33" absoluteBounds="9.265, 1.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
-      </nestedChildShapes>
-    </classShape>
-    <classShape Id="1e9eaa77-adfd-4384-a037-a0e72e25e03b" absoluteBounds="0.5, 4.375, 2, 1.7708968098958331">
+    <classShape Id="1e9eaa77-adfd-4384-a037-a0e72e25e03b" absoluteBounds="0.625, 7.375, 2, 1.7708968098958331">
       <DataClassMoniker Name="/BDDataContext/Prepack" />
       <nestedChildShapes>
-        <elementListCompartment Id="b5330e6f-8716-4d1c-823f-73f2f5073de3" absoluteBounds="0.515, 4.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="b5330e6f-8716-4d1c-823f-73f2f5073de3" absoluteBounds="0.64, 7.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.5 : 5.26044840494792); (2.585 : 5.26044840494792); (2.585 : 5.085); (4.96 : 5.085); (4.96 : 0.585); (9.19 : 0.585); (9.19 : 1.79890055338542); (9.25 : 1.79890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+    <classShape Id="9f85172b-e826-42b5-803a-e2aeda0b7778" absoluteBounds="3.5, 7.25, 2, 2.5401025390625">
+      <DataClassMoniker Name="/BDDataContext/PrepackDetalle" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4a386701-fb32-408f-a065-a58077f26962" absoluteBounds="3.515, 7.71, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 8.26044840494792); (3.5 : 8.26044840494792)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BDDataContext/Prepack/Prepack_PrepackDetalle" />
       <nodes>
         <classShapeMoniker Id="1e9eaa77-adfd-4384-a037-a0e72e25e03b" />
-        <classShapeMoniker Id="71391b77-dd04-437a-85f4-21d99fabdfdf" />
+        <classShapeMoniker Id="9f85172b-e826-42b5-803a-e2aeda0b7778" />
       </nodes>
     </associationConnector>
   </nestedChildShapes>

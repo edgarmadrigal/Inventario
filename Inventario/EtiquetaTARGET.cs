@@ -34,6 +34,10 @@ namespace Inventario
         public System.Nullable<decimal> po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
 
+
+        public string CARTON_NUMBER_INICIAL { get; set; }
+        public string CARTON_NUMBER_FINAL { get; set; }
+
         public string assembly { get; set; }
 
         public string Vendor { get; set; }
