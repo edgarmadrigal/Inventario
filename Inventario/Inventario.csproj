@@ -28,7 +28,7 @@
     <UpdateUrl>\\192.168.128.245\Sistemas\Inventario\</UpdateUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>402</ApplicationRevision>
+    <ApplicationRevision>445</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -192,6 +192,7 @@
     <Compile Include="EtiquetaCajaModificada.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="EtiquetaROCKY.cs" />
     <Compile Include="EtiquetaTARGET.cs" />
     <Compile Include="EtiquetaZUMIES.cs" />
     <Compile Include="Formulario.cs">
@@ -239,6 +240,12 @@
     <Compile Include="ReporteCaja.Designer.cs">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteCajaSaftech.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteCajaSaftech.Designer.cs">
+      <DependentUpon>ReporteCajaSaftech.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReporteCajaBens.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -275,6 +282,12 @@
     <Compile Include="ReporteHora.Designer.cs">
       <DependentUpon>ReporteHora.cs</DependentUpon>
     </Compile>
+    <Compile Include="ReporteRocky.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReporteRocky.Designer.cs">
+      <DependentUpon>ReporteRocky.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReportesMicrosip.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +319,9 @@
     <EmbeddedResource Include="ReporteCaja.resx">
       <DependentUpon>ReporteCaja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReporteCajaSaftech.resx">
+      <DependentUpon>ReporteCajaSaftech.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReporteCajaBens.resx">
       <DependentUpon>ReporteCajaBens.cs</DependentUpon>
     </EmbeddedResource>
@@ -323,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReporteHora.resx">
       <DependentUpon>ReporteHora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReporteRocky.resx">
+      <DependentUpon>ReporteRocky.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportesMicrosip.resx">
       <DependentUpon>ReportesMicrosip.cs</DependentUpon>
@@ -361,6 +380,7 @@
     <None Include="Properties\DataSources\ConsultaAlmacenesFolioComprasResult.datasource" />
     <None Include="Properties\DataSources\ConsultaAlmacenesResult.datasource" />
     <None Include="Properties\DataSources\ConsultaInventarioResult.datasource" />
+    <None Include="Properties\DataSources\ConsultaInventarioTallaSeparadaResult.datasource" />
     <None Include="Properties\DataSources\ubicacion_Entrada_ConsultaUbicacionDetalleIDResult.datasource" />
     <None Include="Properties\DataSources\ubicacion_Entrada_ConsultaUbicacionDetalleResult.datasource" />
     <None Include="Properties\DataSources\ubicacion_ReporteAlmacen_ConsultaResult.datasource" />

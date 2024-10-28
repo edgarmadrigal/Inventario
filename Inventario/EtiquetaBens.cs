@@ -19,6 +19,7 @@ namespace Inventario
         public int id_terminado { get; set; }
 
         public string cliente { get; set; }
+        public string id_string { get; set; }
 
         public string nivel { get; set; }
 
@@ -29,6 +30,7 @@ namespace Inventario
         public string QUANTITY { get; set; }
 
         public string COUNTRY { get; set; }
+        public string po_varchar { get; set; }
 
         public string CARTON_NUMBER_INICIAL { get; set; }
         public string CARTON_NUMBER_FINAL { get; set; }
@@ -86,6 +88,7 @@ namespace Inventario
         public string itemDescription { get; set; }
 
 
+        public string anio { get; set; }
 
 
         public int idusuario { get; set; }

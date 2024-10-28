@@ -52,6 +52,7 @@ namespace Inventario
 
         public string poItem { get; set; }
 
+        public string po_varchar { get; set; }
         public System.Nullable<decimal> Cantidad { get; set; }
         public System.Nullable<decimal> CantidadCajas { get; set; }
         public System.Nullable<int> Cant { get; set; }
@@ -76,6 +77,7 @@ namespace Inventario
 
         public string CartonRight { get; set; }
 
+        public string marca { get; set; }
         public string ProductCode { get; set; }
 
         public string TipoCarton { get; set; }

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Inventario\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F4F99B44-9D49-4113-A99B-D6C689A484EF}|Inventario\\Inventario.csproj|c:\\inventario\\inventario\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F4F99B44-9D49-4113-A99B-D6C689A484EF}|Inventario\\Inventario.csproj|solutionrelative:inventario\\principal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Principal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Inventario\\Inventario\\Principal.cs",
+              "RelativeDocumentMoniker": "Inventario\\Principal.cs",
+              "ToolTip": "C:\\Inventario\\Inventario\\Principal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inventario\\Principal.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T00:26:49.055Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

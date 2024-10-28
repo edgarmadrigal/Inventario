@@ -78,7 +78,7 @@ namespace Inventario
             catch (Exception ex)
 #pragma warning restore CS0168 // La variable 'ex' se ha declarado pero nunca se usa
             {
-                /*MessageBox.Show(ex.Message.ToString());*/
+                MessageBox.Show(ex.Message.ToString());
             }
         }
 
