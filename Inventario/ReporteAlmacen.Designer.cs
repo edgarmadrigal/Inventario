@@ -11,7 +11,9 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+#pragma warning disable CS0115 // 'ReporteAlmacen.Dispose(bool)': no se encontró ningún miembro adecuado para invalidar
         protected override void Dispose(bool disposing)
+#pragma warning restore CS0115 // 'ReporteAlmacen.Dispose(bool)': no se encontró ningún miembro adecuado para invalidar
         {
             if (disposing && (components != null))
             {
@@ -202,17 +204,41 @@
 
         #endregion
 
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.DetailBand Detail;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.DetailBand detailBand1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.DataAccess.ObjectBinding.ObjectDataSource objectDataSource2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
     }
 }

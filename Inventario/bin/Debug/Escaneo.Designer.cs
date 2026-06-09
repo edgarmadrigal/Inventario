@@ -30,41 +30,46 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Escaneo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle125 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle126 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle127 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle128 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle129 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle130 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle131 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle132 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle133 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle134 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle135 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle136 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle137 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle138 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvReporteAlmacen = new DevExpress.XtraTab.XtraTabControl();
             this.gridView9 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gcReporte = new DevExpress.XtraGrid.GridControl();
-            this.consultaInventarioResultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.consultaInventarioTallaSeparadaResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPO = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -80,6 +85,7 @@
             this.colCLIENTE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFACTURA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTERMINADO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.consultaInventarioResultBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.cbLimpiar = new System.Windows.Forms.CheckBox();
             this.btnImprimirRe = new System.Windows.Forms.Button();
             this.txtIDReImpresion = new System.Windows.Forms.TextBox();
@@ -95,14 +101,14 @@
             this.lblFechaFinal = new System.Windows.Forms.Label();
             this.lblFechaInicio = new System.Windows.Forms.Label();
             this.cmbPOB = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblCartonsEmpacados = new System.Windows.Forms.Label();
+            this.lblCartonReq = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txtCartonsReamaining = new System.Windows.Forms.TextBox();
             this.txtCartonsPacked = new System.Windows.Forms.TextBox();
             this.txtUnitsRemai = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblCartonsRestantes = new System.Windows.Forms.Label();
             this.txtCartonRq = new System.Windows.Forms.TextBox();
             this.cmbTerminado = new System.Windows.Forms.ComboBox();
             this.cmbFactura = new System.Windows.Forms.ComboBox();
@@ -127,12 +133,6 @@
             this.label32 = new System.Windows.Forms.Label();
             this.cmbTallaBaja = new System.Windows.Forms.ComboBox();
             this.btnBajaPO = new System.Windows.Forms.Button();
-            this.cmbTerminadoB = new System.Windows.Forms.ComboBox();
-            this.cmbFacturacionB = new System.Windows.Forms.ComboBox();
-            this.cmbClienteB = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.gcModulo = new DevExpress.XtraGrid.GridControl();
@@ -193,7 +193,9 @@
             this.cmbPOItem = new System.Windows.Forms.ComboBox();
             this.cmbPO = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.lblImprimirEtiqueta = new System.Windows.Forms.Label();
+            this.chkImprimirEtiqueta = new System.Windows.Forms.CheckBox();
+            this.btnImprimeOldNavy = new System.Windows.Forms.Button();
             this.btnPrendasExtra = new System.Windows.Forms.Button();
             this.lblAyuda = new System.Windows.Forms.Label();
             this.btnIncompleteCarton = new System.Windows.Forms.Button();
@@ -215,6 +217,8 @@
             this.label70 = new System.Windows.Forms.Label();
             this.dgvZumies = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.btnTodaslasTallas = new System.Windows.Forms.Button();
             this.cmbEstilo = new System.Windows.Forms.ComboBox();
             this.label73 = new System.Windows.Forms.Label();
             this.cmbMarca = new System.Windows.Forms.ComboBox();
@@ -297,6 +301,9 @@
             this.btnGuardarModificacion = new System.Windows.Forms.Button();
             this.tpReportePO = new System.Windows.Forms.TabPage();
             this.tpImportaLEVIS = new System.Windows.Forms.TabPage();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnImportarEstilo = new System.Windows.Forms.Button();
             this.btnImportar = new System.Windows.Forms.Button();
             this.btnImportarTARGET = new System.Windows.Forms.Button();
             this.btnImportarLevis = new System.Windows.Forms.Button();
@@ -310,7 +317,6 @@
             this.label59 = new System.Windows.Forms.Label();
             this.tpPOTallasSeparadas = new System.Windows.Forms.TabPage();
             this.gcPOTallasSeparadas = new DevExpress.XtraGrid.GridControl();
-            this.consultaInventarioTallaSeparadaResultBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView14 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn29 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn30 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -334,6 +340,32 @@
             this.dtpFechaInicioPOTallasSeparadas = new System.Windows.Forms.DateTimePicker();
             this.label84 = new System.Windows.Forms.Label();
             this.label85 = new System.Windows.Forms.Label();
+            this.tpAltaEstilo = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.dgvEstiloAlta = new System.Windows.Forms.DataGridView();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.cmbMarcaEstiloAlta = new System.Windows.Forms.ComboBox();
+            this.txtSizeIzquierdoEstiloAlta = new System.Windows.Forms.TextBox();
+            this.label88 = new System.Windows.Forms.Label();
+            this.txtSizeDerechoEstiloAlta = new System.Windows.Forms.TextBox();
+            this.txtDescriptionEstiloAlta = new System.Windows.Forms.TextBox();
+            this.label90 = new System.Windows.Forms.Label();
+            this.txtColorEstiloAlta = new System.Windows.Forms.TextBox();
+            this.label91 = new System.Windows.Forms.Label();
+            this.txtEstiloAlta = new System.Windows.Forms.TextBox();
+            this.btnEliminaEstiloAlta = new System.Windows.Forms.Button();
+            this.btnAgregarEstiloAlta = new System.Windows.Forms.Button();
+            this.txtUpcEstiloAlta = new System.Windows.Forms.TextBox();
+            this.btnCancelarEstiloAlta = new System.Windows.Forms.Button();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.btnActualizaEstiloAlta = new System.Windows.Forms.Button();
+            this.btnGuardarEstiloAlta = new System.Windows.Forms.Button();
+            this.label94 = new System.Windows.Forms.Label();
+            this.txtPOEstiloAlta = new System.Windows.Forms.TextBox();
             this.tabAlmacen = new DevExpress.XtraBars.Navigation.TabNavigationPage();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblVersion2 = new System.Windows.Forms.Label();
@@ -493,8 +525,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAlmacen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcReporte)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioResultBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioTallaSeparadaResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioResultBindingSource1)).BeginInit();
             this.tpReimpresion.SuspendLayout();
             this.tpReportes.SuspendLayout();
             this.tpbajaPO.SuspendLayout();
@@ -532,9 +565,12 @@
             this.tpReporteDiario.SuspendLayout();
             this.tpPOTallasSeparadas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcPOTallasSeparadas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioTallaSeparadaResultBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView15)).BeginInit();
+            this.tpAltaEstilo.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstiloAlta)).BeginInit();
+            this.groupBox10.SuspendLayout();
             this.tabAlmacen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
@@ -584,7 +620,7 @@
             // 
             // gcReporte
             // 
-            this.gcReporte.DataSource = this.consultaInventarioResultBindingSource1;
+            this.gcReporte.DataSource = this.consultaInventarioTallaSeparadaResultBindingSource;
             this.gcReporte.Location = new System.Drawing.Point(34, 80);
             this.gcReporte.MainView = this.gridView1;
             this.gcReporte.Name = "gcReporte";
@@ -593,6 +629,10 @@
             this.gcReporte.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1,
             this.gridView9});
+            // 
+            // consultaInventarioTallaSeparadaResultBindingSource
+            // 
+            this.consultaInventarioTallaSeparadaResultBindingSource.DataSource = typeof(ConsultaInventarioTallaSeparadaResult);
             // 
             // gridView1
             // 
@@ -639,7 +679,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ID", "Cajas: {0}")});
             this.colID.Visible = true;
             this.colID.VisibleIndex = 1;
-            this.colID.Width = 49;
+            this.colID.Width = 55;
             // 
             // colPO
             // 
@@ -652,7 +692,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "PO", "Cajas: {0}")});
             this.colPO.Visible = true;
             this.colPO.VisibleIndex = 0;
-            this.colPO.Width = 84;
+            this.colPO.Width = 74;
             // 
             // colPOITEM
             // 
@@ -683,7 +723,7 @@
             this.colSIZE.OptionsColumn.ReadOnly = true;
             this.colSIZE.Visible = true;
             this.colSIZE.VisibleIndex = 2;
-            this.colSIZE.Width = 47;
+            this.colSIZE.Width = 52;
             // 
             // colUPC
             // 
@@ -693,7 +733,7 @@
             this.colUPC.OptionsColumn.ReadOnly = true;
             this.colUPC.Visible = true;
             this.colUPC.VisibleIndex = 3;
-            this.colUPC.Width = 67;
+            this.colUPC.Width = 74;
             // 
             // colCARTONNUMBER
             // 
@@ -703,7 +743,7 @@
             this.colCARTONNUMBER.OptionsColumn.ReadOnly = true;
             this.colCARTONNUMBER.Visible = true;
             this.colCARTONNUMBER.VisibleIndex = 5;
-            this.colCARTONNUMBER.Width = 128;
+            this.colCARTONNUMBER.Width = 143;
             // 
             // colPRODUCTCODE
             // 
@@ -713,6 +753,7 @@
             this.colPRODUCTCODE.OptionsColumn.ReadOnly = true;
             this.colPRODUCTCODE.Visible = true;
             this.colPRODUCTCODE.VisibleIndex = 4;
+            this.colPRODUCTCODE.Width = 84;
             // 
             // colCARTONTYPE
             // 
@@ -724,7 +765,7 @@
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "CARTONTYPE", "Cajas Prepack: {0}")});
             this.colCARTONTYPE.Visible = true;
             this.colCARTONTYPE.VisibleIndex = 6;
-            this.colCARTONTYPE.Width = 72;
+            this.colCARTONTYPE.Width = 79;
             // 
             // colCREATEDATE
             // 
@@ -736,7 +777,7 @@
             this.colCREATEDATE.OptionsColumn.ReadOnly = true;
             this.colCREATEDATE.Visible = true;
             this.colCREATEDATE.VisibleIndex = 7;
-            this.colCREATEDATE.Width = 121;
+            this.colCREATEDATE.Width = 137;
             // 
             // colUSERCREATE
             // 
@@ -746,7 +787,7 @@
             this.colUSERCREATE.OptionsColumn.ReadOnly = true;
             this.colUSERCREATE.Visible = true;
             this.colUSERCREATE.VisibleIndex = 8;
-            this.colUSERCREATE.Width = 88;
+            this.colUSERCREATE.Width = 98;
             // 
             // colCLIENTE
             // 
@@ -756,7 +797,7 @@
             this.colCLIENTE.OptionsColumn.ReadOnly = true;
             this.colCLIENTE.Visible = true;
             this.colCLIENTE.VisibleIndex = 9;
-            this.colCLIENTE.Width = 28;
+            this.colCLIENTE.Width = 30;
             // 
             // colFACTURA
             // 
@@ -767,7 +808,7 @@
             this.colFACTURA.OptionsColumn.TabStop = false;
             this.colFACTURA.Visible = true;
             this.colFACTURA.VisibleIndex = 10;
-            this.colFACTURA.Width = 36;
+            this.colFACTURA.Width = 39;
             // 
             // colTERMINADO
             // 
@@ -777,7 +818,7 @@
             this.colTERMINADO.OptionsColumn.ReadOnly = true;
             this.colTERMINADO.Visible = true;
             this.colTERMINADO.VisibleIndex = 11;
-            this.colTERMINADO.Width = 35;
+            this.colTERMINADO.Width = 63;
             // 
             // cbLimpiar
             // 
@@ -926,7 +967,6 @@
             this.cmbPOB.AllowDrop = true;
             this.cmbPOB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cmbPOB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbPOB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPOB.Enabled = false;
             this.cmbPOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPOB.FormattingEnabled = true;
@@ -938,25 +978,25 @@
             this.cmbPOB.TabStop = false;
             this.cmbPOB.SelectedIndexChanged += new System.EventHandler(this.cmbPOB_SelectedIndexChanged);
             // 
-            // label21
+            // lblCartonsEmpacados
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(218, 156);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(130, 74);
-            this.label21.TabIndex = 9999;
-            this.label21.Text = "Cartons\r\nPacked";
+            this.lblCartonsEmpacados.AutoSize = true;
+            this.lblCartonsEmpacados.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartonsEmpacados.Location = new System.Drawing.Point(218, 156);
+            this.lblCartonsEmpacados.Name = "lblCartonsEmpacados";
+            this.lblCartonsEmpacados.Size = new System.Drawing.Size(130, 74);
+            this.lblCartonsEmpacados.TabIndex = 9999;
+            this.lblCartonsEmpacados.Text = "Cartons\r\nPacked";
             // 
-            // label22
+            // lblCartonReq
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(203, 23);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(145, 74);
-            this.label22.TabIndex = 9999;
-            this.label22.Text = " Cartons\r\nRequired\r\n";
+            this.lblCartonReq.AutoSize = true;
+            this.lblCartonReq.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartonReq.Location = new System.Drawing.Point(203, 23);
+            this.lblCartonReq.Name = "lblCartonReq";
+            this.lblCartonReq.Size = new System.Drawing.Size(145, 74);
+            this.lblCartonReq.TabIndex = 9999;
+            this.lblCartonReq.Text = " Cartons\r\nRequired\r\n";
             // 
             // label23
             // 
@@ -1014,16 +1054,16 @@
             this.txtUnitsRemai.TabStop = false;
             this.txtUnitsRemai.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label20
+            // lblCartonsRestantes
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(196, 275);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(187, 74);
-            this.label20.TabIndex = 9595959;
-            this.label20.Text = " Cartons\r\nReamaining";
-            this.label20.Visible = false;
+            this.lblCartonsRestantes.AutoSize = true;
+            this.lblCartonsRestantes.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartonsRestantes.Location = new System.Drawing.Point(196, 275);
+            this.lblCartonsRestantes.Name = "lblCartonsRestantes";
+            this.lblCartonsRestantes.Size = new System.Drawing.Size(187, 74);
+            this.lblCartonsRestantes.TabIndex = 9595959;
+            this.lblCartonsRestantes.Text = " Cartons\r\nReamaining";
+            this.lblCartonsRestantes.Visible = false;
             // 
             // txtCartonRq
             // 
@@ -1218,12 +1258,6 @@
             this.tpbajaPO.Controls.Add(this.cmbTallaBaja);
             this.tpbajaPO.Controls.Add(this.cmbPOB);
             this.tpbajaPO.Controls.Add(this.btnBajaPO);
-            this.tpbajaPO.Controls.Add(this.cmbTerminadoB);
-            this.tpbajaPO.Controls.Add(this.cmbFacturacionB);
-            this.tpbajaPO.Controls.Add(this.cmbClienteB);
-            this.tpbajaPO.Controls.Add(this.label9);
-            this.tpbajaPO.Controls.Add(this.label10);
-            this.tpbajaPO.Controls.Add(this.label11);
             this.tpbajaPO.Controls.Add(this.label8);
             this.tpbajaPO.Location = new System.Drawing.Point(4, 22);
             this.tpbajaPO.Name = "tpbajaPO";
@@ -1330,7 +1364,7 @@
             this.btnBajaPO.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBajaPO.BackgroundImage")));
             this.btnBajaPO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBajaPO.Enabled = false;
-            this.btnBajaPO.Location = new System.Drawing.Point(192, 265);
+            this.btnBajaPO.Location = new System.Drawing.Point(192, 91);
             this.btnBajaPO.Name = "btnBajaPO";
             this.btnBajaPO.Size = new System.Drawing.Size(75, 57);
             this.btnBajaPO.TabIndex = 1000000009;
@@ -1339,83 +1373,6 @@
             this.toolTipController1.SetToolTipIconType(this.btnBajaPO, DevExpress.Utils.ToolTipIconType.Warning);
             this.btnBajaPO.UseVisualStyleBackColor = false;
             this.btnBajaPO.Click += new System.EventHandler(this.btnBajaPO_Click);
-            // 
-            // cmbTerminadoB
-            // 
-            this.cmbTerminadoB.AllowDrop = true;
-            this.cmbTerminadoB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cmbTerminadoB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbTerminadoB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTerminadoB.Enabled = false;
-            this.cmbTerminadoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTerminadoB.FormattingEnabled = true;
-            this.cmbTerminadoB.ItemHeight = 24;
-            this.cmbTerminadoB.Location = new System.Drawing.Point(192, 201);
-            this.cmbTerminadoB.MaxDropDownItems = 50;
-            this.cmbTerminadoB.Name = "cmbTerminadoB";
-            this.cmbTerminadoB.Size = new System.Drawing.Size(194, 32);
-            this.cmbTerminadoB.TabIndex = 10000004;
-            this.cmbTerminadoB.TabStop = false;
-            // 
-            // cmbFacturacionB
-            // 
-            this.cmbFacturacionB.AllowDrop = true;
-            this.cmbFacturacionB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cmbFacturacionB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbFacturacionB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFacturacionB.Enabled = false;
-            this.cmbFacturacionB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbFacturacionB.FormattingEnabled = true;
-            this.cmbFacturacionB.Location = new System.Drawing.Point(192, 150);
-            this.cmbFacturacionB.Name = "cmbFacturacionB";
-            this.cmbFacturacionB.Size = new System.Drawing.Size(194, 32);
-            this.cmbFacturacionB.TabIndex = 10000003;
-            this.cmbFacturacionB.TabStop = false;
-            // 
-            // cmbClienteB
-            // 
-            this.cmbClienteB.AllowDrop = true;
-            this.cmbClienteB.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.cmbClienteB.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cmbClienteB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbClienteB.Enabled = false;
-            this.cmbClienteB.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbClienteB.FormattingEnabled = true;
-            this.cmbClienteB.Location = new System.Drawing.Point(192, 94);
-            this.cmbClienteB.Name = "cmbClienteB";
-            this.cmbClienteB.Size = new System.Drawing.Size(194, 32);
-            this.cmbClienteB.TabIndex = 10000002;
-            this.cmbClienteB.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(72, 97);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(114, 33);
-            this.label9.TabIndex = 10000007;
-            this.label9.Text = "Cliente:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(19, 204);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(163, 33);
-            this.label10.TabIndex = 10000006;
-            this.label10.Text = "Terminado:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 150);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(176, 33);
-            this.label11.TabIndex = 10000005;
-            this.label11.Text = "Facturación:";
             // 
             // label8
             // 
@@ -2069,6 +2026,7 @@
             this.TabEsaneo.Controls.Add(this.tpReimpresion);
             this.TabEsaneo.Controls.Add(this.tpbajaPO);
             this.TabEsaneo.Controls.Add(this.tpPOTallasSeparadas);
+            this.TabEsaneo.Controls.Add(this.tpAltaEstilo);
             this.TabEsaneo.Cursor = System.Windows.Forms.Cursors.Default;
             this.TabEsaneo.Location = new System.Drawing.Point(3, 3);
             this.TabEsaneo.Name = "TabEsaneo";
@@ -2140,7 +2098,9 @@
             // groupBox4
             // 
             this.groupBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Controls.Add(this.lblImprimirEtiqueta);
+            this.groupBox4.Controls.Add(this.chkImprimirEtiqueta);
+            this.groupBox4.Controls.Add(this.btnImprimeOldNavy);
             this.groupBox4.Controls.Add(this.btnPrendasExtra);
             this.groupBox4.Controls.Add(this.lblAyuda);
             this.groupBox4.Controls.Add(this.btnIncompleteCarton);
@@ -2160,16 +2120,43 @@
             this.groupBox4.Text = "Last Item Scanned";
             this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
-            // button6
+            // lblImprimirEtiqueta
             // 
-            this.button6.Location = new System.Drawing.Point(6, 185);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(153, 87);
-            this.button6.TabIndex = 9995963;
-            this.button6.Text = "imprime Target Assorment";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Visible = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.lblImprimirEtiqueta.AutoSize = true;
+            this.lblImprimirEtiqueta.Location = new System.Drawing.Point(180, 136);
+            this.lblImprimirEtiqueta.Name = "lblImprimirEtiqueta";
+            this.lblImprimirEtiqueta.Size = new System.Drawing.Size(299, 39);
+            this.lblImprimirEtiqueta.TabIndex = 9995965;
+            this.lblImprimirEtiqueta.Text = "Imprimir Etiquetas";
+            this.lblImprimirEtiqueta.Visible = false;
+            // 
+            // chkImprimirEtiqueta
+            // 
+            this.chkImprimirEtiqueta.AccessibleName = "";
+            this.chkImprimirEtiqueta.Appearance = System.Windows.Forms.Appearance.Button;
+            this.chkImprimirEtiqueta.BackColor = System.Drawing.Color.Transparent;
+            this.chkImprimirEtiqueta.Checked = true;
+            this.chkImprimirEtiqueta.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkImprimirEtiqueta.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkImprimirEtiqueta.ForeColor = System.Drawing.Color.Transparent;
+            this.chkImprimirEtiqueta.Image = global::Inventario.Properties.Resources.Check_Mark;
+            this.chkImprimirEtiqueta.Location = new System.Drawing.Point(140, 138);
+            this.chkImprimirEtiqueta.Name = "chkImprimirEtiqueta";
+            this.chkImprimirEtiqueta.Size = new System.Drawing.Size(41, 39);
+            this.chkImprimirEtiqueta.TabIndex = 9995964;
+            this.chkImprimirEtiqueta.UseVisualStyleBackColor = false;
+            this.chkImprimirEtiqueta.CheckedChanged += new System.EventHandler(this.chkImprimirEtiqueta_CheckedChanged);
+            // 
+            // btnImprimeOldNavy
+            // 
+            this.btnImprimeOldNavy.Location = new System.Drawing.Point(6, 185);
+            this.btnImprimeOldNavy.Name = "btnImprimeOldNavy";
+            this.btnImprimeOldNavy.Size = new System.Drawing.Size(153, 87);
+            this.btnImprimeOldNavy.TabIndex = 9995963;
+            this.btnImprimeOldNavy.Text = "Guardar";
+            this.btnImprimeOldNavy.UseVisualStyleBackColor = true;
+            this.btnImprimeOldNavy.Visible = false;
+            this.btnImprimeOldNavy.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // btnPrendasExtra
             // 
@@ -2179,7 +2166,7 @@
             this.btnPrendasExtra.Size = new System.Drawing.Size(184, 89);
             this.btnPrendasExtra.TabIndex = 9995962;
             this.btnPrendasExtra.TabStop = false;
-            this.btnPrendasExtra.Text = "Prendas Extra";
+            this.btnPrendasExtra.Text = " Prendas Extra";
             this.toolTipController1.SetTitle(this.btnPrendasExtra, "Imprimir Carton Incompleto");
             this.btnPrendasExtra.UseVisualStyleBackColor = true;
             this.btnPrendasExtra.Click += new System.EventHandler(this.btnPrendasExtra_Click);
@@ -2199,6 +2186,7 @@
             this.btnIncompleteCarton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIncompleteCarton.Location = new System.Drawing.Point(178, 278);
             this.btnIncompleteCarton.Name = "btnIncompleteCarton";
+            this.btnIncompleteCarton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnIncompleteCarton.Size = new System.Drawing.Size(184, 90);
             this.btnIncompleteCarton.TabIndex = 6;
             this.btnIncompleteCarton.TabStop = false;
@@ -2272,7 +2260,7 @@
             this.txtUPCScann.Name = "txtUPCScann";
             this.txtUPCScann.Size = new System.Drawing.Size(371, 47);
             this.txtUPCScann.TabIndex = 5;
-            this.txtUPCScann.TextChanged += new System.EventHandler(this.txtUPCScann_TextChanged);
+            this.txtUPCScann.TextChanged += new System.EventHandler(this.btnNuevoPrePack_Click);
             this.txtUPCScann.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUPCScann_KeyPress);
             // 
             // label30
@@ -2287,9 +2275,9 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label20);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.lblCartonsRestantes);
+            this.groupBox3.Controls.Add(this.lblCartonsEmpacados);
+            this.groupBox3.Controls.Add(this.lblCartonReq);
             this.groupBox3.Controls.Add(this.label23);
             this.groupBox3.Controls.Add(this.label24);
             this.groupBox3.Controls.Add(this.txtCartonsReamaining);
@@ -2315,14 +2303,14 @@
             // 
             this.dgvEscan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEscan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle125.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle125.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle125.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle125.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle125.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle125.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle125.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEscan.DefaultCellStyle = dataGridViewCellStyle125;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEscan.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvEscan.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvEscan.Location = new System.Drawing.Point(9, 123);
             this.dgvEscan.MultiSelect = false;
@@ -2335,7 +2323,7 @@
             this.dgvEscan.ShowCellToolTips = false;
             this.dgvEscan.ShowEditingIcon = false;
             this.dgvEscan.ShowRowErrors = false;
-            this.dgvEscan.Size = new System.Drawing.Size(952, 109);
+            this.dgvEscan.Size = new System.Drawing.Size(986, 109);
             this.dgvEscan.TabIndex = 9999;
             // 
             // label4
@@ -2394,7 +2382,7 @@
             // 
             this.groupBox6.Controls.Add(this.label70);
             this.groupBox6.Controls.Add(this.dgvZumies);
-            this.groupBox6.Location = new System.Drawing.Point(483, 3);
+            this.groupBox6.Location = new System.Drawing.Point(483, 41);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(509, 643);
             this.groupBox6.TabIndex = 1000000016;
@@ -2415,44 +2403,44 @@
             this.dgvZumies.AllowUserToAddRows = false;
             this.dgvZumies.AllowUserToDeleteRows = false;
             this.dgvZumies.AllowUserToResizeRows = false;
-            dataGridViewCellStyle126.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvZumies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle126;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvZumies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvZumies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvZumies.BackgroundColor = System.Drawing.Color.White;
             this.dgvZumies.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle127.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle127.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle127.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle127.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle127.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle127.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle127.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZumies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle127;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZumies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvZumies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle128.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle128.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle128.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle128.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle128.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle128.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle128.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvZumies.DefaultCellStyle = dataGridViewCellStyle128;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvZumies.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvZumies.GridColor = System.Drawing.Color.Black;
-            this.dgvZumies.Location = new System.Drawing.Point(15, 74);
+            this.dgvZumies.Location = new System.Drawing.Point(6, 36);
             this.dgvZumies.MultiSelect = false;
             this.dgvZumies.Name = "dgvZumies";
             this.dgvZumies.ReadOnly = true;
-            dataGridViewCellStyle129.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle129.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle129.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle129.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle129.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle129.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle129.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZumies.RowHeadersDefaultCellStyle = dataGridViewCellStyle129;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZumies.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvZumies.RowHeadersVisible = false;
-            dataGridViewCellStyle130.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvZumies.RowsDefaultCellStyle = dataGridViewCellStyle130;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvZumies.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvZumies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZumies.Size = new System.Drawing.Size(494, 549);
             this.dgvZumies.StandardTab = true;
@@ -2461,6 +2449,8 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.checkBox1);
+            this.groupBox5.Controls.Add(this.btnTodaslasTallas);
             this.groupBox5.Controls.Add(this.cmbEstilo);
             this.groupBox5.Controls.Add(this.label73);
             this.groupBox5.Controls.Add(this.cmbMarca);
@@ -2492,6 +2482,37 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos";
             this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AccessibleName = "";
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Image = global::Inventario.Properties.Resources.Check_Mark;
+            this.checkBox1.Location = new System.Drawing.Point(289, 584);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(41, 39);
+            this.checkBox1.TabIndex = 9995965;
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.Visible = false;
+            // 
+            // btnTodaslasTallas
+            // 
+            this.btnTodaslasTallas.BackColor = System.Drawing.SystemColors.Window;
+            this.btnTodaslasTallas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnTodaslasTallas.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodaslasTallas.Location = new System.Drawing.Point(26, 480);
+            this.btnTodaslasTallas.Name = "btnTodaslasTallas";
+            this.btnTodaslasTallas.Size = new System.Drawing.Size(125, 73);
+            this.btnTodaslasTallas.TabIndex = 311;
+            this.btnTodaslasTallas.Text = "Agrega Todas las Tallas";
+            this.btnTodaslasTallas.UseVisualStyleBackColor = false;
+            this.btnTodaslasTallas.Visible = false;
+            this.btnTodaslasTallas.Click += new System.EventHandler(this.btnTodaslasTallas_Click);
             // 
             // cmbEstilo
             // 
@@ -2538,7 +2559,9 @@
             "BENS",
             "ROCKY",
             "OLDNAVY",
-            "SAFTECH"});
+            "SAFTECH",
+            "WRANGLER",
+            "IFR"});
             this.cmbMarca.Location = new System.Drawing.Point(157, 20);
             this.cmbMarca.Name = "cmbMarca";
             this.cmbMarca.Size = new System.Drawing.Size(317, 37);
@@ -2606,7 +2629,7 @@
             // txtzItemDescripcion
             // 
             this.txtzItemDescripcion.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtzItemDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtzItemDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtzItemDescripcion.Location = new System.Drawing.Point(157, 186);
             this.txtzItemDescripcion.MaxLength = 100;
             this.txtzItemDescripcion.Multiline = true;
@@ -2619,7 +2642,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(66, 148);
+            this.label61.Location = new System.Drawing.Point(62, 151);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(92, 25);
             this.label61.TabIndex = 217;
@@ -2823,45 +2846,45 @@
             // 
             this.dgvPrePack2.AllowUserToAddRows = false;
             this.dgvPrePack2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle131.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle131.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPrePack2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle131;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPrePack2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPrePack2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrePack2.BackgroundColor = System.Drawing.Color.White;
             this.dgvPrePack2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle132.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle132.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle132.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle132.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle132.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle132.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle132.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrePack2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle132;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrePack2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPrePack2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle133.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle133.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle133.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle133.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle133.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle133.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle133.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPrePack2.DefaultCellStyle = dataGridViewCellStyle133;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPrePack2.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPrePack2.GridColor = System.Drawing.Color.Black;
             this.dgvPrePack2.Location = new System.Drawing.Point(6, 64);
             this.dgvPrePack2.MultiSelect = false;
             this.dgvPrePack2.Name = "dgvPrePack2";
             this.dgvPrePack2.ReadOnly = true;
-            dataGridViewCellStyle134.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle134.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle134.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle134.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle134.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle134.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle134.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPrePack2.RowHeadersDefaultCellStyle = dataGridViewCellStyle134;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPrePack2.RowHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvPrePack2.RowHeadersVisible = false;
-            dataGridViewCellStyle135.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvPrePack2.RowsDefaultCellStyle = dataGridViewCellStyle135;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPrePack2.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvPrePack2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrePack2.Size = new System.Drawing.Size(503, 559);
             this.dgvPrePack2.StandardTab = true;
@@ -3153,44 +3176,44 @@
             this.dgvModificarPO.AllowUserToAddRows = false;
             this.dgvModificarPO.AllowUserToDeleteRows = false;
             this.dgvModificarPO.AllowUserToResizeRows = false;
-            dataGridViewCellStyle136.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvModificarPO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle136;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvModificarPO.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvModificarPO.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvModificarPO.BackgroundColor = System.Drawing.Color.White;
             this.dgvModificarPO.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle137.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle137.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle137.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle137.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle137.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle137.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle137.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModificarPO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle137;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModificarPO.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvModificarPO.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle138.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle138.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle138.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle138.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle138.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle138.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle138.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvModificarPO.DefaultCellStyle = dataGridViewCellStyle138;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvModificarPO.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgvModificarPO.GridColor = System.Drawing.Color.Black;
             this.dgvModificarPO.Location = new System.Drawing.Point(15, 74);
             this.dgvModificarPO.MultiSelect = false;
             this.dgvModificarPO.Name = "dgvModificarPO";
             this.dgvModificarPO.ReadOnly = true;
-            dataGridViewCellStyle139.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle139.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle139.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle139.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle139.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle139.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle139.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvModificarPO.RowHeadersDefaultCellStyle = dataGridViewCellStyle139;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvModificarPO.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvModificarPO.RowHeadersVisible = false;
-            dataGridViewCellStyle140.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvModificarPO.RowsDefaultCellStyle = dataGridViewCellStyle140;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvModificarPO.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvModificarPO.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvModificarPO.Size = new System.Drawing.Size(494, 549);
             this.dgvModificarPO.StandardTab = true;
@@ -3259,10 +3282,10 @@
             this.label81.ForeColor = System.Drawing.Color.Red;
             this.label81.Location = new System.Drawing.Point(95, 609);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(322, 26);
+            this.label81.Size = new System.Drawing.Size(326, 26);
             this.label81.TabIndex = 1000000025;
             this.label81.Text = "Se necesita no estar escaneando este contrato\r\n,para poder actualizar lo que llev" +
-    "an escaneado tambien";
+    "an escaneado tambien ";
             // 
             // btnAplicarModificacionInv
             // 
@@ -3576,6 +3599,9 @@
             // tpImportaLEVIS
             // 
             this.tpImportaLEVIS.BackColor = System.Drawing.Color.Silver;
+            this.tpImportaLEVIS.Controls.Add(this.button6);
+            this.tpImportaLEVIS.Controls.Add(this.button2);
+            this.tpImportaLEVIS.Controls.Add(this.btnImportarEstilo);
             this.tpImportaLEVIS.Controls.Add(this.btnImportar);
             this.tpImportaLEVIS.Controls.Add(this.btnImportarTARGET);
             this.tpImportaLEVIS.Controls.Add(this.btnImportarLevis);
@@ -3585,6 +3611,39 @@
             this.tpImportaLEVIS.TabIndex = 10;
             this.tpImportaLEVIS.Text = "Importar Archivo";
             this.tpImportaLEVIS.Click += new System.EventHandler(this.tpImportaLEVIS_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(458, 273);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(216, 105);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "IMPORTAR CONTRATO ";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(289, 273);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(163, 105);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "IMPORTAR CONTRATO ZUMIES";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnImportarEstilo
+            // 
+            this.btnImportarEstilo.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportarEstilo.Location = new System.Drawing.Point(289, 30);
+            this.btnImportarEstilo.Name = "btnImportarEstilo";
+            this.btnImportarEstilo.Size = new System.Drawing.Size(385, 156);
+            this.btnImportarEstilo.TabIndex = 4;
+            this.btnImportarEstilo.Text = "IMPORTAR ESTILO";
+            this.btnImportarEstilo.UseVisualStyleBackColor = true;
+            this.btnImportarEstilo.Visible = false;
+            this.btnImportarEstilo.Click += new System.EventHandler(this.btnImportarEstilo_Click);
             // 
             // btnImportar
             // 
@@ -3611,12 +3670,13 @@
             // btnImportarLevis
             // 
             this.btnImportarLevis.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImportarLevis.Location = new System.Drawing.Point(289, 206);
+            this.btnImportarLevis.Location = new System.Drawing.Point(5, 545);
             this.btnImportarLevis.Name = "btnImportarLevis";
-            this.btnImportarLevis.Size = new System.Drawing.Size(385, 156);
+            this.btnImportarLevis.Size = new System.Drawing.Size(163, 105);
             this.btnImportarLevis.TabIndex = 1;
-            this.btnImportarLevis.Text = "IMPORTAR CONTRATO";
+            this.btnImportarLevis.Text = "IMPORTAR CONTRATO LEVIS";
             this.btnImportarLevis.UseVisualStyleBackColor = true;
+            this.btnImportarLevis.Visible = false;
             this.btnImportarLevis.Click += new System.EventHandler(this.btnImportarLevis_Click);
             // 
             // tpBajaCaja
@@ -3729,10 +3789,6 @@
             this.gcPOTallasSeparadas.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView14,
             this.gridView15});
-            // 
-            // consultaInventarioTallaSeparadaResultBindingSource
-            // 
-            this.consultaInventarioTallaSeparadaResultBindingSource.DataSource = typeof(ConsultaInventarioTallaSeparadaResult);
             // 
             // gridView14
             // 
@@ -3987,6 +4043,370 @@
             this.label85.TabIndex = 2441;
             this.label85.Text = "Del :";
             // 
+            // tpAltaEstilo
+            // 
+            this.tpAltaEstilo.Controls.Add(this.groupBox9);
+            this.tpAltaEstilo.Controls.Add(this.groupBox10);
+            this.tpAltaEstilo.Location = new System.Drawing.Point(4, 22);
+            this.tpAltaEstilo.Name = "tpAltaEstilo";
+            this.tpAltaEstilo.Size = new System.Drawing.Size(1001, 655);
+            this.tpAltaEstilo.TabIndex = 19;
+            this.tpAltaEstilo.Text = "AltaEstilo";
+            this.tpAltaEstilo.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.BackColor = System.Drawing.Color.Silver;
+            this.groupBox9.Controls.Add(this.label78);
+            this.groupBox9.Controls.Add(this.dgvEstiloAlta);
+            this.groupBox9.Location = new System.Drawing.Point(489, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(521, 650);
+            this.groupBox9.TabIndex = 1000000018;
+            this.groupBox9.TabStop = false;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label78.Location = new System.Drawing.Point(166, 627);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(337, 13);
+            this.label78.TabIndex = 1000000024;
+            this.label78.Text = "Si necesitas ayuda favor de contactarme Edgar Madrigal 8718961844";
+            // 
+            // dgvEstiloAlta
+            // 
+            this.dgvEstiloAlta.AllowUserToAddRows = false;
+            this.dgvEstiloAlta.AllowUserToDeleteRows = false;
+            this.dgvEstiloAlta.AllowUserToResizeRows = false;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvEstiloAlta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            this.dgvEstiloAlta.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvEstiloAlta.BackgroundColor = System.Drawing.Color.White;
+            this.dgvEstiloAlta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstiloAlta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvEstiloAlta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEstiloAlta.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dgvEstiloAlta.GridColor = System.Drawing.Color.Black;
+            this.dgvEstiloAlta.Location = new System.Drawing.Point(9, 74);
+            this.dgvEstiloAlta.MultiSelect = false;
+            this.dgvEstiloAlta.Name = "dgvEstiloAlta";
+            this.dgvEstiloAlta.ReadOnly = true;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEstiloAlta.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.dgvEstiloAlta.RowHeadersVisible = false;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvEstiloAlta.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvEstiloAlta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEstiloAlta.Size = new System.Drawing.Size(494, 549);
+            this.dgvEstiloAlta.StandardTab = true;
+            this.dgvEstiloAlta.TabIndex = 1000000023;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.BackColor = System.Drawing.Color.Silver;
+            this.groupBox10.Controls.Add(this.label9);
+            this.groupBox10.Controls.Add(this.label86);
+            this.groupBox10.Controls.Add(this.cmbMarcaEstiloAlta);
+            this.groupBox10.Controls.Add(this.txtSizeIzquierdoEstiloAlta);
+            this.groupBox10.Controls.Add(this.label88);
+            this.groupBox10.Controls.Add(this.txtSizeDerechoEstiloAlta);
+            this.groupBox10.Controls.Add(this.txtDescriptionEstiloAlta);
+            this.groupBox10.Controls.Add(this.label90);
+            this.groupBox10.Controls.Add(this.txtColorEstiloAlta);
+            this.groupBox10.Controls.Add(this.label91);
+            this.groupBox10.Controls.Add(this.txtEstiloAlta);
+            this.groupBox10.Controls.Add(this.btnEliminaEstiloAlta);
+            this.groupBox10.Controls.Add(this.btnAgregarEstiloAlta);
+            this.groupBox10.Controls.Add(this.txtUpcEstiloAlta);
+            this.groupBox10.Controls.Add(this.btnCancelarEstiloAlta);
+            this.groupBox10.Controls.Add(this.label92);
+            this.groupBox10.Controls.Add(this.label93);
+            this.groupBox10.Controls.Add(this.btnActualizaEstiloAlta);
+            this.groupBox10.Controls.Add(this.btnGuardarEstiloAlta);
+            this.groupBox10.Controls.Add(this.label94);
+            this.groupBox10.Controls.Add(this.txtPOEstiloAlta);
+            this.groupBox10.Location = new System.Drawing.Point(6, 3);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(492, 656);
+            this.groupBox10.TabIndex = 1000000017;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Datos";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(10, 333);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(141, 29);
+            this.label9.TabIndex = 312;
+            this.label9.Text = "Talla Largo:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label86
+            // 
+            this.label86.AutoSize = true;
+            this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label86.Location = new System.Drawing.Point(66, 20);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(85, 29);
+            this.label86.TabIndex = 260;
+            this.label86.Text = "Marca:";
+            // 
+            // cmbMarcaEstiloAlta
+            // 
+            this.cmbMarcaEstiloAlta.AutoCompleteCustomSource.AddRange(new string[] {
+            "LEVIS",
+            "ZUMIES",
+            "TARGET",
+            "CINTAS",
+            "BENS",
+            "ROCKY",
+            "OLDNAVY",
+            "SAFTECH"});
+            this.cmbMarcaEstiloAlta.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cmbMarcaEstiloAlta.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cmbMarcaEstiloAlta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbMarcaEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMarcaEstiloAlta.FormattingEnabled = true;
+            this.cmbMarcaEstiloAlta.Items.AddRange(new object[] {
+            "LEVIS",
+            "ZUMIES",
+            "TARGET",
+            "CINTAS",
+            "BENS",
+            "ROCKY",
+            "OLDNAVY",
+            "SAFTECH"});
+            this.cmbMarcaEstiloAlta.Location = new System.Drawing.Point(157, 20);
+            this.cmbMarcaEstiloAlta.Name = "cmbMarcaEstiloAlta";
+            this.cmbMarcaEstiloAlta.Size = new System.Drawing.Size(317, 37);
+            this.cmbMarcaEstiloAlta.TabIndex = 300;
+            // 
+            // txtSizeIzquierdoEstiloAlta
+            // 
+            this.txtSizeIzquierdoEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSizeIzquierdoEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSizeIzquierdoEstiloAlta.Location = new System.Drawing.Point(157, 275);
+            this.txtSizeIzquierdoEstiloAlta.MaxLength = 3;
+            this.txtSizeIzquierdoEstiloAlta.Name = "txtSizeIzquierdoEstiloAlta";
+            this.txtSizeIzquierdoEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtSizeIzquierdoEstiloAlta.TabIndex = 255;
+            this.toolTipController1.SetTitle(this.txtSizeIzquierdoEstiloAlta, "CANTIDAD DE CARTONS");
+            this.toolTipController1.SetToolTip(this.txtSizeIzquierdoEstiloAlta, "Cantidad de Cajas que son del PO de la Talla");
+            this.txtSizeIzquierdoEstiloAlta.Visible = false;
+            // 
+            // label88
+            // 
+            this.label88.AutoSize = true;
+            this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label88.Location = new System.Drawing.Point(15, 186);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(135, 72);
+            this.label88.TabIndex = 219;
+            this.label88.Text = "ITEM \r\nDESCRIPTION\r\n / DPCI / CUT:";
+            // 
+            // txtSizeDerechoEstiloAlta
+            // 
+            this.txtSizeDerechoEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtSizeDerechoEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSizeDerechoEstiloAlta.Location = new System.Drawing.Point(157, 330);
+            this.txtSizeDerechoEstiloAlta.MaxLength = 3;
+            this.txtSizeDerechoEstiloAlta.Name = "txtSizeDerechoEstiloAlta";
+            this.txtSizeDerechoEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtSizeDerechoEstiloAlta.TabIndex = 306;
+            this.toolTipController1.SetTitle(this.txtSizeDerechoEstiloAlta, "CANTIDAD DE PRENDAS");
+            this.toolTipController1.SetToolTip(this.txtSizeDerechoEstiloAlta, "Cantidad de Prendas que van en la Caja de esta Talla");
+            // 
+            // txtDescriptionEstiloAlta
+            // 
+            this.txtDescriptionEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDescriptionEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescriptionEstiloAlta.Location = new System.Drawing.Point(157, 186);
+            this.txtDescriptionEstiloAlta.MaxLength = 100;
+            this.txtDescriptionEstiloAlta.Multiline = true;
+            this.txtDescriptionEstiloAlta.Name = "txtDescriptionEstiloAlta";
+            this.txtDescriptionEstiloAlta.Size = new System.Drawing.Size(317, 73);
+            this.txtDescriptionEstiloAlta.TabIndex = 303;
+            // 
+            // label90
+            // 
+            this.label90.AutoSize = true;
+            this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label90.Location = new System.Drawing.Point(58, 151);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(92, 25);
+            this.label90.TabIndex = 217;
+            this.label90.Text = "COLOR:";
+            // 
+            // txtColorEstiloAlta
+            // 
+            this.txtColorEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtColorEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColorEstiloAlta.Location = new System.Drawing.Point(157, 145);
+            this.txtColorEstiloAlta.MaxLength = 100;
+            this.txtColorEstiloAlta.Name = "txtColorEstiloAlta";
+            this.txtColorEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtColorEstiloAlta.TabIndex = 304;
+            // 
+            // label91
+            // 
+            this.label91.AutoSize = true;
+            this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label91.Location = new System.Drawing.Point(75, 63);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(79, 29);
+            this.label91.TabIndex = 215;
+            this.label91.Text = "Estilo:";
+            // 
+            // txtEstiloAlta
+            // 
+            this.txtEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstiloAlta.Location = new System.Drawing.Point(157, 63);
+            this.txtEstiloAlta.MaxLength = 12;
+            this.txtEstiloAlta.Name = "txtEstiloAlta";
+            this.txtEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtEstiloAlta.TabIndex = 301;
+            // 
+            // btnEliminaEstiloAlta
+            // 
+            this.btnEliminaEstiloAlta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnEliminaEstiloAlta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnEliminaEstiloAlta.BackgroundImage")));
+            this.btnEliminaEstiloAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEliminaEstiloAlta.Location = new System.Drawing.Point(174, 446);
+            this.btnEliminaEstiloAlta.Name = "btnEliminaEstiloAlta";
+            this.btnEliminaEstiloAlta.Size = new System.Drawing.Size(83, 73);
+            this.btnEliminaEstiloAlta.TabIndex = 205;
+            this.btnEliminaEstiloAlta.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnEliminaEstiloAlta.UseVisualStyleBackColor = false;
+            this.btnEliminaEstiloAlta.Click += new System.EventHandler(this.btnEliminaEstiloAlta_Click);
+            // 
+            // btnAgregarEstiloAlta
+            // 
+            this.btnAgregarEstiloAlta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAgregarEstiloAlta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAgregarEstiloAlta.BackgroundImage")));
+            this.btnAgregarEstiloAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAgregarEstiloAlta.Location = new System.Drawing.Point(391, 446);
+            this.btnAgregarEstiloAlta.Name = "btnAgregarEstiloAlta";
+            this.btnAgregarEstiloAlta.Size = new System.Drawing.Size(83, 73);
+            this.btnAgregarEstiloAlta.TabIndex = 308;
+            this.btnAgregarEstiloAlta.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnAgregarEstiloAlta.UseVisualStyleBackColor = false;
+            this.btnAgregarEstiloAlta.Click += new System.EventHandler(this.btnAgregarEstiloAlta_Click);
+            // 
+            // txtUpcEstiloAlta
+            // 
+            this.txtUpcEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtUpcEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUpcEstiloAlta.Location = new System.Drawing.Point(157, 385);
+            this.txtUpcEstiloAlta.MaxLength = 15;
+            this.txtUpcEstiloAlta.Name = "txtUpcEstiloAlta";
+            this.txtUpcEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtUpcEstiloAlta.TabIndex = 307;
+            this.toolTipController1.SetTitle(this.txtUpcEstiloAlta, "Codigo de Barras");
+            this.toolTipController1.SetToolTip(this.txtUpcEstiloAlta, "UPC");
+            // 
+            // btnCancelarEstiloAlta
+            // 
+            this.btnCancelarEstiloAlta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnCancelarEstiloAlta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelarEstiloAlta.BackgroundImage")));
+            this.btnCancelarEstiloAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelarEstiloAlta.Location = new System.Drawing.Point(174, 535);
+            this.btnCancelarEstiloAlta.Name = "btnCancelarEstiloAlta";
+            this.btnCancelarEstiloAlta.Size = new System.Drawing.Size(83, 73);
+            this.btnCancelarEstiloAlta.TabIndex = 207;
+            this.btnCancelarEstiloAlta.UseVisualStyleBackColor = false;
+            this.btnCancelarEstiloAlta.Click += new System.EventHandler(this.btnCancelarEstiloAlta_Click);
+            // 
+            // label92
+            // 
+            this.label92.AutoSize = true;
+            this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label92.Location = new System.Drawing.Point(0, 281);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(155, 29);
+            this.label92.TabIndex = 211;
+            this.label92.Text = "Talla Cintura:";
+            this.label92.Click += new System.EventHandler(this.label92_Click);
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label93.Location = new System.Drawing.Point(0, 385);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(154, 29);
+            this.label93.TabIndex = 210;
+            this.label93.Text = "Codigo UPC:";
+            // 
+            // btnActualizaEstiloAlta
+            // 
+            this.btnActualizaEstiloAlta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnActualizaEstiloAlta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnActualizaEstiloAlta.BackgroundImage")));
+            this.btnActualizaEstiloAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnActualizaEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizaEstiloAlta.Location = new System.Drawing.Point(281, 446);
+            this.btnActualizaEstiloAlta.Name = "btnActualizaEstiloAlta";
+            this.btnActualizaEstiloAlta.Size = new System.Drawing.Size(83, 73);
+            this.btnActualizaEstiloAlta.TabIndex = 204;
+            this.btnActualizaEstiloAlta.Text = "Actualiza";
+            this.btnActualizaEstiloAlta.UseVisualStyleBackColor = false;
+            // 
+            // btnGuardarEstiloAlta
+            // 
+            this.btnGuardarEstiloAlta.BackColor = System.Drawing.SystemColors.Window;
+            this.btnGuardarEstiloAlta.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGuardarEstiloAlta.BackgroundImage")));
+            this.btnGuardarEstiloAlta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGuardarEstiloAlta.Location = new System.Drawing.Point(391, 535);
+            this.btnGuardarEstiloAlta.Name = "btnGuardarEstiloAlta";
+            this.btnGuardarEstiloAlta.Size = new System.Drawing.Size(83, 73);
+            this.btnGuardarEstiloAlta.TabIndex = 309;
+            this.btnGuardarEstiloAlta.UseVisualStyleBackColor = false;
+            this.btnGuardarEstiloAlta.Click += new System.EventHandler(this.btnGuardarEstiloAlta_Click);
+            // 
+            // label94
+            // 
+            this.label94.AutoSize = true;
+            this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label94.Location = new System.Drawing.Point(100, 104);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(54, 29);
+            this.label94.TabIndex = 208;
+            this.label94.Text = "PO:";
+            // 
+            // txtPOEstiloAlta
+            // 
+            this.txtPOEstiloAlta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtPOEstiloAlta.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPOEstiloAlta.Location = new System.Drawing.Point(157, 104);
+            this.txtPOEstiloAlta.MaxLength = 50;
+            this.txtPOEstiloAlta.Name = "txtPOEstiloAlta";
+            this.txtPOEstiloAlta.Size = new System.Drawing.Size(317, 35);
+            this.txtPOEstiloAlta.TabIndex = 302;
+            // 
             // tabAlmacen
             // 
             this.tabAlmacen.Caption = "Almacen";
@@ -4212,44 +4632,44 @@
             this.dgvUbicacion.AllowUserToAddRows = false;
             this.dgvUbicacion.AllowUserToDeleteRows = false;
             this.dgvUbicacion.AllowUserToResizeRows = false;
-            dataGridViewCellStyle141.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle141.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvUbicacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle141;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvUbicacion.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvUbicacion.BackgroundColor = System.Drawing.Color.White;
             this.dgvUbicacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle142.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle142.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle142.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle142.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle142.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle142.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUbicacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle142;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUbicacion.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dgvUbicacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle143.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle143.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle143.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle143.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle143.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle143.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle143.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUbicacion.DefaultCellStyle = dataGridViewCellStyle143;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUbicacion.DefaultCellStyle = dataGridViewCellStyle24;
             this.dgvUbicacion.GridColor = System.Drawing.Color.Black;
             this.dgvUbicacion.Location = new System.Drawing.Point(399, 126);
             this.dgvUbicacion.MultiSelect = false;
             this.dgvUbicacion.Name = "dgvUbicacion";
             this.dgvUbicacion.ReadOnly = true;
-            dataGridViewCellStyle144.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle144.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle144.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle144.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle144.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle144.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle144.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUbicacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle144;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUbicacion.RowHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvUbicacion.RowHeadersVisible = false;
-            dataGridViewCellStyle145.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvUbicacion.RowsDefaultCellStyle = dataGridViewCellStyle145;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvUbicacion.RowsDefaultCellStyle = dataGridViewCellStyle26;
             this.dgvUbicacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUbicacion.Size = new System.Drawing.Size(609, 449);
             this.dgvUbicacion.StandardTab = true;
@@ -4260,44 +4680,44 @@
             this.dgvAlmacen.AllowUserToAddRows = false;
             this.dgvAlmacen.AllowUserToDeleteRows = false;
             this.dgvAlmacen.AllowUserToResizeRows = false;
-            dataGridViewCellStyle146.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle146.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvAlmacen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle146;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvAlmacen.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvAlmacen.BackgroundColor = System.Drawing.Color.White;
             this.dgvAlmacen.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle147.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle147.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle147.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle147.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle147.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle147.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle147.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlmacen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle147;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlmacen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle148.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle148.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle148.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle148.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle148.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle148.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle148.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAlmacen.DefaultCellStyle = dataGridViewCellStyle148;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAlmacen.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvAlmacen.GridColor = System.Drawing.Color.Black;
             this.dgvAlmacen.Location = new System.Drawing.Point(6, 126);
             this.dgvAlmacen.MultiSelect = false;
             this.dgvAlmacen.Name = "dgvAlmacen";
             this.dgvAlmacen.ReadOnly = true;
-            dataGridViewCellStyle149.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle149.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle149.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle149.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle149.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAlmacen.RowHeadersDefaultCellStyle = dataGridViewCellStyle149;
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAlmacen.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvAlmacen.RowHeadersVisible = false;
-            dataGridViewCellStyle150.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvAlmacen.RowsDefaultCellStyle = dataGridViewCellStyle150;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvAlmacen.RowsDefaultCellStyle = dataGridViewCellStyle31;
             this.dgvAlmacen.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlmacen.Size = new System.Drawing.Size(387, 309);
             this.dgvAlmacen.StandardTab = true;
@@ -4568,44 +4988,44 @@
             this.dgvSalida.AllowUserToAddRows = false;
             this.dgvSalida.AllowUserToDeleteRows = false;
             this.dgvSalida.AllowUserToResizeRows = false;
-            dataGridViewCellStyle151.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle151.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvSalida.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle151;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvSalida.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle32;
             this.dgvSalida.BackgroundColor = System.Drawing.Color.White;
             this.dgvSalida.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle152.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle152.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle152.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle152.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle152.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle152.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle152.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSalida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle152;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSalida.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
             this.dgvSalida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle153.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle153.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle153.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle153.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle153.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle153.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle153.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSalida.DefaultCellStyle = dataGridViewCellStyle153;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSalida.DefaultCellStyle = dataGridViewCellStyle34;
             this.dgvSalida.GridColor = System.Drawing.Color.Black;
             this.dgvSalida.Location = new System.Drawing.Point(269, 16);
             this.dgvSalida.MultiSelect = false;
             this.dgvSalida.Name = "dgvSalida";
             this.dgvSalida.ReadOnly = true;
-            dataGridViewCellStyle154.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle154.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle154.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle154.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle154.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle154.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle154.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSalida.RowHeadersDefaultCellStyle = dataGridViewCellStyle154;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSalida.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dgvSalida.RowHeadersVisible = false;
-            dataGridViewCellStyle155.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvSalida.RowsDefaultCellStyle = dataGridViewCellStyle155;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvSalida.RowsDefaultCellStyle = dataGridViewCellStyle36;
             this.dgvSalida.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalida.Size = new System.Drawing.Size(596, 393);
             this.dgvSalida.StandardTab = true;
@@ -4965,7 +5385,7 @@
             // dtpFechaFinalAlmacen
             // 
             this.dtpFechaFinalAlmacen.Enabled = false;
-            this.dtpFechaFinalAlmacen.Location = new System.Drawing.Point(304, 40);
+            this.dtpFechaFinalAlmacen.Location = new System.Drawing.Point(305, 41);
             this.dtpFechaFinalAlmacen.Name = "dtpFechaFinalAlmacen";
             this.dtpFechaFinalAlmacen.Size = new System.Drawing.Size(195, 21);
             this.dtpFechaFinalAlmacen.TabIndex = 2432;
@@ -4973,7 +5393,7 @@
             // dtpFechaInicioAlmacen
             // 
             this.dtpFechaInicioAlmacen.Enabled = false;
-            this.dtpFechaInicioAlmacen.Location = new System.Drawing.Point(55, 40);
+            this.dtpFechaInicioAlmacen.Location = new System.Drawing.Point(56, 41);
             this.dtpFechaInicioAlmacen.Name = "dtpFechaInicioAlmacen";
             this.dtpFechaInicioAlmacen.Size = new System.Drawing.Size(196, 21);
             this.dtpFechaInicioAlmacen.TabIndex = 2431;
@@ -5162,7 +5582,7 @@
             // dtpFechaFinalEmbarques
             // 
             this.dtpFechaFinalEmbarques.Enabled = false;
-            this.dtpFechaFinalEmbarques.Location = new System.Drawing.Point(303, 44);
+            this.dtpFechaFinalEmbarques.Location = new System.Drawing.Point(304, 45);
             this.dtpFechaFinalEmbarques.Name = "dtpFechaFinalEmbarques";
             this.dtpFechaFinalEmbarques.Size = new System.Drawing.Size(195, 21);
             this.dtpFechaFinalEmbarques.TabIndex = 2439;
@@ -5170,7 +5590,7 @@
             // dtpFechaInicioEmbarques
             // 
             this.dtpFechaInicioEmbarques.Enabled = false;
-            this.dtpFechaInicioEmbarques.Location = new System.Drawing.Point(54, 44);
+            this.dtpFechaInicioEmbarques.Location = new System.Drawing.Point(55, 45);
             this.dtpFechaInicioEmbarques.Name = "dtpFechaInicioEmbarques";
             this.dtpFechaInicioEmbarques.Size = new System.Drawing.Size(196, 21);
             this.dtpFechaInicioEmbarques.TabIndex = 2438;
@@ -5731,6 +6151,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1017, 711);
             this.Controls.Add(this.tpApparelInternational);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -5738,11 +6159,13 @@
             this.Name = "Escaneo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Apparel International";
+            this.Load += new System.EventHandler(this.Escaneo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReporteAlmacen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcReporte)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioResultBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioTallaSeparadaResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioResultBindingSource1)).EndInit();
             this.tpReimpresion.ResumeLayout(false);
             this.tpReimpresion.PerformLayout();
             this.tpReportes.ResumeLayout(false);
@@ -5798,9 +6221,14 @@
             this.tpPOTallasSeparadas.ResumeLayout(false);
             this.tpPOTallasSeparadas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcPOTallasSeparadas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaInventarioTallaSeparadaResultBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView15)).EndInit();
+            this.tpAltaEstilo.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEstiloAlta)).EndInit();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.tabAlmacen.ResumeLayout(false);
             this.tabAlmacen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -5849,26 +6277,64 @@
         }
 
         #endregion
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabControl dgvReporteAlmacen;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView9;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl gcReporte;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.BindingSource consultaInventarioResultBindingSource1;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colID;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPO;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPOITEM;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCANTIDAD;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colSIZE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colUPC;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCARTONNUMBER;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPRODUCTCODE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCARTONTYPE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCREATEDATE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colUSERCREATE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCLIENTE;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFACTURA;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTERMINADO;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.Utils.ToolTipController toolTipController1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.CheckBox cbLimpiar;
         private System.Windows.Forms.Button btnImprimirRe;
         private System.Windows.Forms.TextBox txtIDReImpresion;
@@ -5881,14 +6347,14 @@
         private System.Windows.Forms.Label lblFechaFinal;
         private System.Windows.Forms.Label lblFechaInicio;
         private System.Windows.Forms.ComboBox cmbPOB;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblCartonsEmpacados;
+        private System.Windows.Forms.Label lblCartonReq;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtCartonsReamaining;
         private System.Windows.Forms.TextBox txtCartonsPacked;
         private System.Windows.Forms.TextBox txtUnitsRemai;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblCartonsRestantes;
         private System.Windows.Forms.TextBox txtCartonRq;
         private System.Windows.Forms.ComboBox cmbTerminado;
         private System.Windows.Forms.ComboBox cmbFactura;
@@ -5906,54 +6372,116 @@
         private System.Windows.Forms.TextBox txtCartonNumber;
         private System.Windows.Forms.TabPage tpbajaPO;
         private System.Windows.Forms.Button btnBajaPO;
-        private System.Windows.Forms.ComboBox cmbTerminadoB;
-        private System.Windows.Forms.ComboBox cmbFacturacionB;
-        private System.Windows.Forms.ComboBox cmbClienteB;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label25;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl gcModulo;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView12;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn15;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn16;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn17;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn18;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn19;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn20;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn21;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn22;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn23;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn24;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn25;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn26;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn27;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn28;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView13;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnImprimirReportePO;
         private System.Windows.Forms.Button btnActualizaPO;
         private System.Windows.Forms.DateTimePicker dtpFechaFinPO;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioPO;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label33;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView11;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl gcPO;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView10;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn14;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.TabPage tbpReporteModulo;
         private System.Windows.Forms.Button btnImprimeModulos;
         private System.Windows.Forms.Button btnActualizaPOS;
@@ -5962,8 +6490,12 @@
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.ComboBox cmbSizes;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraBars.Navigation.TabPane tpApparelInternational;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabTerminado;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.Label label5;
@@ -6005,12 +6537,18 @@
         private System.Windows.Forms.TabPage tpImportaLEVIS;
         private System.Windows.Forms.Button btnImportarLevis;
         private System.Windows.Forms.TabPage tpReportePO;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraBars.Navigation.TabNavigationPage tabAlmacen;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblVersion2;
         private System.Windows.Forms.Label label51;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpSalida;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.CheckBox cbContadorEntrada;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtTotalTarima;
@@ -6040,7 +6578,9 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox txtIDCaja;
         private System.Windows.Forms.Label label36;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpEntrada;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.CheckBox cbContadorSalida;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox txtTotalEscaneadoEmb;
@@ -6057,61 +6597,123 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.TextBox txtIDCajaSalida;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpMoverUbicacion;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnGuardarMovimiento;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox txtNuevaUbicacion;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.TextBox txtCajaidMover;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtbBajaCaja;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnBajaAlmacen;
         private System.Windows.Forms.TextBox txtBajaCajaID;
         private System.Windows.Forms.Label label49;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpReporteAlmacen;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl gcReporteAlmacen;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.BindingSource ubicacionReporteAlmacenConsultaResultBindingSource;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colRACK;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colNivel;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPO1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCliente1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFacturacion;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTerminado1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCantidad1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTalla;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colidCaja;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFecha;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView8;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnBuscarAlmacen;
         private System.Windows.Forms.DateTimePicker dtpFechaFinalAlmacen;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioAlmacen;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label48;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpReporteEmbarques;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl dgReporteEmbarques;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.BindingSource ubicacionReporteEmbarquesConsultaResultBindingSource;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colRACK1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colNivel1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPO2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCliente2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFacturacion1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTerminado2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCantidad2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTalla1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colidCaja1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFecha1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnBuscarEmbarques;
         private System.Windows.Forms.DateTimePicker dtpFechaFinalEmbarques;
         private System.Windows.Forms.DateTimePicker dtpFechaInicioEmbarques;
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.Label label54;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpReimpresionEtiqueta;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnImprimirEtiquetaAlmacen;
         private System.Windows.Forms.TextBox txtIDReimpresionAlmacen;
         private System.Windows.Forms.Label label55;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage xtpDividirCaja;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label56;
         private System.Windows.Forms.Button btnGuardarDivision;
@@ -6121,45 +6723,105 @@
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label lblCajaid;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage ReporteAlmacenActual;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnImprimirUbicacion;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl dgReporteUbicacion;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.BindingSource ubicacionEntradaConsultaUbicacionDetalleResultBindingSource1;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colRACK2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTARIMA;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colNivel2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colidCaja2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPO3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colProductCode1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCliente3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFacturacion2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTerminado3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCantidad3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTalla2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFechaEntrada;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnReporteUbicacion;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraTab.XtraTabPage ReporteRack;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnBuscarUbicacion;
         private System.Windows.Forms.Button btnImprimirUbicacionR;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl dgReporteUbicacionID;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.BindingSource ubicacionEntradaConsultaUbicacionDetalleIDResultBindingSource;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView5;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colRACK3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colNivel3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colidCaja3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colPO4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCliente4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFacturacion3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTerminado4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colCantidad4;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colTalla3;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colFechaEntrada1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtUbicacionReporte;
         private System.Windows.Forms.BindingSource ubicacionEntradaConsultaUbicacionDetalleResultBindingSource;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView6;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView7;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.TabPage tpAltaZumies;
         internal System.Windows.Forms.GroupBox groupBox6;
         internal System.Windows.Forms.DataGridView dgvZumies;
@@ -6177,7 +6839,6 @@
         private System.Windows.Forms.Button btnzGuardar;
         internal System.Windows.Forms.Label lblPOZumies;
         internal System.Windows.Forms.TextBox txtzPOZumies;
-        internal System.Windows.Forms.TextBox txtzCantidadPrendas;
         internal System.Windows.Forms.Label label35;
         internal System.Windows.Forms.Label lblEstilo;
         internal System.Windows.Forms.TextBox txtzEstilo;
@@ -6205,7 +6866,7 @@
         private System.Windows.Forms.ComboBox cmbMarca;
         internal System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbMarcaPrepack;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnImprimeOldNavy;
         private System.Windows.Forms.TabPage ModificarPO;
         internal System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label label77;
@@ -6252,22 +6913,54 @@
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.ComboBox cmbEstilo;
         private System.Windows.Forms.TabPage tpPOTallasSeparadas;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.GridControl gcPOTallasSeparadas;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView14;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn29;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn30;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn31;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn32;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn34;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn35;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn36;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn37;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn38;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn39;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn40;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn41;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn42;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Views.Grid.GridView gridView15;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.Button btnImprimiPOTallasSeparadas;
         private System.Windows.Forms.Button btnConsultaTallasSeparadas;
         private System.Windows.Forms.DateTimePicker dtpFechaFinPOTallasSeparadas;
@@ -6275,8 +6968,46 @@
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label85;
         private System.Windows.Forms.BindingSource consultaInventarioTallaSeparadaResultBindingSource;
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colSIZE1;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private DevExpress.XtraGrid.Columns.GridColumn colSIZE2;
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnTodaslasTallas;
+        private System.Windows.Forms.TabPage tpAltaEstilo;
+        internal System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label78;
+        internal System.Windows.Forms.DataGridView dgvEstiloAlta;
+        internal System.Windows.Forms.GroupBox groupBox10;
+        internal System.Windows.Forms.Label label86;
+        private System.Windows.Forms.ComboBox cmbMarcaEstiloAlta;
+        internal System.Windows.Forms.TextBox txtSizeIzquierdoEstiloAlta;
+        internal System.Windows.Forms.Label label88;
+        internal System.Windows.Forms.TextBox txtSizeDerechoEstiloAlta;
+        internal System.Windows.Forms.TextBox txtDescriptionEstiloAlta;
+        internal System.Windows.Forms.Label label90;
+        internal System.Windows.Forms.TextBox txtColorEstiloAlta;
+        internal System.Windows.Forms.Label label91;
+        internal System.Windows.Forms.TextBox txtEstiloAlta;
+        private System.Windows.Forms.Button btnEliminaEstiloAlta;
+        private System.Windows.Forms.Button btnAgregarEstiloAlta;
+        internal System.Windows.Forms.TextBox txtUpcEstiloAlta;
+        private System.Windows.Forms.Button btnCancelarEstiloAlta;
+        internal System.Windows.Forms.Label label92;
+        internal System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Button btnActualizaEstiloAlta;
+        private System.Windows.Forms.Button btnGuardarEstiloAlta;
+        internal System.Windows.Forms.Label label94;
+        internal System.Windows.Forms.TextBox txtPOEstiloAlta;
+        internal System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnImportarEstilo;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox chkImprimirEtiqueta;
+        private System.Windows.Forms.Label lblImprimirEtiqueta;
+        internal System.Windows.Forms.TextBox txtzCantidadPrendas;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

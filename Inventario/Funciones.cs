@@ -97,14 +97,12 @@ namespace Inventario
         {
             try
             {
-
                 BDDataContext consulta = new BDDataContext();
-                List<ConsultaPOResult> po = new List<ConsultaPOResult>();
+                List<ConsultaPO_VarcharResult> po = new List<ConsultaPO_VarcharResult>();
 
                 combo.DataSource = null;
                 combo.Items.Clear();
-
-                po = consulta.ConsultaPO().ToList();
+                po = consulta.ConsultaPO_Varchar().ToList();
 
                 combo.DisplayMember = "po_numero";
                 combo.ValueMember = "po_numero";
@@ -170,7 +168,7 @@ namespace Inventario
 
                 BDDataContext consulta = new BDDataContext();
 
-                System.Data.Linq.ISingleResult<ConsultaPOItemResult> poItem = consulta.ConsultaPOItem(po);
+                System.Data.Linq.ISingleResult<ConsultaPOItem_VarcharResult> poItem = consulta.ConsultaPOItem_Varchar(po);
 
                 combo.DataSource = poItem;
                 combo.DisplayMember = "po_item";
@@ -180,7 +178,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                // MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -202,7 +200,7 @@ namespace Inventario
 
             catch (Exception ex)
             {
-                // MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message);
 
             }
         }
@@ -229,14 +227,14 @@ namespace Inventario
             }
         }
 
-        public List<ConsultaProductosNuevoResult> ConsultaProductos(string po, string poItem, string prodCd, string sizeIzquierdo, string sizeDerecho)
+        public List<ConsultaProductos_VarcharResult> ConsultaProductos(string po, string poItem, string prodCd, string sizeIzquierdo, string sizeDerecho)
         {
-            List<ConsultaProductosNuevoResult> Productonull = null;
+            List<ConsultaProductos_VarcharResult> Productonull = null;
             try
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaProductosNuevoResult> Producto = consulta.ConsultaProductosNuevo(Convert.ToInt64(po), poItem, prodCd, sizeIzquierdo.Trim(), sizeDerecho.Trim()).ToList();
+                List<ConsultaProductos_VarcharResult> Producto = consulta.ConsultaProductos_Varchar(po, poItem, prodCd, sizeIzquierdo.Trim(), sizeDerecho.Trim()).ToList();
 
                 return Producto;
             }
@@ -254,9 +252,29 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                decimal? po_numero = 0;
-                po_numero = Convert.ToInt64(po);
-                List<ConsultaProductosZumiesResult> Producto = consulta.ConsultaProductosZumies(po_numero, poItem, prodCd, size).ToList();
+                //decimal? po_numero = 0;
+                //po_numero = Convert.ToInt64(po);
+                List<ConsultaProductosZumiesResult> Producto = consulta.ConsultaProductosZumies(po, poItem, prodCd, size).ToList();
+
+                return Producto;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return Productonull;
+            }
+        }
+
+        public List<ConsultaProductosOLDNAVYResult> ConsultaProductosOLDNAVY(string po, string sizeIzquierdo, string sizeDerecho)
+        {
+            List<ConsultaProductosOLDNAVYResult> Productonull = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaProductosOLDNAVYResult> Producto = consulta.ConsultaProductosOLDNAVY(po, sizeIzquierdo.Trim(), sizeDerecho.Trim()).ToList();
 
                 return Producto;
             }
@@ -275,7 +293,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaProductosTargetResult> Producto = consulta.ConsultaProductosTarget(Convert.ToInt64(po), poItem, prodCd, size).ToList();
+                List<ConsultaProductosTargetResult> Producto = consulta.ConsultaProductosTarget(po, poItem, prodCd, size).ToList();
 
                 return Producto;
             }
@@ -353,6 +371,27 @@ namespace Inventario
 
         }
 
+        public int? ConsultaMixto(string po, string estilo)
+        {
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                ConsultaMixtoResult objusu = consulta.ConsultaMixto(po,estilo).FirstOrDefault();
+
+                return objusu.mixto;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return 0;
+            }
+
+        }
+
 
         public List<ConsultaPrepackDetalleResult> ConsultaPrepackDetalle(int idPrepack)
         {
@@ -376,28 +415,38 @@ namespace Inventario
 
 
 
-        public int GuardaInventario(EtiquetaCajaModificada et, int iduser)
+        public Int64 GuardaInventario(EtiquetaCajaModificada et, int iduser)
         {
-            int respuesta = 0;
+            Int64 respuesta = 0;
             try
             {
                 BDDataContext consulta = new BDDataContext();
 
                 GuardarInventarioResult insertInventario = consulta.GuardarInventario(et.id,
                                                                                       et.po,
+                                                                                      et.po_varchar,
                                                                                       et.poItem,
                                                                                       et.Cantidad,
                                                                                       et.size_izquierdo,
                                                                                       et.size_derecho,
-                                                                                      et.upc, et.Carton,
+                                                                                      et.upc,
+                                                                                      et.Carton,
                                                                                       et.ProductCode,
                                                                                       et.TipoCarton,
                                                                                       iduser,
                                                                                       et.id_cliente,
                                                                                       et.id_factura,
-                                                                                      et.id_terminado).FirstOrDefault();
+                                                                                      et.id_terminado,
+                                                                                      et.mixto).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = Convert.ToInt32(insertInventario.Column1);
+                if (et.poItem == "22")
+                {
+                    respuesta = Convert.ToInt64(insertInventario.Column1);
+                }
+                else
+                {
+                    respuesta = Convert.ToInt32(insertInventario.Column1);
+                }
             }
             catch (Exception ex)
             {
@@ -407,6 +456,39 @@ namespace Inventario
             return respuesta;
         }
 
+
+        public Int64 GuardaInventarioDetalle(EtiquetaCajaModificada et, int iduser)
+        {
+            Int64 respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                GuardarInventarioDetalleResult insertInventario = consulta.GuardarInventarioDetalle(et.id_inventario
+                                                                                      ,et.estilo			
+                                                                                      ,et.poItem		
+                                                                                      ,et.po		
+                                                                                      ,et.Cantidad		
+                                                                                      ,et.size_izquierdo	
+                                                                                      ,et.size_derecho	
+                                                                                      ,et.upc).FirstOrDefault();
+                consulta.SubmitChanges();
+                if (et.poItem == "22")
+                {
+                    respuesta = Convert.ToInt64(insertInventario.Column1);
+                }
+                else
+                {
+                    respuesta = Convert.ToInt32(insertInventario.Column1);
+                }
+            }
+            catch (Exception ex)
+            {
+                respuesta = 0;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
         public int GuardaInventarioZumies(EtiquetaZUMIES et, int iduser)
         {
             int respuesta = 0;
@@ -416,6 +498,7 @@ namespace Inventario
 
                 GuardarInventarioResult insertInventario = consulta.GuardarInventario(et.id,
                                                                                       et.po,
+                                                                                      "",
                                                                                       et.poItem,
                                                                                       et.Cantidad,
                                                                                       et.size_izquierdo,
@@ -427,7 +510,8 @@ namespace Inventario
                                                                                       iduser,
                                                                                       et.id_cliente,
                                                                                       et.id_factura,
-                                                                                      et.id_terminado).FirstOrDefault();
+                                                                                      et.id_terminado,
+                                                                                      0).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = Convert.ToInt32(insertInventario.Column1);
             }
@@ -469,13 +553,40 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarAltaPOManual(et.po,
-                                          et.Cantidad,
-                                          et.upc,
-                                          et.idSize,
-                                          et.idusuario).FirstOrDefault();
+                GuardarAltaPOManualResult Alta = consulta.GuardarAltaPOManual(et.po,
+                                        et.estilo,
+                                        et.Cantidad,
+                                        et.upc,
+                                        et.idSize,
+                                        et.itemDescription,
+                                        et.color,
+                                        et.idusuario).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public int GuardaWrangler(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                GuardarWranglerResult Alta = consulta.GuardarWrangler(et.po,
+                                        et.estilo,
+                                        et.Cantidad,
+                                        et.upc,
+                                        et.idSize,
+                                        et.itemDescription,
+                                        et.color,
+                                        et.idusuario).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -491,18 +602,43 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarZumies(et.po,
-                                          et.estilo,
-                                          et.Cantidad,
-                                          et.CantidadCajas,
-                                          et.upc,
-                                          et.idSize,
-                                          et.itemDescription,
-                                          et.color,
-                                          et.escaneado,
-                                          et.idusuario).FirstOrDefault();
+                GuardarZumiesResult Alta = consulta.GuardarZumies(et.po,
+                                        et.estilo,
+                                        et.Cantidad,
+                                        et.CantidadCajas,
+                                        et.upc,
+                                        et.idSize,
+                                        et.itemDescription,
+                                        et.color,
+                                        et.escaneado,
+                                        et.idusuario).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public int GuardaIFR(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                GuardarIFRResult Alta = consulta.GuardarIFR(et.po,
+                                                                et.Cantidad,
+                                                                et.idSize,
+                                                                et.idusuario,
+                                                                et.upc,
+                                                                et.color,
+                                                                et.estilo,
+                                                                et.CantidadCajas
+                                                                ).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -518,7 +654,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarBens(et.po, et.po_varchar,
+                GuardarBensResult Alta = consulta.GuardarBens(et.po, et.po_varchar,
                                           et.estilo,
                                           et.Cantidad,
                                           //et.CantidadCajas,
@@ -530,7 +666,7 @@ namespace Inventario
                                           et.idusuario
                                           ).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -539,6 +675,7 @@ namespace Inventario
             return respuesta;
         }
 
+
         public int GuardarSaftech(EtiquetaCajaModificada et)
         {
             int respuesta = 0;
@@ -546,7 +683,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarSaftech(et.po, et.po_varchar,
+                GuardarSaftechResult Alta = consulta.GuardarSaftech(et.po, et.po_varchar,
                                           et.estilo,
                                           et.Cantidad,
                                           //et.CantidadCajas,
@@ -558,7 +695,7 @@ namespace Inventario
                                           et.idusuario
                                           ).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -573,7 +710,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarPO(et.po, et.po_varchar,
+                GuardarPOResult Alta = consulta.GuardarPO(et.po, et.po_varchar,
                                           et.estilo,
                                           et.Cantidad,
                                           et.CantidadCajas,
@@ -586,7 +723,7 @@ namespace Inventario
                                           et.marca
                                           ).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -601,7 +738,8 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                consulta.GuardarTarget(et.po,
+
+                GuardarTargetResult Alta = consulta.GuardarTarget(et.po,
                                           et.Cantidad,
                                           et.idSize,
                                           et.escaneado,
@@ -610,7 +748,7 @@ namespace Inventario
                                           et.itemDescription,
                                           et.upc).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = 1;
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
             catch (Exception ex)
             {
@@ -712,52 +850,52 @@ namespace Inventario
             }
 
         }
-        public List<ConsultaAlmacenesResult> ConsultaAlmacenes(DateTime? fechaInicio, DateTime? fechaFin)
-        {
-            List<ConsultaAlmacenesResult> objInv = null;
-            try
-            {
-                BDDataContext consulta = new BDDataContext
-                {
-                    CommandTimeout = 2500
-                };
-                List<ConsultaAlmacenesResult> objin = consulta.ConsultaAlmacenes(fechaInicio, fechaFin).ToList();
+        //public List<ConsultaAlmacenesResult> ConsultaAlmacenes(DateTime? fechaInicio, DateTime? fechaFin)
+        //{
+        //    List<ConsultaAlmacenesResult> objInv = null;
+        //    try
+        //    {
+        //        BDDataContext consulta = new BDDataContext
+        //        {
+        //            CommandTimeout = 2500
+        //        };
+        //        List<ConsultaAlmacenesResult> objin = consulta.ConsultaAlmacenes(fechaInicio, fechaFin).ToList();
 
-                return objin;
+        //        return objin;
 
-            }
+        //    }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
 
-                return objInv;
-            }
+        //        return objInv;
+        //    }
 
-        }
-        public List<ConsultaAlmacenesDTLResult> ConsultaAlmacenesDTL(DateTime? fechaInicio, DateTime? fechaFin)
-        {
-            List<ConsultaAlmacenesDTLResult> objInv = null;
-            try
-            {
-                BDDataContext consulta = new BDDataContext
-                {
-                    CommandTimeout = 2500
-                };
-                List<ConsultaAlmacenesDTLResult> objin = consulta.ConsultaAlmacenesDTL(fechaInicio, fechaFin).ToList();
+        //}
+        //public List<ConsultaAlmacenesDTLResult> ConsultaAlmacenesDTL(DateTime? fechaInicio, DateTime? fechaFin)
+        //{
+        //    List<ConsultaAlmacenesDTLResult> objInv = null;
+        //    try
+        //    {
+        //        BDDataContext consulta = new BDDataContext
+        //        {
+        //            CommandTimeout = 2500
+        //        };
+        //        List<ConsultaAlmacenesDTLResult> objin = consulta.ConsultaAlmacenesDTL(fechaInicio, fechaFin).ToList();
 
-                return objin;
+        //        return objin;
 
-            }
+        //    }
 
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message);
 
-                return objInv;
-            }
+        //        return objInv;
+        //    }
 
-        }
+        //}
 
         public List<ConsultaAlmacenesFolioComprasResult> ConsultaComprasAIN(DateTime? fechaInicio, DateTime? fechaFin)
         {
@@ -897,14 +1035,14 @@ namespace Inventario
             }
 
         }
-        public List<ConsultaUPCResult> ConsultaUPC(string po_numero, string upc)
+        public List<ConsultaUPC_VarcharResult> ConsultaUPC(string po_numero, string upc)
         {
-            List<ConsultaUPCResult> objInv = null;
+            List<ConsultaUPC_VarcharResult> objInv = null;
             try
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaUPCResult> objin = consulta.ConsultaUPC(po_numero, upc).ToList();
+                List<ConsultaUPC_VarcharResult> objin = consulta.ConsultaUPC_Varchar(po_numero, upc).ToList();
 
                 return objin;
 
@@ -1029,6 +1167,31 @@ namespace Inventario
 
             }
         }
+
+
+        public void ConsultaTallasIFR(ComboBox combo, string estilo)
+        {
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                System.Data.Linq.ISingleResult<ConsultaTallasIFRResult> poItem = consulta.ConsultaTallasIFR(estilo);
+
+                //Corregi el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "size";
+                combo.DataSource = poItem;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+
+            }
+        }
         public void ConsultaTallasXMarca(ComboBox combo, string marca)
         {
             try
@@ -1090,7 +1253,7 @@ namespace Inventario
             }
         }
 
-        
+
         public void ConsultaEstiloRocky(ComboBox combo)
         {
             try
@@ -1099,6 +1262,29 @@ namespace Inventario
                 BDDataContext consulta = new BDDataContext();
 
                 System.Data.Linq.ISingleResult<ConsultaEstiloRockyResult> poItem = consulta.ConsultaEstiloRocky();
+
+                //Corregir el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "estilo";
+                combo.DataSource = poItem;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+
+            }
+        }
+        public void ConsultaEstiloIFR(ComboBox combo)
+        {
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                System.Data.Linq.ISingleResult<ConsultaEstiloIFRResult> poItem = consulta.ConsultaEstiloIFR();
 
                 //Corregir el orden de inicializacion de variables
                 combo.ValueMember = "id";
@@ -1168,7 +1354,7 @@ namespace Inventario
 
                 BDDataContext consulta = new BDDataContext();
 
-                System.Data.Linq.ISingleResult<ConsultaTallasxMarcaxEstiloResult> poItem = consulta.ConsultaTallasxMarcaxEstilo(estilo,marca);
+                System.Data.Linq.ISingleResult<ConsultaTallasxMarcaxEstiloResult> poItem = consulta.ConsultaTallasxMarcaxEstilo(estilo, marca);
 
                 //Corregi el orden de inicializacion de variables
                 combo.ValueMember = "id";
@@ -1449,6 +1635,24 @@ namespace Inventario
         }
 
 
+        public string ConsultaMarca(string po_numero, string po_item)
+        {
+            string respuesta = "";
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaMarcaResult respuesta1 = consulta.ConsultaMarca(po_numero, po_item).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1.marca;
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+               // MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
 
         public int ComprobarCajaPO(string po, string cliente, string factura, string terminado, int idCaja, bool? pOSolamente)
         {
@@ -1659,7 +1863,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                int insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad,pd.CantidadCajas, pd.upc, pd.idusuario, pd.idSize);
+                int insertInventario = consulta.GuardarPrePackDetalle(pd.idPrepack, pd.size, pd.cantidad, pd.CantidadCajas, pd.upc, pd.idusuario, pd.idSize);
 
                 consulta.SubmitChanges();
                 // respuesta = Convert.ToInt32(insertInventario.Column1);
@@ -1729,6 +1933,81 @@ namespace Inventario
         }
 
 
+        public string ConsultaTallasIFRcodigoupc(string size_izquierdo)
+        {
+            string respuesta = "";
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaTallasIFRcodigoupcResult respuesta1 = consulta.ConsultaTallasIFRcodigoupc(size_izquierdo).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1.upcCaja;
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+        public ConsultaTallasColorIFRResult ConsultaTallasColorIFR(string estilo)
+        {
+            ConsultaTallasColorIFRResult respuesta = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaTallasColorIFRResult respuesta1 = consulta.ConsultaTallasColorIFR(estilo).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1;
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+        public Prendas ConsultaPrendas_UPC(string po_numero, string upc)
+        {
+             Prendas respuesta = new Prendas();
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaPrendas_UPCResult respuesta1= consulta.ConsultaPrendas_UPC(po_numero,upc).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta.diferencia = respuesta1.diferencia;
+                respuesta.prendasescaneadas = respuesta1.Escaneadas.ToString();
+                respuesta.totalprendas = respuesta1.Total.ToString();
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public Prendas ConsultaPrendas_Talla(string po_numero, string talla)
+        {
+            Prendas respuesta = new Prendas();
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaPrendas_TallaResult respuesta1 = consulta.ConsultaPrendas_Talla(po_numero, talla).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta.diferencia = respuesta1.diferencia;
+                respuesta.prendasescaneadas = respuesta1.Escaneadas.ToString();
+                respuesta.totalprendas = respuesta1.Total.ToString();
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
         public string ConsultaUPCBENS(int? id)
         {
             String respuesta = "";
@@ -1747,6 +2026,25 @@ namespace Inventario
             return respuesta.ToString();
         }
 
+        public string ConsultaUPCIFR(int? id)
+        {
+            String respuesta = "";
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaUPCIFRResult respuesta1 = consulta.ConsultaUPCIFR(id).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1.upc;
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta.ToString();
+        }
+
+
 
         public List<ConsultaProductosBensResult> ConsultaProductosBens(string po, string size_izquierdo, string size_derecho)
         {
@@ -1755,9 +2053,9 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                decimal? po_numero = 0;
-                po_numero = Convert.ToInt64(po);
-                List<ConsultaProductosBensResult> Producto = consulta.ConsultaProductosBens(po_numero, size_izquierdo,size_derecho).ToList();
+                //decimal? po_numero = 0;
+                //po_numero = Convert.ToInt64(po);
+                List<ConsultaProductosBensResult> Producto = consulta.ConsultaProductosBens(po.ToString(), size_izquierdo, size_derecho).ToList();
 
                 return Producto;
             }
@@ -1770,6 +2068,25 @@ namespace Inventario
             }
         }
 
+        public List<ConsultaProductosBensEscaneoResult> ConsultaProductosBensEscaneo(string po, string size_izquierdo, string size_derecho)
+        {
+            List<ConsultaProductosBensEscaneoResult> Productonull = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                List<ConsultaProductosBensEscaneoResult> Producto = consulta.ConsultaProductosBensEscaneo(po.ToString(), size_izquierdo, size_derecho).ToList();
+
+                return Producto;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+
+                return Productonull;
+            }
+        }
         public List<ConsultaProductosBensIDResult> ConsultaProductosBensID(int? id)
         {
             List<ConsultaProductosBensIDResult> Productonull = null;
@@ -1810,10 +2127,50 @@ namespace Inventario
                                                                                       et.ESTILO,
                                                                                       iduser,
                                                                                       et.color,
-                                                                                      et.itemDescription                                                                                      
+                                                                                      et.itemDescription
                                                                                       ).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = insertInventario.Column1.ToString();
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+
+        public string GuardaTallaEstilos(tallas t)
+        {
+            string respuesta = "";
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                consulta.tallas.InsertOnSubmit(t);
+                consulta.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+
+        public string GuardaEstilos(estilo e)
+        {
+            string respuesta = "";
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                consulta.estilo.InsertOnSubmit(e);
+                consulta.SubmitChanges();
             }
             catch (Exception ex)
             {
@@ -1830,7 +2187,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                ActualizaInventarioPOResult insertInventario = consulta.ActualizaInventarioPO(po,iduser).FirstOrDefault();
+                ActualizaInventarioPOResult insertInventario = consulta.ActualizaInventarioPO(po, iduser).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = insertInventario.id.ToString();
             }

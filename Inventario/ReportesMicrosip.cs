@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraPrinting;
+﻿#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+using DevExpress.XtraPrinting;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -34,9 +36,9 @@ namespace Inventario
         {
             try
             {
-                List<ConsultaAlmacenesResult> inv = f.ConsultaAlmacenes(dtpFechaInicio.Value.Date, dtpFechaFinal.Value.Date);
+                //   List<ConsultaAlmacenesResult> inv = f.ConsultaAlmacenes(dtpFechaInicio.Value.Date, dtpFechaFinal.Value.Date);
 
-                gcReporte.DataSource = inv;
+                //    gcReporte.DataSource = inv;
             }
             catch (Exception ex)
             {
@@ -50,7 +52,9 @@ namespace Inventario
         }
 
 
+#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         private void ShowGridPreview(DevExpress.XtraGrid.GridControl grid)
+#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
         {
             // Check whether or not the Grid Control can be printed. 
             if (!grid.IsPrintingAvailable)
@@ -81,9 +85,9 @@ namespace Inventario
         {
             try
             {
-                List<ConsultaAlmacenesDTLResult> inv = f.ConsultaAlmacenesDTL(dtpFechaInicioDTL.Value.Date, dtpFechaFinalDTL.Value.Date);
+                //List<ConsultaAlmacenesDTLResult> inv = f.ConsultaAlmacenesDTL(dtpFechaInicioDTL.Value.Date, dtpFechaFinalDTL.Value.Date);
 
-                gcReporteDTL.DataSource = inv;
+                // gcReporteDTL.DataSource = inv;
             }
             catch (Exception ex)
             {

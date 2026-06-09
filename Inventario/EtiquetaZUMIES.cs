@@ -35,13 +35,13 @@ namespace Inventario
 
         public string terminado { get; set; }
 
-        public int id_Inventario { get; set; }
+        public int id_inventario { get; set; }
 
         public Bitmap qr { get; set; }
 
         public Image codigoBarras { get; set; }
 
-        public System.Nullable<decimal> po { get; set; }
+        public string po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
 
         public string assembly { get; set; }
@@ -85,6 +85,8 @@ namespace Inventario
 
 
 
+        public string descripcion { get; set; }
+        public string descripcion2 { get; set; }
 
         public int idusuario { get; set; }
 

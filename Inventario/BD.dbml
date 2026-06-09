@@ -1,17 +1,48 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Inventario" Class="BDDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa" SettingsObjectName="Inventario.Properties.Settings" SettingsPropertyName="InventarioConnectionString3" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.caja" Member="caja">
+    <Type Name="caja">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idTarima" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noCaja" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fechahora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nombreUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.usuarios" Member="usuarios">
+    <Type Name="usuarios">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="usuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="idPerfil" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.catProductos" Member="catProductos">
-    <Type Name="catProducto">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    <Type Name="catProductos">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="totalCajasPO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="escaneado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="po_item" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vendor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -20,143 +51,86 @@
       <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.cliente" Member="clientes">
+  <Table Name="dbo.cliente" Member="cliente">
     <Type Name="cliente">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.factura" Member="facturas">
+  <Table Name="dbo.clienteMarca" Member="clienteMarca">
+    <Type Name="clienteMarca">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="clave" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.estilo" Member="estilo">
+    <Type Name="estilo">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="estilo" Member="estilo1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.factura" Member="factura">
     <Type Name="factura">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Inventario" Member="Inventarios">
-    <Type Name="Inventario">
+  <Table Name="dbo.idBajaPO" Member="idBajaPO">
+    <Type Name="idBajaPO">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_talla" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idInventario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idUsuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombreUsuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="estatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="numeroCaja" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="talla" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="fechaBaja" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.nivel" Member="nivels">
+  <Table Name="dbo.nivel" Member="nivel">
     <Type Name="nivel">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="nivel" Member="nivel1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.perfil" Member="perfils">
+  <Table Name="dbo.NuevoGiro" Member="NuevoGiro">
+    <Type Name="NuevoGiro">
+      <Column Name="CartonNumber" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.perfil" Member="perfil">
     <Type Name="perfil">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="perfil" Member="perfil1" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.status" Member="status">
-    <Type Name="status">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tallas" Member="tallas">
-    <Type Name="talla">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.terminado" Member="terminados">
-    <Type Name="terminado">
+  <Table Name="dbo.PrecioArticulo" Member="PrecioArticulo">
+    <Type Name="PrecioArticulo">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tipoCaja" Member="tipoCajas">
-    <Type Name="tipoCaja">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ubicacion" Member="ubicacions">
-    <Type Name="ubicacion">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="nivel_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Capacidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.ubicacionDetalle" Member="ubicacionDetalles">
-    <Type Name="ubicacionDetalle">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ubicacion_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="caja_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cliente_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="facturacion_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="terminado_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ubicacion_id_Anterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="entrada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="salida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="create_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="delete_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="salida_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.usuarios" Member="usuarios">
-    <Type Name="usuario">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="usuario" Member="usuario1" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="password" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="idPerfil" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.generator_16" Member="generator_16s">
-    <Type Name="generator_16">
-      <Column Name="n" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
-  <Table Name="dbo.generator_256" Member="generator_256s">
-    <Type Name="generator_256">
-      <Column Name="n" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.factura" Member="factura1s">
-    <Type Name="factura1">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="empresa_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CLAVE_ARTICULO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="PESOS" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
+      <Column Name="DOLLAR" Type="System.Decimal" DbType="Decimal(18,4)" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.Prepack" Member="Prepack">
     <Type Name="Prepack">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="DPCI" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="barcode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="cantidadTotalCaja" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Prepack_PrepackDetalle" Member="PrepackDetalle" ThisKey="id" OtherKey="idPrepack" Type="PrepackDetalle" />
     </Type>
   </Table>
@@ -174,16 +148,182 @@
       <Association Name="Prepack_PrepackDetalle" Member="Prepack" ThisKey="idPrepack" OtherKey="id" Type="Prepack" IsForeignKey="true" />
     </Type>
   </Table>
-  <Function Name="dbo.ACTUALIZA_UPC_TARGET" Method="ACTUALIZA_UPC_TARGET" IsComposable="true">
-    <Return Type="object" />
+  <Table Name="dbo.status" Member="status">
+    <Type Name="status">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="status_ubicacionDetalle" Member="ubicacionDetalle" ThisKey="id" OtherKey="status_id" Type="ubicacionDetalle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.statusUbicacion" Member="statusUbicacion">
+    <Type Name="statusUbicacion">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tallas" Member="tallas">
+    <Type Name="tallas">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="tipo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tarima" Member="tarima">
+    <Type Name="tarima">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noTarima" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fechahora" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="nombreUsuario" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.terminado" Member="terminado">
+    <Type Name="terminado">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tipoCaja" Member="tipoCaja">
+    <Type Name="tipoCaja">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ubicacion" Member="ubicacion">
+    <Type Name="ubicacion">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nivel_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nombre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Capacidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="ubicacion_ubicacionDetalle" Member="ubicacionDetalle" ThisKey="id" OtherKey="ubicacion_id" Type="ubicacionDetalle" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ubicacionDetalle" Member="ubicacionDetalle">
+    <Type Name="ubicacionDetalle">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ubicacion_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="caja_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliente_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="facturacion_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="terminado_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ubicacion_id_Anterior" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="entrada" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="salida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="delete_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="salida_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="salida_user" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="status_ubicacionDetalle" Member="status" ThisKey="status_id" OtherKey="id" Type="status" IsForeignKey="true" />
+      <Association Name="ubicacion_ubicacionDetalle" Member="ubicacion" ThisKey="ubicacion_id" OtherKey="id" Type="ubicacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Inventario" Member="Inventario">
+    <Type Name="Inventario">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_talla" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mixto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.InventarioDetalle" Member="InventarioDetalle">
+    <Type Name="InventarioDetalle">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Inventario" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ACTUALIZA_TALLAS" Method="ACTUALIZA_TALLAS">
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.ubicacion_Salida_Terminar" Method="ubicacion_Salida_Terminar">
     <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.ACTUALIZA_UPC_TARGET" Method="ACTUALIZA_UPC_TARGET">
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ActualizaInventarioPO" Method="ActualizaInventarioPO">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ActualizaInventarioPOResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.BajaCaja" Method="BajaCaja">
     <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="BajaCajaResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.BajaCaja2" Method="BajaCaja2">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BajaCaja2Result">
       <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
@@ -197,8 +337,79 @@
       <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.BajaTallaPO" Method="BajaTallaPO">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Talla" Parameter="talla" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="BajaTallaPOResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.BD_RESPALDO" Method="BD_RESPALDO">
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ConsultaAlmacenes" Method="ConsultaAlmacenes" IsComposable="true">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="object" />
+  </Function>
+  <Function Name="dbo.ConsultaAlmacenesFolioCompras" Method="ConsultaAlmacenesFolioCompras">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ConsultaAlmacenesFolioComprasResult">
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaAlmacenesFolioComprasDTL" Method="ConsultaAlmacenesFolioComprasDTL">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ConsultaAlmacenesFolioComprasDTLResult">
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaAlmacenesFolioComprasTBG" Method="ConsultaAlmacenesFolioComprasTBG">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ConsultaAlmacenesFolioComprasTBGResult">
+      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
+      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
+      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
+      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaAlmacenesTBG" Method="ConsultaAlmacenesTBG">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ConsultaAlmacenesTBGResult">
+      <Column Name="" Member="Column1" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
   <Function Name="dbo.ConsultaARTICULOS" Method="ConsultaARTICULOS">
     <ElementType Name="ConsultaARTICULOSResult">
@@ -206,11 +417,9 @@
       <Column Name="ARTICULO_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaBata" Method="ConsultaBata">
+  <Function Name="dbo.ConsultaBata" Method="ConsultaBata" IsComposable="true">
     <Parameter Name="noBata" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="ConsultaBataResult">
-      <Column Name="idInventarioBata" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.ConsultaCajaBata" Method="ConsultaCajaBata">
     <Parameter Name="noCaja" Type="System.String" DbType="VarChar(50)" />
@@ -253,7 +462,7 @@
       <Column Name="NUMERO" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="APELLIDO_PATERNO" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
       <Column Name="APELLIDO_MATERNO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="NOMBRES" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="RFC" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
       <Column Name="CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
       <Column Name="REG_IMSS" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
@@ -286,6 +495,12 @@
       <Column Name="CLAVE_ARTICULO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaEstiloBens" Method="ConsultaEstiloBens">
+    <ElementType Name="ConsultaEstiloBensResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.[ConsultaEstiloNuevoPO!!]" Method="ConsultaEstiloNuevoPO__">
     <Parameter Name="Estilo" Parameter="estilo" Type="System.String" DbType="VarChar(1)" />
     <Parameter Name="PO" Parameter="pO" Type="System.String" DbType="VarChar(1)" />
@@ -293,8 +508,8 @@
       <Column Name="PO" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
       <Column Name="po_item" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
       <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
       <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
       <Column Name="cn_tag_num" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
@@ -310,30 +525,22 @@
       <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaEtiqueta" Method="ConsultaEtiqueta">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ConsultaEtiquetaResult">
+  <Function Name="dbo.ConsultaEstiloOldNavy" Method="ConsultaEstiloOldNavy">
+    <ElementType Name="ConsultaEstiloOldNavyResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="po" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poInCompleto" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poItem" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Carton" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="CartonLeft" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="CartonRight" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Vendor" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="ShipTo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Binary(50)" CanBeNull="true" />
-      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaEstiloRocky" Method="ConsultaEstiloRocky">
+    <ElementType Name="ConsultaEstiloRockyResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaEstiloSaftech" Method="ConsultaEstiloSaftech">
+    <ElementType Name="ConsultaEstiloSaftechResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaFactura" Method="ConsultaFactura">
@@ -347,7 +554,8 @@
     <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
     <ElementType Name="ConsultaInventarioResult">
       <Column Name="ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="PO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="poVarchar" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
       <Column Name="POITEM" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
       <Column Name="CANTIDAD" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="SIZE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
@@ -373,6 +581,29 @@
       <Column Name="PO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaInventarioTallaSeparada" Method="ConsultaInventarioTallaSeparada">
+    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="ConsultaInventarioTallaSeparadaResult">
+      <Column Name="ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="POVARCHAR" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="POITEM" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CANTIDAD" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="SIZE1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="SIZE2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CARTONNUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="PRODUCTCODE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CARTONTYPE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USERCREATE" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CLIENTE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="FACTURA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="TERMINADO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="ESTATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ConsultaNumeroCajaPO" Method="ConsultaNumeroCajaPO">
     <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="NumeroCaja" Parameter="numeroCaja" Type="System.String" DbType="VarChar(MAX)" />
@@ -382,7 +613,12 @@
   </Function>
   <Function Name="dbo.ConsultaPO" Method="ConsultaPO">
     <ElementType Name="ConsultaPOResult">
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaPO_Varchar" Method="ConsultaPO_Varchar">
+    <ElementType Name="ConsultaPO_VarcharResult">
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaPOItem" Method="ConsultaPOItem">
@@ -391,9 +627,37 @@
       <Column Name="po_item" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaPOItem_Varchar" Method="ConsultaPOItem_Varchar">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaPOItem_VarcharResult">
+      <Column Name="po_item" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ConsultaPOModificar" Method="ConsultaPOModificar">
     <ElementType Name="ConsultaPOModificarResult">
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaPrepack" Method="ConsultaPrepack">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaPrepackResult">
+      <Column Name="ESPREPACK" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaPrepackDetalle" Method="ConsultaPrepackDetalle">
+    <Parameter Name="idPrepack" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaPrepackDetalleResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="idPrepack" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idusuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="idSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="size" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DPCI" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="barcode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaProductCode" Method="ConsultaProductCode">
@@ -404,7 +668,7 @@
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaProductos" Method="ConsultaProductos">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
@@ -425,15 +689,71 @@
     <Parameter Name="PO" Parameter="pO" Type="System.String" DbType="VarChar(50)" />
     <ElementType Name="ConsultaProductosAltaResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="PO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Tamaño" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Tamaño" Type="System.String" DbType="VarChar(903)" CanBeNull="true" />
       <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
       <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaProductosBens" Method="ConsultaProductosBens">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaProductosBensResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosBensEscaneo" Method="ConsultaProductosBensEscaneo">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaProductosBensEscaneoResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosBensID" Method="ConsultaProductosBensID">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaProductosBensIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ConsultaProductosNuevo" Method="ConsultaProductosNuevo">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
@@ -451,12 +771,64 @@
       <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaSizes" Method="ConsultaSizes">
-    <Parameter Name="po" Type="System.String" DbType="VarChar(150)" />
+  <Function Name="dbo.ConsultaProductosOLDNAVY" Method="ConsultaProductosOLDNAVY">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaProductosOLDNAVYResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PO" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosTarget" Method="ConsultaProductosTarget">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaSizesResult">
-      <Column Name="size" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaProductosTargetResult">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroCaja" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Talla" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="escaneado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductosZumies" Method="ConsultaProductosZumies">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="poItem" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaProductosZumiesResult">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NumeroCaja" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="totalCajasPO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="cajasEscaneadasporTalla" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Talla" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="escaneado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaTallas" Method="ConsultaTallas">
@@ -465,9 +837,38 @@
       <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.ConsultaTallasBENS" Method="ConsultaTallasBENS">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasBENSResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasColor" Method="ConsultaTallasColor">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasColorResult">
+      <Column Name="color" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasRocky" Method="ConsultaTallasRocky">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasRockyResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ConsultaTallasXMarca" Method="ConsultaTallasXMarca">
     <Parameter Name="marca" Type="System.String" DbType="VarChar(150)" />
     <ElementType Name="ConsultaTallasXMarcaResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasxMarcaxEstilo" Method="ConsultaTallasxMarcaxEstilo">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="marca" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasxMarcaxEstiloResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
     </ElementType>
@@ -496,20 +897,39 @@
       <Column Name="descripcion" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.ConsultaUPC" Method="ConsultaUPC">
-    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaUPCResult">
+  <Function Name="dbo.ConsultaTodoPO" Method="ConsultaTodoPO">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaTodoPOResult">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="po" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poItem" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="idSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="escaneado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="po_item" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="vendor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="delete_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUPCBENS" Method="ConsultaUPCBENS">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaUPCBENSResult">
+      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ConsultaUsuario" Method="ConsultaUsuario">
@@ -520,68 +940,6 @@
       <Column Name="password" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="perfil" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarAltaPOManual" Method="GuardarAltaPOManual">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarAltaPOManualResult">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarCajaBata" Method="GuardarCajaBata">
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idTarima" Type="System.Int32" DbType="Int" />
-    <Parameter Name="noCaja" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="GuardarCajaBataResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarInventarioBata" Method="GuardarInventarioBata">
-    <Parameter Name="id_CatProductos" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idCaja" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idTarima" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <Parameter Name="noBata" Type="System.String" DbType="VarChar(50)" />
-    <ElementType Name="GuardarInventarioBataResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarProductos" Method="GuardarProductos">
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
-    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarProductosResult">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarTarget" Method="GuardarTarget">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <Parameter Name="assembly" Type="System.String" DbType="VarChar(250)" />
-    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(250)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(250)" />
-    <ElementType Name="GuardarTargetResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarTarimaBata" Method="GuardarTarimaBata">
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <Parameter Name="noTarima" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <ElementType Name="GuardarTarimaBataResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.ubicacion_Dividir_CajaID" Method="ubicacion_Dividir_CajaID">
@@ -624,7 +982,7 @@
     <Parameter Name="Terminado" Parameter="terminado" Type="System.String" DbType="VarChar(50)" />
     <Parameter Name="POSolamente" Parameter="pOSolamente" Type="System.Boolean" DbType="Bit" />
     <ElementType Name="ubicacion_Entrada_ConsultaCajasResult">
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="idCaja" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
       <Column Name="Talla" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
@@ -744,7 +1102,7 @@
       <Column Name="Ubicacion" Type="System.String" DbType="VarChar(31)" CanBeNull="true" />
       <Column Name="nivel" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Column Name="size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
-      <Column Name="po" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="po" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
       <Column Name="salida" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </ElementType>
   </Function>
@@ -759,540 +1117,17 @@
     <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.Split" Method="Split" IsComposable="true">
-    <Parameter Name="String" Parameter="string" Type="System.String" DbType="NVarChar(4000)" />
-    <Parameter Name="Delimitador" Parameter="delimitador" Type="System.String" DbType="NVarChar(10)" />
-    <ElementType Name="SplitResult">
-      <Column Name="Value" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.BajaCaja2" Method="BajaCaja2">
-    <Parameter Name="id" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <ElementType Name="BajaCaja2Result">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenesFolioCompras" Method="ConsultaAlmacenesFolioCompras">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesFolioComprasResult">
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
-      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
-      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
-      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
-      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenesFolioComprasDTL" Method="ConsultaAlmacenesFolioComprasDTL">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesFolioComprasDTLResult">
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
-      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
-      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
-      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
-      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenes" Method="ConsultaAlmacenes">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesResult">
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="FOLIO" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
-      <Column Name="CLAVE_ARTICULO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="UNIDADES" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
-      <Column Name="COSTO_UNITARIO" Type="System.Decimal" DbType="Decimal(20,6) NOT NULL" CanBeNull="false" />
-      <Column Name="COSTO_TOTAL" Type="System.Decimal" DbType="Decimal(37,9) NOT NULL" CanBeNull="false" />
-      <Column Name="ORIGEN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DESTINO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="CENTRO_DE_COSTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarProductos2" Method="GuardarProductos2">
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="assembly" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
-    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarProductos2Result">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenesDTL" Method="ConsultaAlmacenesDTL">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesDTLResult">
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="FOLIO" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
-      <Column Name="CLAVE_ARTICULO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
-      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="UNIDADES" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
-      <Column Name="COSTO_UNITARIO" Type="System.Decimal" DbType="Decimal(20,6) NOT NULL" CanBeNull="false" />
-      <Column Name="COSTO_TOTAL" Type="System.Decimal" DbType="Decimal(37,9) NOT NULL" CanBeNull="false" />
-      <Column Name="ORIGEN" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DESTINO" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
-      <Column Name="CENTRO_DE_COSTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenesFolioComprasTBG" Method="ConsultaAlmacenesFolioComprasTBG">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesFolioComprasTBGResult">
-      <Column Name="FECHA" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Folio" Type="System.String" DbType="Char(9) NOT NULL" CanBeNull="false" />
-      <Column Name="MONEDA" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
-      <Column Name="Proveedor" Type="System.String" DbType="VarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="Almacen" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
-      <Column Name="Unidades" Type="System.Decimal" DbType="Decimal(18,5) NOT NULL" CanBeNull="false" />
-      <Column Name="IMPORTE_NETO" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
-      <Column Name="FOLIO_DE_EMBARQUE" Type="System.Decimal" DbType="Decimal(9,0)" CanBeNull="true" />
-      <Column Name="RFC_CURP" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
-      <Column Name="FOLIO_PROV" Type="System.String" DbType="Char(9)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaAlmacenesTBG" Method="ConsultaAlmacenesTBG">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaAlmacenesTBGResult">
-      <Column Name="" Member="Column1" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaPrepack" Method="ConsultaPrepack">
-    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaPrepackResult">
-      <Column Name="ESPREPACK" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaPrepackDetalle" Method="ConsultaPrepackDetalle">
-    <Parameter Name="idPrepack" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ConsultaPrepackDetalleResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="idPrepack" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="idusuario" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="idSize" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="size" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="DPCI" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="barcode" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarPrePack" Method="GuardarPrePack">
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="barcode" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="GuardarPrePackResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarZumies" Method="GuardarZumies">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
-    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarZumiesResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.BajaTallaPO" Method="BajaTallaPO">
-    <Parameter Name="po" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="Talla" Parameter="talla" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <ElementType Name="BajaTallaPOResult">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaInventarioID" Method="ConsultaInventarioID">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ConsultaInventarioIDResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cliente" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="factura" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="terminado" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="po" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poInCompleto" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poItem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="CartonLeft" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CartonRight" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="Carton" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(663)" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="TotalCajas" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarProductosTARGET" Method="GuardarProductosTARGET">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="CantidadCajas" Parameter="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="esPrepack" Type="System.Int32" DbType="Int" />
-    <Parameter Name="barcode" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarProductosTARGETResult">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarPrePackDetalle" Method="GuardarPrePackDetalle">
-    <Parameter Name="idPrepack" Type="System.Int32" DbType="Int" />
-    <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="CantidadCajas" Parameter="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.ConsultaProductosZumies" Method="ConsultaProductosZumies">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(28,0)" />
-    <Parameter Name="poItem" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="size" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaProductosZumiesResult">
-      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NumeroCaja" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="estilo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="color" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
-      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="totalCajasPO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="cajasEscaneadasporTalla" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="Talla" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="escaneado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaProductosTarget" Method="ConsultaProductosTarget">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaProductosTargetResult">
-      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NumeroCaja" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="estilo" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="color" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="Talla" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="escaneado" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaTallasBENS" Method="ConsultaTallasBENS">
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaTallasBENSResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaEstiloBens" Method="ConsultaEstiloBens">
-    <ElementType Name="ConsultaEstiloBensResult">
-      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaUPCBENS" Method="ConsultaUPCBENS">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ConsultaUPCBENSResult">
-      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaTallasColor" Method="ConsultaTallasColor">
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaTallasColorResult">
-      <Column Name="color" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaInventarioPO" Method="ConsultaInventarioPO">
-    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaInventarioPOResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="cliente" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="factura" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="terminado" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
-      <Column Name="po" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="poInCompleto" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="poItem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
-      <Column Name="CartonLeft" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CartonRight" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="NumeroInicial" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="NumeroFinal" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="TipoCarton1" Type="System.String" DbType="VarChar(963)" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="usuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
-      <Column Name="TotalCajas" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaInventarioTallaSeparada" Method="ConsultaInventarioTallaSeparada">
-    <Parameter Name="fechaInicio" Type="System.DateTime" DbType="DateTime" />
-    <Parameter Name="fechaFin" Type="System.DateTime" DbType="DateTime" />
-    <ElementType Name="ConsultaInventarioTallaSeparadaResult">
-      <Column Name="ID" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="PO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="POITEM" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CANTIDAD" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="SIZE1" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="SIZE2" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="UPC" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CARTONNUMBER" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="PRODUCTCODE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CARTONTYPE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="USERCREATE" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="CLIENTE" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="FACTURA" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="TERMINADO" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
-      <Column Name="ESTATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ActualizaInventarioPO" Method="ActualizaInventarioPO">
-    <Parameter Name="po" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ActualizaInventarioPOResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="po_item" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaTodoPO" Method="ConsultaTodoPO">
-    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaTodoPOResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="prod_cd" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
-      <Column Name="idSize" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
-      <Column Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="escaneado" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="cn_tag_num" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="ctn_type_cd" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="po_item" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="vendor" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="update_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="update_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="delete_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="delete_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaTallasRocky" Method="ConsultaTallasRocky">
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaTallasRockyResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaEstiloRocky" Method="ConsultaEstiloRocky">
-    <ElementType Name="ConsultaEstiloRockyResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaEstiloOldNavy" Method="ConsultaEstiloOldNavy">
-    <ElementType Name="ConsultaEstiloOldNavyResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarPO" Method="GuardarPO">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
-    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <Parameter Name="marca" Type="System.String" DbType="VarChar(250)" />
-    <ElementType Name="GuardarPOResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaTallasxMarcaxEstilo" Method="ConsultaTallasxMarcaxEstilo">
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="marca" Type="System.String" DbType="VarChar(150)" />
-    <ElementType Name="ConsultaTallasxMarcaxEstiloResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="size" Type="System.String" DbType="VarChar(103)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaProductosBens" Method="ConsultaProductosBens">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(28,0)" />
-    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(MAX)" />
-    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(MAX)" />
-    <ElementType Name="ConsultaProductosBensResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="PO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="po_varchar" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
-      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="CartonNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaProductosBensID" Method="ConsultaProductosBensID">
-    <Parameter Name="id" Type="System.Int32" DbType="Int" />
-    <ElementType Name="ConsultaProductosBensIDResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="PO" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="UPC" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
-      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
-      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
-      <Column Name="CartonNumber" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.ConsultaEstiloSaftech" Method="ConsultaEstiloSaftech">
-    <ElementType Name="ConsultaEstiloSaftechResult">
-      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="estilo" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarBens" Method="GuardarBens">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
-    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
-    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
-    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
-    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarBensResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.GuardarInventario" Method="GuardarInventario">
+  <Function Name="dbo.GuardarInventarioBata" Method="GuardarInventarioBata" IsComposable="true">
     <Parameter Name="id_CatProductos" Type="System.Int32" DbType="Int" />
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="po_item" Type="System.String" DbType="VarChar(50)" />
-    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
-    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
-    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" />
-    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
-    <Parameter Name="cliente" Type="System.Int32" DbType="Int" />
-    <Parameter Name="factura" Type="System.Int32" DbType="Int" />
-    <Parameter Name="terminado" Type="System.Int32" DbType="Int" />
-    <ElementType Name="GuardarInventarioResult">
-      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
-    </ElementType>
+    <Parameter Name="idCaja" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTarima" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <Parameter Name="noBata" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="object" />
   </Function>
   <Function Name="dbo.GuardarInventarioBeans" Method="GuardarInventarioBeans">
     <Parameter Name="id_CatProductos" Type="System.Int32" DbType="Int" />
-    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
     <Parameter Name="po_item" Type="System.String" DbType="VarChar(350)" />
     <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
@@ -1308,8 +1143,117 @@
       <Column Name="" Member="Column1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GuardarPrePack" Method="GuardarPrePack">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="barcode" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="GuardarPrePackResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarPrePackDetalle" Method="GuardarPrePackDetalle">
+    <Parameter Name="idPrepack" Type="System.Int32" DbType="Int" />
+    <Parameter Name="size" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="CantidadCajas" Parameter="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GuardarProductos" Method="GuardarProductos">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarProductosResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarProductos2" Method="GuardarProductos2">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="assembly" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarProductos2Result">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarProductosTARGET" Method="GuardarProductosTARGET">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="CantidadCajas" Parameter="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="esPrepack" Type="System.Int32" DbType="Int" />
+    <Parameter Name="barcode" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarProductosTARGETResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarTarimaBata" Method="GuardarTarimaBata">
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <Parameter Name="noTarima" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="po_numero" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="GuardarTarimaBataResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarCajaBata" Method="GuardarCajaBata">
+    <Parameter Name="idUser" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idTarima" Type="System.Int32" DbType="Int" />
+    <Parameter Name="noCaja" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GuardarCajaBataResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarBens" Method="GuardarBens">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarBensResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarPO" Method="GuardarPO">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="marca" Type="System.String" DbType="VarChar(250)" />
+    <ElementType Name="GuardarPOResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.GuardarSaftech" Method="GuardarSaftech">
-    <Parameter Name="po" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
     <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(350)" />
     <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
     <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
@@ -1320,7 +1264,359 @@
     <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
     <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
     <ElementType Name="GuardarSaftechResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarTarget" Method="GuardarTarget">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="assembly" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="DPCI" Parameter="dPCI" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(250)" />
+    <ElementType Name="GuardarTargetResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarZumies" Method="GuardarZumies">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="cantidadCajas" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="escaneado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarZumiesResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarWrangler" Method="GuardarWrangler">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarWranglerResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarAltaPOManual" Method="GuardarAltaPOManual">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="itemDescription" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarAltaPOManualResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasIFR" Method="ConsultaTallasIFR">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasIFRResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="size" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaEstiloIFR" Method="ConsultaEstiloIFR">
+    <ElementType Name="ConsultaEstiloIFRResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasColorIFR" Method="ConsultaTallasColorIFR">
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasColorIFRResult">
+      <Column Name="color" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descripcion2" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="cantidadPrendas" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUPCIFR" Method="ConsultaUPCIFR">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaUPCIFRResult">
+      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUPCIFR" Method="ConsultaUPCIFR1">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaUPCIFRResult1">
+      <Column Name="upc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaMarca" Method="ConsultaMarca">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="po_item" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaMarcaResult">
+      <Column Name="marca" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaSizes" Method="ConsultaSizes">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaSizesResult">
+      <Column Name="size" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaEtiqueta" Method="ConsultaEtiqueta">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaEtiquetaResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="po" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_numero" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poInCompleto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="poItem" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(903)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Carton" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CartonLeft" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CartonRight" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Vendor" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShipTo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Fecha" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Imagen" Type="System.Data.Linq.Binary" DbType="Binary(50)" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="descripcion2" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaProductos_Varchar" Method="ConsultaProductos_Varchar">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="poItem" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="prodCd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizeIzquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="sizederecho" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaProductos_VarcharResult">
+      <Column Name="id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UPC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="vendor" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalUnits" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CartonType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="cantidad" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ProductCode1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaInventarioID" Method="ConsultaInventarioID">
+    <Parameter Name="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="ConsultaInventarioIDResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliente" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="factura" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="terminado" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="po" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poInCompleto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poItem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CartonLeft" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CartonRight" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Carton" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(963)" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCajas" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion2" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="upcCaja" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaInventarioPO" Method="ConsultaInventarioPO">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaInventarioPOResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="poItem" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="TipoCarton" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Estilo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="itemDescription" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="id_CatProductos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_cliente" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="cliente" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_factura" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="factura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_terminado" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="terminado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="po" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="po_varchar" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poInCompleto" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poItem1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(303)" CanBeNull="true" />
+      <Column Name="CartonLeft" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="CartonRight" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="Carton" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="NumeroInicial" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NumeroFinal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CartonNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="usuario" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="[Assembly]" Member="Assembly" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Vendor" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="ShipTo" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalCajas" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+      <Column Name="descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion2" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="upcCaja" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="estilo1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="marca" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUPC" Method="ConsultaUPC">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaUPCResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="po" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="poItem" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(903)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaUPC_Varchar" Method="ConsultaUPC_Varchar">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaUPC_VarcharResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="po" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="poItem" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Cantidad" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Size" Type="System.String" DbType="VarChar(903)" CanBeNull="true" />
+      <Column Name="size_izquierdo" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="size_derecho" Type="System.String" DbType="VarChar(450)" CanBeNull="true" />
+      <Column Name="upc" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="create_dtm" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_iduser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="color" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="estilo" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaMixto" Method="ConsultaMixto">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaMixtoResult">
+      <Column Name="mixto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarInventario" Method="GuardarInventario">
+    <Parameter Name="id_CatProductos" Type="System.Int32" DbType="Int" />
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="po_varchar" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="po_item" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="cn_tag_num" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="prod_cd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="ctn_type_cd" Type="System.String" DbType="VarChar(150)" />
+    <Parameter Name="create_iduser" Type="System.Int32" DbType="Int" />
+    <Parameter Name="cliente" Type="System.Int32" DbType="Int" />
+    <Parameter Name="factura" Type="System.Int32" DbType="Int" />
+    <Parameter Name="terminado" Type="System.Int32" DbType="Int" />
+    <Parameter Name="mixto" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GuardarInventarioResult">
       <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarInventarioDetalle" Method="GuardarInventarioDetalle">
+    <Parameter Name="id_Inventario" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Estilo" Parameter="estilo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="po_item" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="size_derecho" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="GuardarInventarioDetalleResult">
+      <Column Name="" Member="Column1" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaTallasIFRcodigoupc" Method="ConsultaTallasIFRcodigoupc">
+    <Parameter Name="size_izquierdo" Type="System.String" DbType="VarChar(150)" />
+    <ElementType Name="ConsultaTallasIFRcodigoupcResult">
+      <Column Name="upcCaja" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GuardarIFR" Method="GuardarIFR">
+    <Parameter Name="po" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="cantidad" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <Parameter Name="idSize" Type="System.Int32" DbType="Int" />
+    <Parameter Name="idusuario" Type="System.Int32" DbType="Int" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="color" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="estilo" Type="System.String" DbType="VarChar(250)" />
+    <Parameter Name="CantidadPrendasTotal" Parameter="cantidadPrendasTotal" Type="System.Decimal" DbType="Decimal(18,0)" />
+    <ElementType Name="GuardarIFRResult">
+      <Column Name="RESPUESTA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaPrendas_Talla" Method="ConsultaPrendas_Talla">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="size" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaPrendas_TallaResult">
+      <Column Name="diferencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Escaneadas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.ConsultaPrendas_UPC" Method="ConsultaPrendas_UPC">
+    <Parameter Name="po_numero" Type="System.String" DbType="VarChar(MAX)" />
+    <Parameter Name="upc" Type="System.String" DbType="VarChar(MAX)" />
+    <ElementType Name="ConsultaPrendas_UPCResult">
+      <Column Name="diferencia" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Escaneadas" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+      <Column Name="Total" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>
