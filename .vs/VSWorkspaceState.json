@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Inventario"
   ],
+  "SelectedNode": "\\Inventario\\Principal.cs",
   "PreviewInSolutionExplorer": false
 }

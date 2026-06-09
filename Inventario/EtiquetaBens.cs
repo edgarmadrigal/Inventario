@@ -45,7 +45,7 @@ namespace Inventario
 
         public Image codigoBarras { get; set; }
 
-        public System.Nullable<decimal> po { get; set; }
+        public string po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
 
         public string assembly { get; set; }

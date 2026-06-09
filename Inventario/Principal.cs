@@ -1,43 +1,43 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Inventario
 {
-    public partial class Principal : Form
+    public partial class Principal : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public Principal()
+        private readonly List<ConsultaUsuarioResult> usu = null;
+        public Principal(List<ConsultaUsuarioResult> usuario)
         {
             InitializeComponent();
-            IsMdiContainer = true;
+
+            usu = usuario;
+        }
+        void navBarControl_ActiveGroupChanged(object sender, DevExpress.XtraNavBar.NavBarGroupEventArgs e)
+        {
+            navigationFrame.SelectedPageIndex = navBarControl.Groups.IndexOf(e.Group);
+        }
+        void barButtonNavigation_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            int barItemIndex = barSubItemNavigation.ItemLinks.IndexOf(e.Link);
+            navBarControl.ActiveGroup = navBarControl.Groups[barItemIndex];
         }
 
-        private void eSCANEOToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
 
-            Escaneo et = new Escaneo
-            {
-                MdiParent = this
-            };
-            // et.Dock = DockStyle.Fill; ///MAXIMIZADO POR DEFAULT
-            et.Show();
         }
 
-        private void sALIRToolStripMenuItem_Click(object sender, EventArgs e)
+        private void officeNavigationBar_Click(object sender, EventArgs e)
         {
 
-            DialogResult dialogResult = MessageBox.Show("Seguro que deseas Cerrar el programa", "Cerrar", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                Application.Exit();
-                Application.Exit();
-
-
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-
-                //do something else
-            }
         }
     }
 }

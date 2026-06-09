@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace Inventario
 {
@@ -40,13 +35,13 @@ namespace Inventario
 
         public string terminado { get; set; }
 
-        public int id_Inventario { get; set; }
+        public int id_inventario { get; set; }
 
         public Bitmap qr { get; set; }
 
-        public Image codigoBarras { get; set; }
+        public string codigoBarras { get; set; }
 
-        public System.Nullable<decimal> po { get; set; }
+        public string po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
 
         public string assembly { get; set; }
@@ -86,7 +81,7 @@ namespace Inventario
         public string TipoCarton { get; set; }
 
         public string usuario { get; set; }
-        public string itemDescription { get; set; } 
+        public string itemDescription { get; set; }
 
         public int idusuario { get; set; }
 

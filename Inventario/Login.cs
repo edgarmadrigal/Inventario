@@ -59,6 +59,7 @@ namespace Inventario
                         else
                         {
                             this.Visible = false;
+                            //Principal es = new Principal(objusuario);
                             Escaneo es = new Escaneo(objusuario);
                             es.ShowDialog();
                             this.Dispose();

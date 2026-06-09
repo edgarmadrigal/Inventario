@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 
 namespace Inventario
 {
@@ -10,19 +11,18 @@ namespace Inventario
         }
         public int? id { get; set; }
         public int? escaneado { get; set; }
-
         public int id_cliente { get; set; }
-
-
+        public Int64 id_inventario { get; set; }
+        public int mixto { get; set; }
+        public int QUANTITY { get; set; }
         public int cn_tag_num { get; set; }
-
         public int id_factura { get; set; }
-
         public int id_terminado { get; set; }
-
         public string cliente { get; set; }
-
+        public string upcCaja { get; set; }
         public string itemDescription { get; set; }
+        public string descripcion { get; set; }
+        public string descripcion2 { get; set; }
         public string color { get; set; }
 
         public string nivel { get; set; }
@@ -35,13 +35,13 @@ namespace Inventario
 
         public string terminado { get; set; }
 
-        public int id_Inventario { get; set; }
+       // public Int64 id_Inventario { get; set; }
 
         public Bitmap qr { get; set; }
 
         public Image codigoBarras { get; set; }
 
-        public System.Nullable<decimal> po { get; set; }
+        public string po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
 
         public string assembly { get; set; }
@@ -77,6 +77,7 @@ namespace Inventario
 
         public string CartonRight { get; set; }
 
+        public string country { get; set; }
         public string marca { get; set; }
         public string ProductCode { get; set; }
 
@@ -93,5 +94,11 @@ namespace Inventario
         public System.Nullable<int> idSize { get; set; }
 
         public System.Nullable<System.DateTime> Fecha { get; set; }
+
+
+        public string codigoBarrasB { get; set; }
+
+        public string codigoBarrasTextoB { get; set; }
+
     }
 }
