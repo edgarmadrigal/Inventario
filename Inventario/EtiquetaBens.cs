@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Drawing;
 
 namespace Inventario
@@ -9,7 +10,7 @@ namespace Inventario
         public EtiquetaBens()
         {
         }
-        public int? id { get; set; }
+        public Int64? id { get; set; }
 
         public int id_cliente { get; set; }
         public int cn_tag_num { get; set; }
@@ -44,6 +45,7 @@ namespace Inventario
         public Bitmap qr { get; set; }
 
         public Image codigoBarras { get; set; }
+        public string codigodeBarras { get; set; }
 
         public string po { get; set; }
         public System.Nullable<decimal> poInCompleto { get; set; }
@@ -96,6 +98,7 @@ namespace Inventario
         public System.Nullable<int> idSize { get; set; }
 
         public System.Nullable<System.DateTime> Fecha { get; set; }
+
 
     }
 }

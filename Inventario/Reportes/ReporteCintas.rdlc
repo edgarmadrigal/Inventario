@@ -1,0 +1,1174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Inventario">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>14d6bf12-2521-4985-9652-83534bef6e43</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="Datos">
+      <Query>
+        <DataSourceName>Inventario</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="id">
+          <DataField>id</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="escaneado">
+          <DataField>escaneado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_cliente">
+          <DataField>id_cliente</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_inventario">
+          <DataField>id_inventario</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="mixto">
+          <DataField>mixto</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="QUANTITY">
+          <DataField>QUANTITY</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cn_tag_num">
+          <DataField>cn_tag_num</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_factura">
+          <DataField>id_factura</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_terminado">
+          <DataField>id_terminado</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="cliente">
+          <DataField>cliente</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="upcCaja">
+          <DataField>upcCaja</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="itemDescription">
+          <DataField>itemDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="descripcion">
+          <DataField>descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="descripcion2">
+          <DataField>descripcion2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="color">
+          <DataField>color</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="nivel">
+          <DataField>nivel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="estilo">
+          <DataField>estilo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="factura">
+          <DataField>factura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="terminado">
+          <DataField>terminado</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="qr">
+          <DataField>qr</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="qr2">
+          <DataField>qr2</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="qr3">
+          <DataField>qr3</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="codigoBarras">
+          <DataField>codigoBarras</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+        <Field Name="po">
+          <DataField>po</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="poInCompleto">
+          <DataField>poInCompleto</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="assembly">
+          <DataField>assembly</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Vendor">
+          <DataField>Vendor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShipTo">
+          <DataField>ShipTo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="poItem">
+          <DataField>poItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="po_varchar">
+          <DataField>po_varchar</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Cantidad">
+          <DataField>Cantidad</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CantidadCajas">
+          <DataField>CantidadCajas</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Cant">
+          <DataField>Cant</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="size_izquierdo">
+          <DataField>size_izquierdo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="size_derecho">
+          <DataField>size_derecho</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="numeroEtiqueta1">
+          <DataField>numeroEtiqueta1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="numeroEtiqueta2">
+          <DataField>numeroEtiqueta2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="numeroEtiqueta3">
+          <DataField>numeroEtiqueta3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Size">
+          <DataField>Size</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="upc">
+          <DataField>upc</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Carton">
+          <DataField>Carton</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="CartonLeft">
+          <DataField>CartonLeft</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CartonRight">
+          <DataField>CartonRight</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="country">
+          <DataField>country</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="marca">
+          <DataField>marca</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductCode">
+          <DataField>ProductCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TipoCarton">
+          <DataField>TipoCarton</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="usuario">
+          <DataField>usuario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DPCI">
+          <DataField>DPCI</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="barcode">
+          <DataField>barcode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="idusuario">
+          <DataField>idusuario</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="esprepack">
+          <DataField>esprepack</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="idSize">
+          <DataField>idSize</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="codigoBarrasB">
+          <DataField>codigoBarrasB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="codigoBarrasTextoB">
+          <DataField>codigoBarrasTextoB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>Inventario</rd:DataSetName>
+        <rd:TableName>EtiquetaCajaModificada</rd:TableName>
+        <rd:ObjectDataSourceType>Inventario.EtiquetaCajaModificada</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Lista">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>4in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>3.39in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Rectangle Name="Detalle22">
+                          <ReportItems>
+                            <Textbox Name="Txt1">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!numeroEtiqueta3.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.76792in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.16901in</Height>
+                              <Width>0.58116in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt2">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!numeroEtiqueta2.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>1.33in</Top>
+                              <Left>0.68116in</Left>
+                              <Height>0.13in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt3">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!numeroEtiqueta1.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>1.33in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.13in</Height>
+                              <Width>0.58116in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt4">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>SHIP TO:</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>7.5pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>2.67375in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.15in</Height>
+                              <Width>2.2812in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt5">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!upc.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>1.06714in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.19875in</Height>
+                              <Width>2.00053in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt6">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Vendor.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9.75pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.53792in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.23in</Height>
+                              <Width>2.28125in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt7">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!ShipTo.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>7.5pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>2.82375in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.15in</Height>
+                              <Width>2.2812in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt8">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!po.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>12pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.30792in</Top>
+                              <Left>1.10053in</Left>
+                              <Height>0.23in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt9">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Fecha.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>12pt</FontSize>
+                                        <Format>MM/dd/yyyy</Format>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.1in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.23in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Image Name="Img10">
+                              <Source>Database</Source>
+                              <Value>=Fields!codigoBarras.Value</Value>
+                              <MIMEType>image/png</MIMEType>
+                              <Sizing>Fit</Sizing>
+                              <CustomProperties>
+                                <CustomProperty>
+                                  <Name>AjusteImagen</Name>
+                                  <Value>squeeze;1.4775;3.0358</Value>
+                                </CustomProperty>
+                              </CustomProperties>
+                              <Top>0.1in</Top>
+                              <Left>2.4125in</Left>
+                              <Height>3.03583in</Height>
+                              <Width>1.4775in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Image>
+                            <Textbox Name="Txt11">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!Carton.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>20pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>2.30375in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.37in</Height>
+                              <Width>2.28125in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Tablix Name="Tabla16">
+                              <TablixBody>
+                                <TablixColumns>
+                                  <TablixColumn>
+                                    <Width>1.048in</Width>
+                                  </TablixColumn>
+                                  <TablixColumn>
+                                    <Width>1.233in</Width>
+                                  </TablixColumn>
+                                </TablixColumns>
+                                <TablixRows>
+                                  <TablixRow>
+                                    <Height>0.42187in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Txt12">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>QTY in Carton</Value>
+                                                    <Style>
+                                                      <FontFamily>Arial Narrow</FontFamily>
+                                                      <FontSize>9pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </BottomBorder>
+                                              <LeftBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </LeftBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </RightBorder>
+                                              <VerticalAlign>Top</VerticalAlign>
+                                              <PaddingLeft>1.44pt</PaddingLeft>
+                                              <PaddingRight>1.44pt</PaddingRight>
+                                              <PaddingTop>7.2pt</PaddingTop>
+                                              <PaddingBottom>0pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Txt13">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>Country of Assembly</Value>
+                                                    <Style>
+                                                      <FontFamily>Times New Roman</FontFamily>
+                                                      <FontSize>9pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </BottomBorder>
+                                              <LeftBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </LeftBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </RightBorder>
+                                              <VerticalAlign>Top</VerticalAlign>
+                                              <PaddingLeft>1.44pt</PaddingLeft>
+                                              <PaddingRight>1.44pt</PaddingRight>
+                                              <PaddingTop>7.2pt</PaddingTop>
+                                              <PaddingBottom>0pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                  <TablixRow>
+                                    <Height>0.42187in</Height>
+                                    <TablixCells>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Txt14">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!Cantidad.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Times New Roman</FontFamily>
+                                                      <FontSize>12pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </BottomBorder>
+                                              <LeftBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </LeftBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </RightBorder>
+                                              <VerticalAlign>Top</VerticalAlign>
+                                              <PaddingLeft>1.44pt</PaddingLeft>
+                                              <PaddingRight>1.44pt</PaddingRight>
+                                              <PaddingTop>3.6pt</PaddingTop>
+                                              <PaddingBottom>0pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                      <TablixCell>
+                                        <CellContents>
+                                          <Textbox Name="Txt15">
+                                            <CanGrow>true</CanGrow>
+                                            <KeepTogether>true</KeepTogether>
+                                            <Paragraphs>
+                                              <Paragraph>
+                                                <TextRuns>
+                                                  <TextRun>
+                                                    <Value>=Fields!assembly.Value</Value>
+                                                    <Style>
+                                                      <FontFamily>Times New Roman</FontFamily>
+                                                      <FontSize>12pt</FontSize>
+                                                      <FontWeight>Bold</FontWeight>
+                                                    </Style>
+                                                  </TextRun>
+                                                </TextRuns>
+                                                <Style>
+                                                  <TextAlign>Center</TextAlign>
+                                                </Style>
+                                              </Paragraph>
+                                            </Paragraphs>
+                                            <Style>
+                                              <Border>
+                                                <Style>None</Style>
+                                              </Border>
+                                              <TopBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </TopBorder>
+                                              <BottomBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </BottomBorder>
+                                              <LeftBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </LeftBorder>
+                                              <RightBorder>
+                                                <Style>Solid</Style>
+                                                <Color>#000000</Color>
+                                                <Width>0.75pt</Width>
+                                              </RightBorder>
+                                              <VerticalAlign>Top</VerticalAlign>
+                                              <PaddingLeft>1.44pt</PaddingLeft>
+                                              <PaddingRight>1.44pt</PaddingRight>
+                                              <PaddingTop>3.6pt</PaddingTop>
+                                              <PaddingBottom>0pt</PaddingBottom>
+                                            </Style>
+                                          </Textbox>
+                                        </CellContents>
+                                      </TablixCell>
+                                    </TablixCells>
+                                  </TablixRow>
+                                </TablixRows>
+                              </TablixBody>
+                              <TablixColumnHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixColumnHierarchy>
+                              <TablixRowHierarchy>
+                                <TablixMembers>
+                                  <TablixMember />
+                                  <TablixMember />
+                                </TablixMembers>
+                              </TablixRowHierarchy>
+                              <Top>1.46in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.84375in</Height>
+                              <Width>2.281in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Tablix>
+                            <Textbox Name="Txt17">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>ORDER NUM.</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>12pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.30792in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.23in</Height>
+                              <Width>1in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Image Name="Control18_i">
+                              <Source>Embedded</Source>
+                              <Value>Control18</Value>
+                              <Sizing>FitProportional</Sizing>
+                              <Top>0in</Top>
+                              <Left>1.71458in</Left>
+                              <Height>0.30792in</Height>
+                              <Width>0.66667in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                              </Style>
+                            </Image>
+                            <Textbox Name="Txt19">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>636 East Park Blvd</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>7.5pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>2.97375in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.15in</Height>
+                              <Width>2.2812in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt20">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>Grayson,KY - 41143</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>7.5pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>3.12375in</Top>
+                              <Left>0.1in</Left>
+                              <Height>0.15in</Height>
+                              <Width>2.2812in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="Txt21">
+                              <CanGrow>true</CanGrow>
+                              <KeepTogether>true</KeepTogether>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>=Fields!numeroEtiqueta2.Value</Value>
+                                      <Style>
+                                        <FontFamily>Arial Narrow</FontFamily>
+                                        <FontSize>9pt</FontSize>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Left</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>0.76792in</Top>
+                              <Left>0.68116in</Left>
+                              <Height>0.17141in</Height>
+                              <Width>0.90234in</Width>
+                              <Style>
+                                <Border>
+                                  <Style>None</Style>
+                                </Border>
+                                <VerticalAlign>Top</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                            <Textbox Name="MarcaReimpresion">
+                              <CanGrow>false</CanGrow>
+                              <Paragraphs>
+                                <Paragraph>
+                                  <TextRuns>
+                                    <TextRun>
+                                      <Value>R</Value>
+                                      <Style>
+                                        <FontFamily>Arial</FontFamily>
+                                        <FontSize>12pt</FontSize>
+                                        <FontWeight>Bold</FontWeight>
+                                      </Style>
+                                    </TextRun>
+                                  </TextRuns>
+                                  <Style>
+                                    <TextAlign>Center</TextAlign>
+                                  </Style>
+                                </Paragraph>
+                              </Paragraphs>
+                              <Top>3.14in</Top>
+                              <Left>3.75in</Left>
+                              <Height>0.22in</Height>
+                              <Width>0.22in</Width>
+                              <Visibility>
+                                <Hidden>=Not(Parameters!Reimpresion.Value)</Hidden>
+                              </Visibility>
+                              <Style>
+                                <Border>
+                                  <Style>Solid</Style>
+                                  <Width>1pt</Width>
+                                </Border>
+                                <BackgroundColor>White</BackgroundColor>
+                                <VerticalAlign>Middle</VerticalAlign>
+                                <PaddingLeft>0pt</PaddingLeft>
+                                <PaddingRight>0pt</PaddingRight>
+                                <PaddingTop>0pt</PaddingTop>
+                                <PaddingBottom>0pt</PaddingBottom>
+                              </Style>
+                            </Textbox>
+                          </ReportItems>
+                          <Top>0in</Top>
+                          <Left>0in</Left>
+                          <Height>3.39in</Height>
+                          <Width>4in</Width>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Rectangle>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <Group Name="Detalle">
+                    <PageBreak>
+                      <BreakLocation>Between</BreakLocation>
+                    </PageBreak>
+                  </Group>
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>Datos</DataSetName>
+            <Top>0in</Top>
+            <Left>0in</Left>
+            <Height>3.39in</Height>
+            <Width>4in</Width>
+          </Tablix>
+        </ReportItems>
+        <Height>3.39in</Height>
+      </Body>
+      <Width>4in</Width>
+      <Page>
+        <PageHeight>4in</PageHeight>
+        <PageWidth>4in</PageWidth>
+        <LeftMargin>0in</LeftMargin>
+        <RightMargin>0in</RightMargin>
+        <TopMargin>0in</TopMargin>
+        <BottomMargin>0in</BottomMargin>
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Reimpresion">
+      <DataType>Boolean</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>false</Value>
+        </Values>
+      </DefaultValue>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Reimpresion</Prompt>
+      <Hidden>true</Hidden>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Control18">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <Language>es-MX</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>adba0a55-d47c-4252-8407-03356353663e</rd:ReportID>
+</Report>

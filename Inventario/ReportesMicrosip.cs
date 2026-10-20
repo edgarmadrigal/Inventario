@@ -1,6 +1,4 @@
-﻿#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
-#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
-using DevExpress.XtraPrinting;
+﻿using Inventario.Reportes;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -13,6 +11,8 @@ namespace Inventario
         public ReportesMicrosip()
         {
             InitializeComponent();
+            ConfigurarGrids();
+            Tema.Aplicar(this);
         }
 
         private void btnImprimir_Click(object sender, EventArgs e)
@@ -52,27 +52,9 @@ namespace Inventario
         }
 
 
-#pragma warning disable CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
-        private void ShowGridPreview(DevExpress.XtraGrid.GridControl grid)
-#pragma warning restore CS0246 // El nombre del tipo o del espacio de nombres 'DevExpress' no se encontró (¿falta una directiva using o una referencia de ensamblado?)
+        private void ShowGridPreview(global::Inventario.Controles.GridReporte grid)
         {
-            // Check whether or not the Grid Control can be printed. 
-            if (!grid.IsPrintingAvailable)
-            {
-                MessageBox.Show("The 'DevExpress.XtraPrinting' Library is not found", "Error");
-                return;
-            }
-            // Opens the Preview window. 
-
-            PrintableComponentLink link = new PrintableComponentLink(new PrintingSystem())
-            {
-                Component = grid,
-
-                Landscape = true
-            };
-
-            link.ShowPreview();
-
+            grid.VistaPrevia(grid.Titulo);
         }
 
         private void btnBuscarDTL_Click(object sender, EventArgs e)

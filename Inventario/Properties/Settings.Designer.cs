@@ -12,7 +12,7 @@ namespace Inventario.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "18.8.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -70,11 +70,22 @@ namespace Inventario.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=AIN-MSSRV\\SISTEMASAIN;Initial Catalog=Inventario;Persist Security Inf" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Inf" +
             "o=True;User ID=sa;Password=SisAin03")]
         public string InventarioConnectionString3 {
             get {
                 return ((string)(this["InventarioConnectionString3"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Inf" +
+            "o=True;User ID=sa;Password=SisAin03;Encrypt=True;TrustServerCertificate=True")]
+        public string InventarioConnectionString4 {
+            get {
+                return ((string)(this["InventarioConnectionString4"]));
             }
         }
     }

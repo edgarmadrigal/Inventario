@@ -9,10 +9,10 @@ namespace Inventario
         public EtiquetaCajaModificada()
         {
         }
-        public int? id { get; set; }
+        public Int64? id { get; set; }
         public int? escaneado { get; set; }
         public int id_cliente { get; set; }
-        public Int64 id_inventario { get; set; }
+        public Int64? id_inventario { get; set; }
         public int mixto { get; set; }
         public int QUANTITY { get; set; }
         public int cn_tag_num { get; set; }
@@ -35,9 +35,11 @@ namespace Inventario
 
         public string terminado { get; set; }
 
-       // public Int64 id_Inventario { get; set; }
+        // public Int64 id_Inventario { get; set; }
 
         public Bitmap qr { get; set; }
+        public Bitmap qr2 { get; set; }
+        public Bitmap qr3 { get; set; }
 
         public Image codigoBarras { get; set; }
 
@@ -94,5 +96,11 @@ namespace Inventario
         public System.Nullable<int> idSize { get; set; }
 
         public System.Nullable<System.DateTime> Fecha { get; set; }
+
+
+        public string codigoBarrasB { get; set; }
+
+        public string codigoBarrasTextoB { get; set; }
+
     }
 }

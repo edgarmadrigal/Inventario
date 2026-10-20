@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Drawing;
 namespace Inventario
 {
@@ -7,7 +8,7 @@ namespace Inventario
         public EtiquetaZUMIES()
         {
         }
-        public int? id { get; set; }
+        public Int64? id { get; set; }
 
         public int id_cliente { get; set; }
         public int cn_tag_num { get; set; }

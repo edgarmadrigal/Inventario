@@ -4,7 +4,7 @@
   <Settings>
     <Setting Name="InventarioConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=192.168.128.199;Initial Catalog=Inventario;User ID=sa;Password=dbAin1&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
@@ -12,7 +12,7 @@
     </Setting>
     <Setting Name="InventarioConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=AIN-MSSRV\TASQLEXPRESS;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=TANet001&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
@@ -20,7 +20,7 @@
     </Setting>
     <Setting Name="InventarioAnteriorConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=192.168.128.245\TASQLEXPRESS;Initial Catalog=InventarioAnterior;User ID=sa;Password=TANet001&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
@@ -28,7 +28,7 @@
     </Setting>
     <Setting Name="InventarioConnectionString2" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
   &lt;ConnectionString&gt;Data Source=192.168.128.245\TASQLEXPRESS;Initial Catalog=Inventario;User ID=sa;Password=TANet001&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
@@ -36,11 +36,19 @@
     </Setting>
     <Setting Name="InventarioConnectionString3" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03&lt;/ConnectionString&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03</Value>
+      <Value Profile="(Default)">Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03;Connect Timeout=15;ConnectRetryCount=3;ConnectRetryInterval=5</Value>
+    </Setting>
+    <Setting Name="InventarioConnectionString4" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
+  &lt;ConnectionString&gt;Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03;Encrypt=True;TrustServerCertificate=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=tcp:192.168.128.245,58938;Initial Catalog=Inventario;Persist Security Info=True;User ID=sa;Password=SisAin03;Encrypt=True;TrustServerCertificate=True;Connect Timeout=15;ConnectRetryCount=3;ConnectRetryInterval=5</Value>
     </Setting>
   </Settings>
 </SettingsFile>

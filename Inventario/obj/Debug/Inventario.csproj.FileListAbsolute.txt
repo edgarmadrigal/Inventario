@@ -1,727 +1,100 @@
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Escaneo.resx
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Escaneo.cs
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Escaneo.Designer.cs
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\EtiquetaCajaModificada.cs
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.exe.manifest
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.application
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.exe
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\BarcodeLib.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.CodeParser.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Images.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Export.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\IDAutomation.DataBarFontEncoder.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\IDAutomation.IntelligentMail.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\IDAutomation.NetAssembly.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\lib_q.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\lib_r.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\QRCoder.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.DataVisualization.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Extensions.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\UnityEngine.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Office.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Xpo.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Xpo.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Xpo.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Xpo.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraBars.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraBars.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraBars.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraBars.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\de\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\es\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Interop.WMPLib.dll
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.ResolveComReference.cache
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.CodigoBarrasAlmacen.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ControlProduccion.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Formulario.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.PopUp.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Principal.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReportCajaTarget.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteAlmacen.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteCaja.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaZumines.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteCintas.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteDiario.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReporteHora.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.ReportesMicrosip.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Escaneo.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Login.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.exe.licenses
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.TrustInfo.xml
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.exe.manifest
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.application
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\Users\SISTEMAS-EDGAR\Documents\Visual Studio 2015\Projects\Proyectos\Inventario\Inventario\obj\Debug\Inventario.pdb
-C:\resp\Inventario\Inventario\obj\Debug\Interop.WMPLib.dll
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.ResolveComReference.cache
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.CodigoBarrasAlmacen.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ControlProduccion.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.Formulario.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.PopUp.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.Principal.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReportCajaTarget.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteAlmacen.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteCaja.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaZumines.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteCintas.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteDiario.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReporteHora.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.ReportesMicrosip.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.Escaneo.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.Login.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
-C:\resp\Inventario\Inventario\bin\Debug\Escaneo.resx
-C:\resp\Inventario\Inventario\bin\Debug\Escaneo.cs
-C:\resp\Inventario\Inventario\bin\Debug\Escaneo.Designer.cs
-C:\resp\Inventario\Inventario\bin\Debug\EtiquetaCajaModificada.cs
-C:\resp\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\resp\Inventario\Inventario\bin\Debug\Inventario.exe.manifest
-C:\resp\Inventario\Inventario\bin\Debug\Inventario.application
-C:\resp\Inventario\Inventario\bin\Debug\Inventario.exe
-C:\resp\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\resp\Inventario\Inventario\bin\Debug\BarcodeLib.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.CodeParser.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Images.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Export.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.dll
-C:\resp\Inventario\Inventario\bin\Debug\IDAutomation.DataBarFontEncoder.dll
-C:\resp\Inventario\Inventario\bin\Debug\IDAutomation.IntelligentMail.dll
-C:\resp\Inventario\Inventario\bin\Debug\IDAutomation.NetAssembly.dll
-C:\resp\Inventario\Inventario\bin\Debug\lib_q.dll
-C:\resp\Inventario\Inventario\bin\Debug\lib_r.dll
-C:\resp\Inventario\Inventario\bin\Debug\QRCoder.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.DataVisualization.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Extensions.dll
-C:\resp\Inventario\Inventario\bin\Debug\UnityEngine.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.dll
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.xml
-C:\resp\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.xml
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Office.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Printing.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Xpo.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Xpo.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Xpo.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Xpo.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraBars.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraBars.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraBars.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraBars.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraEditors.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraEditors.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraEditors.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\de\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\es\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.TrustInfo.xml
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.exe.manifest
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.application
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.pdb
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
-C:\resp\Inventario\Inventario\obj\Debug\Inventario.exe.licenses
-C:\Inventario\Inventario\obj\Debug\Interop.WMPLib.dll
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.ResolveComReference.cache
-C:\Inventario\Inventario\obj\Debug\Inventario.CodigoBarrasAlmacen.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ControlProduccion.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.Formulario.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.PopUp.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReportCajaTarget.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteAlmacen.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaIFRMixtas.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaWrangler.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaOLDNAVY.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCaja.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaSaftech.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaBens.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaTargetAssorment.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaIFR.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCajaZumines.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteCintas.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteDiario.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteHora.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReporteRocky.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.ReportesMicrosip.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.Escaneo.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.Login.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.Properties.Resources.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
-C:\Inventario\Inventario\obj\Debug\Inventario.exe.licenses
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
-C:\Inventario\Inventario\bin\Debug\libSkiaSharp.dylib
-C:\Inventario\Inventario\bin\Debug\x86\libSkiaSharp.dll
-C:\Inventario\Inventario\bin\Debug\x64\libSkiaSharp.dll
-C:\Inventario\Inventario\bin\Debug\arm64\libSkiaSharp.dll
-C:\Inventario\Inventario\bin\Debug\x64\libSkiaSharp.so
-C:\Inventario\Inventario\bin\Debug\arm\libSkiaSharp.so
-C:\Inventario\Inventario\bin\Debug\arm64\libSkiaSharp.so
-C:\Inventario\Inventario\bin\Debug\musl-x64\libSkiaSharp.so
-C:\Inventario\Inventario\bin\Debug\Escaneo.resx
-C:\Inventario\Inventario\bin\Debug\Escaneo.cs
-C:\Inventario\Inventario\bin\Debug\Escaneo.Designer.cs
-C:\Inventario\Inventario\bin\Debug\EtiquetaCajaModificada.cs
-C:\Inventario\Inventario\bin\Debug\C39M90DM.TTF
-C:\Inventario\Inventario\bin\Debug\Inventario.exe.config
-C:\Inventario\Inventario\bin\Debug\Inventario.exe.manifest
-C:\Inventario\Inventario\bin\Debug\Inventario.application
-C:\Inventario\Inventario\bin\Debug\Inventario.exe
-C:\Inventario\Inventario\bin\Debug\Inventario.pdb
-C:\Inventario\Inventario\bin\Debug\BarcodeStandard.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.CodeParser.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Images.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Export.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.SpellChecker.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraSpellChecker.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\IDAutomation.DataBarFontEncoder.dll
-C:\Inventario\Inventario\bin\Debug\IDAutomation.IntelligentMail.dll
-C:\Inventario\Inventario\bin\Debug\IDAutomation.NetAssembly.dll
-C:\Inventario\Inventario\bin\Debug\lib_q.dll
-C:\Inventario\Inventario\bin\Debug\lib_r.dll
-C:\Inventario\Inventario\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Inventario\Inventario\bin\Debug\QRCoder.dll
-C:\Inventario\Inventario\bin\Debug\SkiaSharp.dll
-C:\Inventario\Inventario\bin\Debug\System.Buffers.dll
-C:\Inventario\Inventario\bin\Debug\System.Drawing.Common.dll
-C:\Inventario\Inventario\bin\Debug\System.Memory.dll
-C:\Inventario\Inventario\bin\Debug\System.Numerics.Vectors.dll
-C:\Inventario\Inventario\bin\Debug\System.Resources.Extensions.dll
-C:\Inventario\Inventario\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Inventario\Inventario\bin\Debug\System.Text.Encodings.Web.dll
-C:\Inventario\Inventario\bin\Debug\System.Text.Json.dll
-C:\Inventario\Inventario\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Inventario\Inventario\bin\Debug\System.ValueTuple.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.DataVisualization.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Extensions.dll
-C:\Inventario\Inventario\bin\Debug\UnityEngine.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.dll
-C:\Inventario\Inventario\bin\Debug\DevExpress.Charts.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Data.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Office.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Pdf.v21.2.Drawing.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.PivotGrid.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Printing.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.RichEdit.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Sparkline.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Data.Desktop.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.SpellChecker.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Utils.v21.2.UI.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Xpo.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraBars.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraEditors.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraGauges.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraGrid.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraLayout.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraNavBar.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraPrinting.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraReports.v21.2.Extensions.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraSpellChecker.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraTreeList.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Inventario\Inventario\bin\Debug\SkiaSharp.pdb
-C:\Inventario\Inventario\bin\Debug\SkiaSharp.xml
-C:\Inventario\Inventario\bin\Debug\System.Buffers.xml
-C:\Inventario\Inventario\bin\Debug\System.Memory.xml
-C:\Inventario\Inventario\bin\Debug\System.Numerics.Vectors.xml
-C:\Inventario\Inventario\bin\Debug\System.Resources.Extensions.xml
-C:\Inventario\Inventario\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Inventario\Inventario\bin\Debug\System.Text.Encodings.Web.xml
-C:\Inventario\Inventario\bin\Debug\System.Text.Json.xml
-C:\Inventario\Inventario\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Inventario\Inventario\bin\Debug\System.ValueTuple.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraRichEdit.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraVerticalGrid.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.DataAccess.v21.2.UI.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraCharts.v21.2.Wizard.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraPivotGrid.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.XtraDiagram.v21.2.xml
-C:\Inventario\Inventario\bin\Debug\DevExpress.Diagram.v21.2.Core.xml
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Data.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Data.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Data.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Data.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Office.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Office.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Office.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Office.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Pdf.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.PivotGrid.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Printing.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.RichEdit.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Sparkline.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Utils.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Xpo.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Xpo.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Xpo.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Xpo.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraBars.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraBars.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraBars.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraBars.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraEditors.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGauges.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraLayout.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraNavBar.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPrinting.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraReports.v21.2.Extensions.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraSpellChecker.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraSpellChecker.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraSpellChecker.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraSpellChecker.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraTreeList.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraRichEdit.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraVerticalGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.DataAccess.v21.2.UI.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraCharts.v21.2.Wizard.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.XtraPivotGrid.v21.2.resources.dll
-C:\Inventario\Inventario\bin\Debug\de\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\es\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ja\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Inventario\Inventario\bin\Debug\ru\DevExpress.Diagram.v21.2.Core.resources.dll
-C:\Inventario\Inventario\obj\Debug\Inventario.TrustInfo.xml
-C:\Inventario\Inventario\obj\Debug\Inventario.exe.manifest
-C:\Inventario\Inventario\obj\Debug\Inventario.application
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.CopyComplete
-C:\Inventario\Inventario\obj\Debug\Inventario.exe
-C:\Inventario\Inventario\obj\Debug\Inventario.pdb
-C:\Inventario\Inventario\obj\Debug\Inventario.Principal.resources
-C:\Inventario\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\InventarioV2\Inventario\bin\Debug\Escaneo.resx
+C:\InventarioV2\Inventario\bin\Debug\Escaneo.cs
+C:\InventarioV2\Inventario\bin\Debug\Escaneo.Designer.cs
+C:\InventarioV2\Inventario\bin\Debug\EtiquetaCajaModificada.cs
+C:\InventarioV2\Inventario\bin\Debug\C39M90DM.TTF
+C:\InventarioV2\Inventario\bin\Debug\InventarioV2.exe.config
+C:\InventarioV2\Inventario\bin\Debug\InventarioV2.exe.manifest
+C:\InventarioV2\Inventario\bin\Debug\InventarioV2.application
+C:\InventarioV2\Inventario\bin\Debug\InventarioV2.exe
+C:\InventarioV2\Inventario\bin\Debug\InventarioV2.pdb
+C:\InventarioV2\Inventario\bin\Debug\BarcodeStandard.dll
+C:\InventarioV2\Inventario\bin\Debug\BouncyCastle.Cryptography.dll
+C:\InventarioV2\Inventario\bin\Debug\ClosedXML.dll
+C:\InventarioV2\Inventario\bin\Debug\DocumentFormat.OpenXml.dll
+C:\InventarioV2\Inventario\bin\Debug\Excel.dll
+C:\InventarioV2\Inventario\bin\Debug\ExcelNumberFormat.dll
+C:\InventarioV2\Inventario\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\InventarioV2\Inventario\bin\Debug\IDAutomation.DataBarFontEncoder.dll
+C:\InventarioV2\Inventario\bin\Debug\IDAutomation.IntelligentMail.dll
+C:\InventarioV2\Inventario\bin\Debug\IDAutomation.NetAssembly.dll
+C:\InventarioV2\Inventario\bin\Debug\itextsharp.dll
+C:\InventarioV2\Inventario\bin\Debug\lib_q.dll
+C:\InventarioV2\Inventario\bin\Debug\lib_r.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.ReportViewer.Design.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\InventarioV2\Inventario\bin\Debug\QRCoder.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Buffers.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Drawing.Common.dll
+C:\InventarioV2\Inventario\bin\Debug\System.IO.Packaging.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Memory.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Numerics.Vectors.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Resources.Extensions.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Encoding.CodePages.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Encodings.Web.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Json.dll
+C:\InventarioV2\Inventario\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\InventarioV2\Inventario\bin\Debug\System.ValueTuple.dll
+C:\InventarioV2\Inventario\bin\Debug\zxing.dll
+C:\InventarioV2\Inventario\bin\Debug\zxing.presentation.dll
+C:\InventarioV2\Inventario\bin\Debug\UnityEngine.dll
+C:\InventarioV2\Inventario\bin\Debug\EnvDTE.dll
+C:\InventarioV2\Inventario\bin\Debug\stdole.dll
+C:\InventarioV2\Inventario\bin\Debug\BouncyCastle.Cryptography.xml
+C:\InventarioV2\Inventario\bin\Debug\itextsharp.xml
+C:\InventarioV2\Inventario\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Buffers.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Drawing.Common.pdb
+C:\InventarioV2\Inventario\bin\Debug\System.Drawing.Common.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Memory.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Numerics.Vectors.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Resources.Extensions.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Encoding.CodePages.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Encodings.Web.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Text.Json.xml
+C:\InventarioV2\Inventario\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\InventarioV2\Inventario\bin\Debug\System.ValueTuple.xml
+C:\InventarioV2\Inventario\bin\Debug\zxing.xml
+C:\InventarioV2\Inventario\bin\Debug\zxing.presentation.xml
+C:\InventarioV2\Inventario\bin\Debug\ClosedXML.pdb
+C:\InventarioV2\Inventario\bin\Debug\ClosedXML.xml
+C:\InventarioV2\Inventario\bin\Debug\DocumentFormat.OpenXml.xml
+C:\InventarioV2\Inventario\bin\Debug\ExcelNumberFormat.xml
+C:\InventarioV2\Inventario\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+C:\InventarioV2\Inventario\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+C:\InventarioV2\Inventario\bin\Debug\es\Microsoft.ReportViewer.Design.resources.dll
+C:\InventarioV2\Inventario\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+C:\InventarioV2\Inventario\obj\Debug\Inventario.csproj.AssemblyReference.cache
+C:\InventarioV2\Inventario\obj\Debug\Interop.WMPLib.dll
+C:\InventarioV2\Inventario\obj\Debug\Inventario.csproj.ResolveComReference.cache
+C:\InventarioV2\Inventario\obj\Debug\Inventario.ImportarEstilosPDF.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.PopUp.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.ReportesMicrosip.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.Escaneo.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.Login.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.Properties.Resources.resources
+C:\InventarioV2\Inventario\obj\Debug\Inventario.csproj.GenerateResource.cache
+C:\InventarioV2\Inventario\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
+C:\InventarioV2\Inventario\obj\Debug\InventarioV2.TrustInfo.xml
+C:\InventarioV2\Inventario\obj\Debug\InventarioV2.exe.manifest
+C:\InventarioV2\Inventario\obj\Debug\InventarioV2.application
+C:\InventarioV2\Inventario\obj\Debug\Inventario.csproj.Up2Date
+C:\InventarioV2\Inventario\obj\Debug\InventarioV2.exe
+C:\InventarioV2\Inventario\obj\Debug\InventarioV2.pdb
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\Escaneo.resx
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\Escaneo.cs
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\Escaneo.Designer.cs
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\EtiquetaCajaModificada.cs
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\C39M90DM.TTF
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\InventarioV2.exe.config
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\InventarioV2.exe.manifest
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\InventarioV2.application
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\InventarioV2.exe
+C:\Users\PC\AppData\Local\Temp\build_InventarioV2\InventarioV2.pdb

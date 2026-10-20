@@ -10,6 +10,7 @@ namespace Inventario
         public Login()
         {
             InitializeComponent();
+            Tema.Aplicar(this);
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)

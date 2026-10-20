@@ -4,12 +4,24 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Windows.Forms;
-
 namespace Inventario
 {
     public class Funciones
     {
-
+        public List<ConsultaInventarioDetalleResult> ConsultaInventarioDetalle(int idInventario)
+        {
+            List<ConsultaInventarioDetalleResult> lista = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                lista = consulta.ConsultaInventarioDetalle(idInventario).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return lista;
+        }
         public void ConsultaUbicacion(ComboBox combo)
         {
             try
@@ -348,8 +360,6 @@ namespace Inventario
 
         }
 
-
-
         public int? ConsultaPrepack(string po)
         {
             try
@@ -377,7 +387,7 @@ namespace Inventario
             {
                 BDDataContext consulta = new BDDataContext();
 
-                ConsultaMixtoResult objusu = consulta.ConsultaMixto(po,estilo).FirstOrDefault();
+                ConsultaMixtoResult objusu = consulta.ConsultaMixto(po, estilo).FirstOrDefault();
 
                 return objusu.mixto;
 
@@ -391,7 +401,6 @@ namespace Inventario
             }
 
         }
-
 
         public List<ConsultaPrepackDetalleResult> ConsultaPrepackDetalle(int idPrepack)
         {
@@ -412,8 +421,6 @@ namespace Inventario
                 return listprepackDetalle;
             }
         }
-
-
 
         public Int64 GuardaInventario(EtiquetaCajaModificada et, int iduser)
         {
@@ -456,7 +463,6 @@ namespace Inventario
             return respuesta;
         }
 
-
         public Int64 GuardaInventarioDetalle(EtiquetaCajaModificada et, int iduser)
         {
             Int64 respuesta = 0;
@@ -465,13 +471,13 @@ namespace Inventario
                 BDDataContext consulta = new BDDataContext();
 
                 GuardarInventarioDetalleResult insertInventario = consulta.GuardarInventarioDetalle(et.id_inventario
-                                                                                      ,et.estilo			
-                                                                                      ,et.poItem		
-                                                                                      ,et.po		
-                                                                                      ,et.Cantidad		
-                                                                                      ,et.size_izquierdo	
-                                                                                      ,et.size_derecho	
-                                                                                      ,et.upc).FirstOrDefault();
+                                                                                      , et.estilo
+                                                                                      , et.poItem
+                                                                                      , et.po
+                                                                                      , et.Cantidad
+                                                                                      , et.size_izquierdo
+                                                                                      , et.size_derecho
+                                                                                      , et.upc).FirstOrDefault();
                 consulta.SubmitChanges();
                 if (et.poItem == "22")
                 {
@@ -584,7 +590,8 @@ namespace Inventario
                                         et.idSize,
                                         et.itemDescription,
                                         et.color,
-                                        et.idusuario).FirstOrDefault();
+                                        et.idusuario,
+                                        et.CantidadCajas).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta = Convert.ToInt32(Alta.RESPUESTA);
             }
@@ -629,6 +636,31 @@ namespace Inventario
                 BDDataContext consulta = new BDDataContext();
 
                 GuardarIFRResult Alta = consulta.GuardarIFR(et.po,
+                                                                et.Cantidad,
+                                                                et.idSize,
+                                                                et.idusuario,
+                                                                et.upc,
+                                                                et.color,
+                                                                et.estilo,
+                                                                et.CantidadCajas
+                                                                ).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = Convert.ToInt32(Alta.RESPUESTA);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+        public int GuardaTYNDALE(EtiquetaCajaModificada et)
+        {
+            int respuesta = 0;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+
+                GuardarTYNDALEResult Alta = consulta.GuardarTYNDALE(et.po,
                                                                 et.Cantidad,
                                                                 et.idSize,
                                                                 et.idusuario,
@@ -807,14 +839,23 @@ namespace Inventario
             return respuesta;
         }
 
-        public List<ConsultaInventarioTallaSeparadaResult> ConsultaInventarioTallasSeparadas(DateTime? fechaInicio, DateTime? fechaFin)
+        public List<ConsultaInventarioTallaSeparadaResult> ConsultaInventarioTallasSeparadas(DateTime? fechaInicio, DateTime? fechaFin, string marca = null)
         {
             List<ConsultaInventarioTallaSeparadaResult> objInv = null;
             try
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaInventarioTallaSeparadaResult> objin = consulta.ConsultaInventarioTallaSeparada(fechaInicio, fechaFin).ToList();
+                List<ConsultaInventarioTallaSeparadaResult> objin;
+                try { objin = consulta.ConsultaInventarioTallaSeparada(fechaInicio, fechaFin, marca).ToList(); }
+                catch (System.Data.SqlClient.SqlException sx) when (sx.Number == 8144)
+                {
+                    // El SP del servidor aun no tiene @marca (falta correr Fase1_ReportesMarca.sql): se llama sin marca
+                    objin = consulta.ExecuteQuery<ConsultaInventarioTallaSeparadaResult>("EXEC dbo.ConsultaInventarioTallaSeparada {0}, {1}", fechaInicio, fechaFin).ToList();
+                    var mapa = MapaMarcas();
+                    foreach (var r in objin) { string m; r.MARCA = r.POITEM != null && mapa.TryGetValue(r.POITEM.Trim(), out m) ? m : null; }
+                    if (!string.IsNullOrEmpty(marca)) objin = objin.Where(r => r.MARCA == marca).ToList();
+                }
 
                 return objin;
 
@@ -829,14 +870,42 @@ namespace Inventario
 
         }
 
-        public List<ConsultaInventarioResult> ConsultaInventario(DateTime? fechaInicio, DateTime? fechaFin)
+        /// <summary>
+        /// Marca por clave de po_item (clienteMarca). Hay claves repetidas (77 = LEVIS y ZUMIES, 1000 = LEVIS y CINTAS):
+        /// se toma la que no es LEVIS, igual que los stored procedures de reportes.
+        /// </summary>
+        public Dictionary<string, string> MapaMarcas()
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.clienteMarca.ToList()
+                .Where(c => !string.IsNullOrWhiteSpace(c.clave) && !string.IsNullOrWhiteSpace(c.nombre))
+                .GroupBy(c => c.clave.Trim())
+                .ToDictionary(g => g.Key, g => g.OrderBy(c => c.nombre.Trim() == "LEVIS" ? 1 : 0).ThenBy(c => c.id).First().nombre.Trim());
+        }
+
+        /// <summary>Marcas para el filtro de los reportes.</summary>
+        public List<string> ConsultaMarcasReporte()
+        {
+            return MapaMarcas().Values.Distinct().OrderBy(m => m).ToList();
+        }
+
+        public List<ConsultaInventarioResult> ConsultaInventario(DateTime? fechaInicio, DateTime? fechaFin, string marca = null)
         {
             List<ConsultaInventarioResult> objInv = null;
             try
             {
                 BDDataContext consulta = new BDDataContext();
 
-                List<ConsultaInventarioResult> objin = consulta.ConsultaInventario(fechaInicio, fechaFin).ToList();
+                List<ConsultaInventarioResult> objin;
+                try { objin = consulta.ConsultaInventario(fechaInicio, fechaFin, marca).ToList(); }
+                catch (System.Data.SqlClient.SqlException sx) when (sx.Number == 8144)
+                {
+                    // El SP del servidor aun no tiene @marca (falta correr Fase1_ReportesMarca.sql): se llama sin marca
+                    objin = consulta.ExecuteQuery<ConsultaInventarioResult>("EXEC dbo.ConsultaInventario {0}, {1}", fechaInicio, fechaFin).ToList();
+                    var mapa = MapaMarcas();
+                    foreach (var r in objin) { string m; r.MARCA = r.POITEM != null && mapa.TryGetValue(r.POITEM.Trim(), out m) ? m : null; }
+                    if (!string.IsNullOrEmpty(marca)) objin = objin.Where(r => r.MARCA == marca).ToList();
+                }
 
                 return objin;
 
@@ -1020,6 +1089,7 @@ namespace Inventario
             try
             {
                 BDDataContext consulta = new BDDataContext();
+                consulta.CommandTimeout = 120; // segundos; ajusta según lo que tarde en SSMS
 
                 List<ConsultaInventarioPOResult> objin = consulta.ConsultaInventarioPO(po_numero).ToList();
 
@@ -1086,6 +1156,111 @@ namespace Inventario
 
 
         }
+
+        public class BajaTallaEstiloResult
+        {
+            // 1 borrado, 3 borrado junto con sus cajas, 2 solo consulta, 0 no encontrada, -1 tiene cajas y no se pidio borrarlas
+            public int Resultado { get; set; }
+            public int Productos { get; set; }
+            public int Cajas { get; set; }
+        }
+
+        // Datos del equipo desde donde se hace una baja, para la bitacora (BitacoraBajas)
+        public static string[] EquipoActual()
+        {
+            string ip = "";
+            try
+            {
+                ip = string.Join(", ", System.Net.Dns.GetHostAddresses(System.Net.Dns.GetHostName())
+                    .Where(a => a.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork && !System.Net.IPAddress.IsLoopback(a))
+                    .Select(a => a.ToString()));
+            }
+            catch { }
+            return new[] { Environment.MachineName, ip, Environment.UserDomainName + "\\" + Environment.UserName };
+        }
+
+        // Baja de una talla de UN estilo (BajaTallaPO borraba la talla en todos los estilos de la PO).
+        // Con borrarCajas tambien da de baja las cajas escaneadas de esa talla; el SP lo deja en BitacoraBajas.
+        public BajaTallaEstiloResult BajaTallaEstilo(string po, string poItem, string estilo, string talla, int iduser, bool soloConsultar, bool borrarCajas = false)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<BajaTallaEstiloResult>("EXEC dbo.BajaTallaEstilo {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}",
+                po, poItem, estilo, talla, iduser, soloConsultar, borrarCajas, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
+        public class BajaCajasPOResult
+        {
+            public int Resultado { get; set; } // 1 borrado, 2 solo consulta, 0 la PO no tiene cajas activas
+            public int Cajas { get; set; }
+            public int Prendas { get; set; }
+        }
+
+        // Da de baja todas las cajas escaneadas de la PO sin borrar la PO del catalogo; el SP lo deja en BitacoraBajas
+        public BajaCajasPOResult BajaCajasPO(string po, int iduser, bool soloConsultar)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<BajaCajasPOResult>("EXEC dbo.BajaCajasPO {0}, {1}, {2}, {3}, {4}, {5}",
+                po, iduser, soloConsultar, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
+        // Borra SOLO la PO del catalogo (catProductos); las cajas escaneadas se quedan. El SP lo deja en BitacoraBajas
+        public BajaTallaEstiloResult BajaCatalogoPO(string po, int iduser, bool soloConsultar)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<BajaTallaEstiloResult>("EXEC dbo.BajaCatalogoPO {0}, {1}, {2}, {3}, {4}, {5}",
+                po, iduser, soloConsultar, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
+        public class ProductoCorreccion
+        {
+            public int id { get; set; }
+            public string po_item { get; set; }
+            public string marca { get; set; }
+            public string talla { get; set; }
+            public string estilo { get; set; }
+            public string color { get; set; }
+            public string descripcion { get; set; }
+            public string vendor { get; set; }
+            public string shipTo { get; set; }
+            public string upc { get; set; }
+            public int cantidad { get; set; }
+            public int cajas { get; set; }
+        }
+
+        public class ModificarProductoResult
+        {
+            public int Resultado { get; set; }
+            public int Cajas { get; set; }
+        }
+
+        // Renglones del catalogo de la PO para la pestana Corregir PO
+        public List<ProductoCorreccion> ConsultaProductosCorreccion(string po)
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<ProductoCorreccion>("EXEC dbo.ConsultaProductosCorreccion {0}", po).ToList();
+        }
+
+        // Cambia un renglon del catalogo y lo propaga a lo escaneado; el SP deja cada cambio en BitacoraCambios
+        public ModificarProductoResult ModificarProductoPO(ProductoCorreccion p, int iduser)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<ModificarProductoResult>("EXEC dbo.ModificarProductoPO {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}",
+                p.id, p.estilo ?? "", p.color ?? "", p.descripcion ?? "", p.vendor ?? "", p.shipTo ?? "", p.upc ?? "", iduser,
+                equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
+        public void RegistrarBitacoraBaja(string tipo, string po, int iduser)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            consulta.ExecuteQuery<int>("EXEC dbo.RegistrarBitacoraBaja @tipo={0}, @po={1}, @idUser={2}, @maquina={3}, @ip={4}, @usuarioWindows={5}",
+                tipo, po, iduser, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
         public bool BajaTallaPO(string po, string talla, int iduser)
         {
             bool respuesta = false;
@@ -1192,6 +1367,57 @@ namespace Inventario
 
             }
         }
+        public void ConsultaTallasTYNDALE(ComboBox combo, string estilo, string color)
+        {
+            try
+            {
+
+                BDDataContext consulta = new BDDataContext();
+
+                System.Data.Linq.ISingleResult<ConsultaTallasTYNDALEResult> poItem = consulta.ConsultaTallasTYNDALE(estilo, color);
+
+                //Corregi el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "size";
+                combo.DataSource = poItem;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+
+            }
+        }
+        public System.Data.Linq.ISingleResult<ConsultaTallasColorTYNDALEResult> ConsultaColorTYNDALE(ComboBox combo, string estilo)
+        {
+            try
+            {
+                System.Data.Linq.ISingleResult<ConsultaTallasColorTYNDALEResult> poItem = null;
+                BDDataContext consulta = new BDDataContext();
+
+                poItem = consulta.ConsultaTallasColorTYNDALE(estilo);
+
+                //Corregi el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "color";
+                combo.DataSource = poItem;
+
+                return poItem;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+                return null;
+
+            }
+        }
+
+
+
         public void ConsultaTallasXMarca(ComboBox combo, string marca)
         {
             try
@@ -1286,6 +1512,26 @@ namespace Inventario
 
                 System.Data.Linq.ISingleResult<ConsultaEstiloIFRResult> poItem = consulta.ConsultaEstiloIFR();
 
+                //Corregir el orden de inicializacion de variables
+                combo.ValueMember = "id";
+                combo.DisplayMember = "estilo";
+                combo.DataSource = poItem;
+
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error en la base de datos " + ex.Message);
+
+            }
+        }
+        public void ConsultaEstiloTYNDALE(ComboBox combo)
+        {
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                System.Data.Linq.ISingleResult<ConsultaEstiloTYNDALEResult> poItem = consulta.ConsultaEstiloTYNDALE();
                 //Corregir el orden de inicializacion de variables
                 combo.ValueMember = "id";
                 combo.DisplayMember = "estilo";
@@ -1493,7 +1739,7 @@ namespace Inventario
         {
             SqlCommand cmd = new SqlCommand();
             SqlDataAdapter miadapter = new SqlDataAdapter();
-            SqlConnection MiConexion = new SqlConnection(@"Data Source =AIN-MSSRV\SISTEMASAIN;Initial Catalog=Inventario;uid=sa;pwd=SisAin03");
+            SqlConnection MiConexion = new SqlConnection(global::Inventario.Properties.Settings.Default.InventarioConnectionString4);
             DataTable dt = new DataTable();
             SqlDataAdapter da;
             try
@@ -1648,7 +1894,7 @@ namespace Inventario
             catch (Exception ex)
             {
                 respuesta = "";
-               // MessageBox.Show(ex.Message);
+                // MessageBox.Show(ex.Message);
             }
             return respuesta;
         }
@@ -1951,6 +2197,8 @@ namespace Inventario
             return respuesta;
         }
 
+
+
         public ConsultaTallasColorIFRResult ConsultaTallasColorIFR(string estilo)
         {
             ConsultaTallasColorIFRResult respuesta = null;
@@ -1969,13 +2217,51 @@ namespace Inventario
             return respuesta;
         }
 
-        public Prendas ConsultaPrendas_UPC(string po_numero, string upc)
+
+
+        public ConsultaColorResult ConsultaColor(string estilo, string marca)
         {
-             Prendas respuesta = new Prendas();
+            ConsultaColorResult respuesta = null;
             try
             {
                 BDDataContext consulta = new BDDataContext();
-                ConsultaPrendas_UPCResult respuesta1= consulta.ConsultaPrendas_UPC(po_numero,upc).FirstOrDefault();
+                ConsultaColorResult respuesta1 = consulta.ConsultaColor(estilo, marca).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1;
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+        public ConsultaTallasColorTYNDALEResult ConsultaTallasColorTYNDALE(string estilo)
+        {
+            ConsultaTallasColorTYNDALEResult respuesta = null;
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaTallasColorTYNDALEResult respuesta1 = consulta.ConsultaTallasColorTYNDALE(estilo).FirstOrDefault();
+                consulta.SubmitChanges();
+                respuesta = respuesta1;
+            }
+            catch (Exception ex)
+            {
+                respuesta = null;
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
+        public Prendas ConsultaPrendas_UPC(string po_numero, string upc)
+        {
+            Prendas respuesta = new Prendas();
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                ConsultaPrendas_UPCResult respuesta1 = consulta.ConsultaPrendas_UPC(po_numero, upc).FirstOrDefault();
                 consulta.SubmitChanges();
                 respuesta.diferencia = respuesta1.diferencia;
                 respuesta.prendasescaneadas = respuesta1.Escaneadas.ToString();
@@ -2044,6 +2330,27 @@ namespace Inventario
             return respuesta.ToString();
         }
 
+        public string ConsultaUPCTYNDALE(int? id)
+        {
+            String respuesta = "";
+            try
+            {
+                BDDataContext consulta = new BDDataContext();
+                // Primera fila o null si no hay resultados
+                var respuesta1 = consulta.ConsultaUPCTYNDALE(id).FirstOrDefault();
+                // SubmitChanges no es necesario para operaciones de solo lectura
+                // consulta.SubmitChanges();
+                // Comprobar null antes de acceder a propiedades
+                respuesta = respuesta1?.upc ?? "";
+            }
+            catch (Exception ex)
+            {
+                respuesta = "";
+                MessageBox.Show(ex.Message);
+            }
+            return respuesta;
+        }
+
 
 
         public List<ConsultaProductosBensResult> ConsultaProductosBens(string po, string size_izquierdo, string size_derecho)
@@ -2108,9 +2415,22 @@ namespace Inventario
         }
 
 
-        public string GuardaInventarioBeans(EtiquetaBens et, int iduser)
+        /// <summary>
+        /// Siguiente numero de carton Ben Davis para el PO (mismo criterio que GuardarInventarioBeans:
+        /// MAX(cn_tag_num)+1 de las cajas no canceladas del po_numero).
+        /// </summary>
+        public int SiguienteCartonBens(string po_numero)
         {
-            string respuesta = "";
+            BDDataContext consulta = new BDDataContext();
+            long? maximo = consulta.Inventario
+                .Where(i => i.po_numero == po_numero && i.id_status != 4)
+                .Max(i => i.cn_tag_num);
+            return Convert.ToInt32((maximo ?? 0) + 1);
+        }
+
+        public EtiquetaCajaModificada GuardaInventarioBeans(EtiquetaBens et, int iduser)
+        {
+            EtiquetaCajaModificada respuesta = new EtiquetaCajaModificada();
             try
             {
                 BDDataContext consulta = new BDDataContext();
@@ -2130,11 +2450,12 @@ namespace Inventario
                                                                                       et.itemDescription
                                                                                       ).FirstOrDefault();
                 consulta.SubmitChanges();
-                respuesta = insertInventario.Column1.ToString();
+                respuesta.codigoBarrasTextoB = insertInventario.codigoBarrasTexto.ToString();
+
             }
             catch (Exception ex)
             {
-                respuesta = "";
+                respuesta = null;
                 MessageBox.Show(ex.Message);
             }
             return respuesta;
