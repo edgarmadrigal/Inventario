@@ -87,6 +87,7 @@ namespace Inventario
                 PrepararFiltrosMarca();
                 PrepararPestanaBajas();
                 PrepararPestanaCorregir();
+                PrepararExcelBENS();
                 ImpresionRdlc.Precalentar("ReporteCajaBens", "ReporteCajaBensCamisas", "ReporteCajaTYNDALE", "ReporteCaja");
                 f.ConsultaPO(cmbPO); cmbPO.SelectedIndex = -1; f.ConsultaCliente(cmbCliente); if (cmbCliente.Items.Count > 0) cmbCliente.SelectedIndex = 0; f.ConsultaFactura(cmbFactura);
                 if (cmbFactura.Items.Count > 0) cmbFactura.SelectedIndex = 0; f.ConsultaTerminado(cmbTerminado); if (cmbTerminado.Items.Count > 0) cmbTerminado.SelectedIndex = 0; f.ConsultaPOModificar(cmbPOMod); cmbPOMod.SelectedIndex = -1;
@@ -321,6 +322,7 @@ namespace Inventario
                 PrepararFiltrosMarca();
                 PrepararPestanaBajas();
                 PrepararPestanaCorregir();
+                PrepararExcelBENS();
                 f.ConsultaPO(cmbPO);
                 cmbPO.SelectedIndex = 1;
                 iniciando = false;

@@ -50,6 +50,130 @@ namespace Inventario
             return cmb;
         }
 
+        // ---- Excel de Ben Davis (packing list por PO) en la pestana Reporte PO ----
+        private ComboBox cmbPOExcelBENS;
+
+        private void PrepararExcelBENS()
+        {
+            int x = btnImprimirReportePO.Right + 20;
+            var lbl = new Label { Text = "PO Ben Davis:", AutoSize = true, Location = new System.Drawing.Point(x, 2) };
+            cmbPOExcelBENS = new ComboBox
+            {
+                Location = new System.Drawing.Point(x, 18),
+                Width = 170,
+                AutoCompleteMode = AutoCompleteMode.SuggestAppend,
+                AutoCompleteSource = AutoCompleteSource.ListItems
+            };
+            // La lista de POs se carga la primera vez que se abre
+            cmbPOExcelBENS.DropDown += (s, e) =>
+            {
+                if (cmbPOExcelBENS.Items.Count == 0)
+                {
+                    string texto = cmbPOExcelBENS.Text;
+                    try { f.ConsultaPO(cmbPOExcelBENS); } catch { }
+                    cmbPOExcelBENS.Text = texto;
+                }
+            };
+            var btn = new Button
+            {
+                Text = "EXCEL BEN DAVIS",
+                Location = new System.Drawing.Point(x, 46),
+                Size = new System.Drawing.Size(170, 32),
+                Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+            };
+            btn.Click += (s, e) => ExportarExcelBENS();
+            tpReportePO.Controls.AddRange(new Control[] { lbl, cmbPOExcelBENS, btn });
+            lbl.BringToFront(); cmbPOExcelBENS.BringToFront(); btn.BringToFront();
+        }
+
+        private void ExportarExcelBENS()
+        {
+            string po = cmbPOExcelBENS.Text.Trim();
+            if (po == "")
+            {
+                MessageBox.Show("Escribe o selecciona la PO de Ben Davis.", "Excel Ben Davis");
+                return;
+            }
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                List<Funciones.PackingBENS> filas = f.ReportePackingBENS(po);
+                Cursor.Current = Cursors.Default;
+                if (filas.Count == 0)
+                {
+                    MessageBox.Show("La PO " + po + " no tiene cajas escaneadas de Ben Davis.", "Excel Ben Davis");
+                    return;
+                }
+
+                string poAI = filas[0].PO;
+                using (var dlg = new SaveFileDialog { Filter = "Excel (*.xlsx)|*.xlsx", FileName = poAI + " Ben Davis " + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx" })
+                {
+                    if (dlg.ShowDialog(this) != DialogResult.OK) return;
+                    GuardarExcelBENS(filas, poAI, dlg.FileName);
+
+                    if (MessageBox.Show("Se guardó el Excel con " + filas.Select(r => r.idCaja).Distinct().Count() + " caja(s) y " +
+                        filas.Sum(r => r.Qty) + " prenda(s).\r\n\r\n¿Abrirlo?", "Excel Ben Davis", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        System.Diagnostics.Process.Start(dlg.FileName);
+                }
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        // Mismo acomodo que el packing list de Ben Davis: PO#, Barcode, Box #, Style, Waist, Length, SIZE, QTY.
+        // En cajas mixtas el Box # va solo en la primera fila de la caja.
+        private static void GuardarExcelBENS(List<Funciones.PackingBENS> filas, string poAI, string ruta)
+        {
+            using (var libro = new ClosedXML.Excel.XLWorkbook())
+            {
+                var hoja = libro.Worksheets.Add(poAI.Length > 31 ? poAI.Substring(0, 31) : poAI);
+                string[] titulos = { "PO#", "Barcode", "Box #", "Style", "Waist", "Length", "SIZE", "QTY" };
+                for (int c = 0; c < titulos.Length; c++) hoja.Cell(1, c + 1).Value = titulos[c];
+
+                int fila = 2, cajaAnterior = -1;
+                foreach (var r in filas)
+                {
+                    hoja.Cell(fila, 1).Value = r.PO;
+                    hoja.Cell(fila, 2).Value = r.Barcode;
+                    if (r.idCaja != cajaAnterior) hoja.Cell(fila, 3).Value = r.Box;
+                    PonerNumeroOTexto(hoja.Cell(fila, 4), r.Style);
+                    PonerNumeroOTexto(hoja.Cell(fila, 5), r.Waist);
+                    PonerNumeroOTexto(hoja.Cell(fila, 6), r.Length);
+                    hoja.Cell(fila, 7).Value = r.Size;
+                    hoja.Cell(fila, 8).Value = r.Qty;
+                    cajaAnterior = r.idCaja;
+                    fila++;
+                }
+
+                var tabla = hoja.Range(1, 1, fila - 1, titulos.Length);
+                tabla.Style.Border.OutsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+                tabla.Style.Border.InsideBorder = ClosedXML.Excel.XLBorderStyleValues.Thin;
+                tabla.Style.Font.FontName = "Calibri";
+                tabla.Style.Font.FontSize = 11;
+                hoja.Range(1, 3, fila - 1, titulos.Length).Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+                var encabezado = hoja.Range(1, 1, 1, titulos.Length);
+                encabezado.Style.Font.Bold = true;
+                encabezado.Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Center;
+                hoja.Cell(1, 1).Style.Alignment.Horizontal = ClosedXML.Excel.XLAlignmentHorizontalValues.Left;
+                tabla.SetAutoFilter();
+                hoja.SheetView.FreezeRows(1);
+                hoja.Columns(1, titulos.Length).AdjustToContents();
+                hoja.Column(2).Width = Math.Max(hoja.Column(2).Width, 26);
+                for (int c = 3; c <= titulos.Length; c++) hoja.Column(c).Width = Math.Max(hoja.Column(c).Width, 12);
+
+                libro.SaveAs(ruta);
+            }
+        }
+
+        private static void PonerNumeroOTexto(ClosedXML.Excel.IXLCell celda, string valor)
+        {
+            int n;
+            if (int.TryParse(valor, out n)) celda.Value = n; else celda.Value = valor;
+        }
+
         private static string MarcaFiltro(ComboBox cmb)
         {
             return cmb == null || cmb.SelectedIndex <= 0 ? null : cmb.Text;

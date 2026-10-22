@@ -1253,6 +1253,27 @@ namespace Inventario
                 equipo[0], equipo[1], equipo[2]).FirstOrDefault();
         }
 
+        public class PackingBENS
+        {
+            public string PO { get; set; }
+            public string Barcode { get; set; }
+            public int Box { get; set; }
+            public string Style { get; set; }
+            public string Waist { get; set; }
+            public string Length { get; set; }
+            public string Size { get; set; }
+            public int Qty { get; set; }
+            public int Mixta { get; set; }
+            public int idCaja { get; set; }
+        }
+
+        // Packing list de Ben Davis por PO (cajas normales y una fila por talla en las mixtas)
+        public List<PackingBENS> ReportePackingBENS(string po)
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<PackingBENS>("EXEC dbo.ReportePackingBENS {0}", po).ToList();
+        }
+
         public void RegistrarBitacoraBaja(string tipo, string po, int iduser)
         {
             string[] equipo = EquipoActual();
