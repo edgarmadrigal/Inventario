@@ -1,6 +1,7 @@
 -- Fase12: packing list de Ben Davis (po_item 55) por PO, para el Excel de la pestana Reporte PO.
 -- Un renglon por caja normal y, en cajas mixtas, un renglon por talla (todas con el carton de la caja).
 -- Columnas: PO#, Barcode, Box #, Style, Waist, Length, SIZE, QTY. Solo cajas activas (id_status <> 4).
+-- Color: lo usa el Summary de Ben Davis (si la caja no lo trae se toma del catalogo del estilo).
 
 IF OBJECT_ID('dbo.ReportePackingBENS') IS NULL
     EXEC('CREATE PROCEDURE dbo.ReportePackingBENS AS BEGIN SET NOCOUNT ON; END');
@@ -14,7 +15,9 @@ BEGIN
 
     DECLARE @poAI VARCHAR(150) = CASE WHEN @po LIKE '%AI%' THEN @po ELSE 'AI' + @po END;
 
-    SELECT x.PO, x.Barcode, x.Box, x.Style, x.Waist, x.Length, x.Size, x.Qty, x.Mixta, x.idCaja
+    SELECT x.PO, x.Barcode, x.Box, x.Style, x.Waist, x.Length, x.Size, x.Qty, x.Mixta, x.idCaja,
+           ISNULL(NULLIF(LTRIM(RTRIM(x.Color)), ''), (SELECT TOP 1 LTRIM(RTRIM(c.color)) FROM dbo.catProductos c
+                     WHERE (c.po_varchar = @po OR c.po_numero = @po OR c.po_varchar = @poAI OR c.po_numero = @poAI) AND c.prod_cd = x.Style)) AS Color
     FROM (
         -- Cajas normales
         SELECT @poAI AS PO,
@@ -28,7 +31,8 @@ BEGIN
                CAST(i.cantidad AS INT) AS Qty,
                0 AS Mixta,
                i.id AS idCaja,
-               0 AS orden
+               0 AS orden,
+               i.color AS Color
         FROM dbo.Inventario i
         WHERE (i.po_varchar = @po OR i.po_numero = @po OR i.po_varchar = @poAI OR i.po_numero = @poAI)
           AND i.po_item = '55' AND i.id_status <> 4 AND ISNULL(i.size_izquierdo, '') <> 'MIXTO'
@@ -47,7 +51,8 @@ BEGIN
                CAST(d.cantidad AS INT),
                1,
                p.id,
-               d.id
+               d.id,
+               p.color
         FROM dbo.InventarioDetalle d
         INNER JOIN dbo.Inventario p ON p.id = d.id_Inventario
         WHERE (p.po_varchar = @po OR p.po_numero = @po OR p.po_varchar = @poAI OR p.po_numero = @poAI

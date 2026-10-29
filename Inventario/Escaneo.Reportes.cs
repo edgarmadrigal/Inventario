@@ -78,12 +78,20 @@ namespace Inventario
             {
                 Text = "EXCEL BEN DAVIS",
                 Location = new System.Drawing.Point(x, 46),
-                Size = new System.Drawing.Size(170, 32),
-                Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
+                Size = new System.Drawing.Size(128, 32),
+                Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold)
             };
             btn.Click += (s, e) => ExportarExcelBENS();
-            tpReportePO.Controls.AddRange(new Control[] { lbl, cmbPOExcelBENS, btn });
-            lbl.BringToFront(); cmbPOExcelBENS.BringToFront(); btn.BringToFront();
+            var btnSummary = new Button
+            {
+                Text = "SUMMARY BEN DAVIS",
+                Location = new System.Drawing.Point(x + 134, 46),
+                Size = new System.Drawing.Size(140, 32),
+                Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold)
+            };
+            btnSummary.Click += (s, e) => ExportarSummaryBENS();
+            tpReportePO.Controls.AddRange(new Control[] { lbl, cmbPOExcelBENS, btn, btnSummary });
+            lbl.BringToFront(); cmbPOExcelBENS.BringToFront(); btn.BringToFront(); btnSummary.BringToFront();
         }
 
         private void ExportarExcelBENS()

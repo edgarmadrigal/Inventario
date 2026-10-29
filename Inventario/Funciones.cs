@@ -1265,6 +1265,7 @@ namespace Inventario
             public int Qty { get; set; }
             public int Mixta { get; set; }
             public int idCaja { get; set; }
+            public string Color { get; set; }
         }
 
         // Packing list de Ben Davis por PO (cajas normales y una fila por talla en las mixtas)
@@ -1272,6 +1273,48 @@ namespace Inventario
         {
             BDDataContext consulta = new BDDataContext();
             return consulta.ExecuteQuery<PackingBENS>("EXEC dbo.ReportePackingBENS {0}", po).ToList();
+        }
+
+        // ---- Sugerencias del Summary de Ben Davis (ORDER QTY por talla y peso por prenda, por PO) ----
+        public class SugerenciaPedidoBENS
+        {
+            public string talla { get; set; }
+            public int pedido { get; set; }
+        }
+
+        public class SugerenciaPesoBENS
+        {
+            public decimal pesoBruto { get; set; }
+            public decimal pesoNeto { get; set; }
+        }
+
+        public List<SugerenciaPedidoBENS> ConsultaSugerenciaPedidoBENS(string po)
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<SugerenciaPedidoBENS>("EXEC dbo.ConsultaSugerenciaPedidoBENS {0}", po).ToList();
+        }
+
+        public SugerenciaPesoBENS ConsultaSugerenciaPesoBENS(string po)
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<SugerenciaPesoBENS>("EXEC dbo.ConsultaSugerenciaPesoBENS {0}", po).FirstOrDefault();
+        }
+
+        // pedido null borra la sugerencia de esa talla
+        public void GuardarSugerenciaPedidoBENS(string po, string talla, int? pedido, int iduser)
+        {
+            BDDataContext consulta = new BDDataContext();
+            // ExecuteQuery no acepta parametros null: sin pedido se manda NULL directo
+            if (pedido.HasValue)
+                consulta.ExecuteQuery<int>("EXEC dbo.GuardarSugerenciaPedidoBENS {0}, {1}, {2}, {3}", po, talla, pedido.Value, iduser).FirstOrDefault();
+            else
+                consulta.ExecuteQuery<int>("EXEC dbo.GuardarSugerenciaPedidoBENS {0}, {1}, NULL, {2}", po, talla, iduser).FirstOrDefault();
+        }
+
+        public void GuardarSugerenciaPesoBENS(string po, decimal bruto, decimal neto, int iduser)
+        {
+            BDDataContext consulta = new BDDataContext();
+            consulta.ExecuteQuery<int>("EXEC dbo.GuardarSugerenciaPesoBENS {0}, {1}, {2}, {3}", po, bruto, neto, iduser).FirstOrDefault();
         }
 
         public void RegistrarBitacoraBaja(string tipo, string po, int iduser)
