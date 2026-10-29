@@ -1165,6 +1165,24 @@ namespace Inventario
             public int Cajas { get; set; }
         }
 
+        // Version instalada (la de ClickOnce); si se corre desde Visual Studio, la del ensamblado marcada "local".
+        // Se muestra en el titulo de las ventanas para saber que version tiene quien llama.
+        public static string VersionApp()
+        {
+            try
+            {
+                if (System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed)
+                    return System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            catch { }
+            return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version + " (local)";
+        }
+
+        public static string TituloConVersion(string titulo)
+        {
+            return titulo + "  -  Versión " + VersionApp();
+        }
+
         // Datos del equipo desde donde se hace una baja, para la bitacora (BitacoraBajas)
         public static string[] EquipoActual()
         {

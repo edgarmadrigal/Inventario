@@ -83,6 +83,7 @@ namespace Inventario
             try
             {
                 InitializeComponent();
+                Text = Funciones.TituloConVersion(Text);
                 ConfigurarGrids();
                 PrepararFiltrosMarca();
                 PrepararPestanaBajas();
@@ -107,8 +108,8 @@ namespace Inventario
                 usu = usuario;
                 try
                 {
-                    lblVersion.Text = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-                    lblVersion2.Text = ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+                    lblVersion.Text = Funciones.VersionApp();
+                    lblVersion2.Text = Funciones.VersionApp();
                 }
                 catch (Exception) { }
                 if (usu[0].perfil == "1")
@@ -318,6 +319,7 @@ namespace Inventario
             try
             {
                 InitializeComponent();
+                Text = Funciones.TituloConVersion(Text);
                 ConfigurarGrids();
                 PrepararFiltrosMarca();
                 PrepararPestanaBajas();

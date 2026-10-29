@@ -10,6 +10,7 @@ namespace Inventario
         public Login()
         {
             InitializeComponent();
+            Text = Funciones.TituloConVersion(Text);
             Tema.Aplicar(this);
         }
 
