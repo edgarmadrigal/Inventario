@@ -75,6 +75,7 @@ namespace Inventario
             gcPO.Columnas.Add(new ColumnaGrid("FACTURA", null, 36, 9, true));
             gcPO.Columnas.Add(new ColumnaGrid("TERMINADO", null, 35, 10, true));
             gcPO.Columnas.Add(new ColumnaGrid("MARCA", "Marca", 80, 0, true));
+            gcPO.Columnas.Add(new ColumnaGrid("codigodeBarras", "Código de barras", 190, 12, true));
             gcPO.ResumenesGrupo.Clear();
             gcPO.ResumenesGrupo.Add(new ResumenGrupo(TipoResumen.Suma, "CANTIDAD", "Prendas :{0}"));
             gcPO.ResumenesGrupo.Add(new ResumenGrupo(TipoResumen.Conteo, "PO", "Cajas :{0}"));
