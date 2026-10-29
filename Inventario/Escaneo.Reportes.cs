@@ -64,14 +64,13 @@ namespace Inventario
                 AutoCompleteMode = AutoCompleteMode.SuggestAppend,
                 AutoCompleteSource = AutoCompleteSource.ListItems
             };
-            // La lista de POs se carga la primera vez que se abre
-            cmbPOExcelBENS.DropDown += (s, e) =>
+            // La lista de POs se carga al entrar a la pestana. No cargarla en el evento DropDown: cambiar la lista
+            // mientras el combo se abre (con autocompletado) truena la app con AccessViolationException.
+            tpReportePO.Enter += (s, e) =>
             {
                 if (cmbPOExcelBENS.Items.Count == 0)
                 {
-                    string texto = cmbPOExcelBENS.Text;
-                    try { f.ConsultaPO(cmbPOExcelBENS); } catch { }
-                    cmbPOExcelBENS.Text = texto;
+                    try { f.ConsultaPO(cmbPOExcelBENS); cmbPOExcelBENS.SelectedIndex = -1; } catch { }
                 }
             };
             var btn = new Button
