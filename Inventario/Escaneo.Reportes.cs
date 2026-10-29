@@ -57,10 +57,11 @@ namespace Inventario
         {
             int x = btnImprimirReportePO.Right + 20;
             var lbl = new Label { Text = "PO Ben Davis:", AutoSize = true, Location = new System.Drawing.Point(x, 2) };
+            // Todo cabe en 220 px de ancho (en pantallas chicas el Summary se cortaba)
             cmbPOExcelBENS = new ComboBox
             {
                 Location = new System.Drawing.Point(x, 18),
-                Width = 170,
+                Width = 220,
                 AutoCompleteMode = AutoCompleteMode.SuggestAppend,
                 AutoCompleteSource = AutoCompleteSource.ListItems
             };
@@ -75,18 +76,19 @@ namespace Inventario
             };
             var btn = new Button
             {
-                Text = "EXCEL BEN DAVIS",
+                Text = "EXCEL",
                 Location = new System.Drawing.Point(x, 46),
-                Size = new System.Drawing.Size(128, 32),
-                Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold)
+                Size = new System.Drawing.Size(104, 32),
+                Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
             };
             btn.Click += (s, e) => ExportarExcelBENS();
+            // El Summary primero pide el Cut Order (foto del cliente) para comparar pedido contra embarcado
             var btnSummary = new Button
             {
-                Text = "SUMMARY BEN DAVIS",
-                Location = new System.Drawing.Point(x + 134, 46),
-                Size = new System.Drawing.Size(140, 32),
-                Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold)
+                Text = "SUMMARY",
+                Location = new System.Drawing.Point(x + 110, 46),
+                Size = new System.Drawing.Size(110, 32),
+                Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold)
             };
             btnSummary.Click += (s, e) => ExportarSummaryBENS();
             tpReportePO.Controls.AddRange(new Control[] { lbl, cmbPOExcelBENS, btn, btnSummary });

@@ -51,10 +51,15 @@ namespace Inventario
                 // Tallas: las del catalogo de la PO mas las escaneadas, en orden de talla
                 List<string> tallas = OrdenarTallas(catalogo.Select(c => NormalizarTalla(c.talla)).Concat(filas.Select(r => NormalizarTalla(r.Size))));
 
-                Dictionary<string, int> pedido;
-                if (!pedidoBENS.TryGetValue(poAI, out pedido)) pedido = new Dictionary<string, int>();
+                // 1) Cut Order: foto del cliente y sus cantidades (tiene que cuadrar con TOTAL UNITS)
+                bool sinPedido;
+                if (!PedirCutOrderBENS(poAI, out sinPedido)) return;
+
+                // 2) Comparacion pedido contra embarcado y pesos
+                Dictionary<string, int> pedido = new Dictionary<string, int>();
                 CargarSugerenciasBENS(poAI, pedido);
-                if (!CapturarPedidoBENS(poAI, tallas, filas, pedido)) return;
+                if (sinPedido) pedido.Clear();
+                if (!CapturarPedidoBENS(poAI, tallas, filas, pedido, !sinPedido)) return;
                 pedidoBENS[poAI] = pedido;
                 GuardarSugerenciasBENS(poAI, tallas, pedido);
 
@@ -163,7 +168,8 @@ namespace Inventario
         }
 
         // Ventana para escribir lo pedido por talla y el peso por prenda
-        private bool CapturarPedidoBENS(string poAI, List<string> tallas, List<Funciones.PackingBENS> filas, Dictionary<string, int> pedido)
+        // pedidoFijo: el ORDER QTY viene del Cut Order (con su foto y TOTAL UNITS); aqui solo se compara, no se edita
+        private bool CapturarPedidoBENS(string poAI, List<string> tallas, List<Funciones.PackingBENS> filas, Dictionary<string, int> pedido, bool pedidoFijo)
         {
             using (var frm = new Form
             {
@@ -178,7 +184,9 @@ namespace Inventario
             {
                 var lbl = new Label
                 {
-                    Text = "Escribe lo pedido (ORDER QTY) de cada talla. Si no lo tienes, déjalo vacío y el renglón sale en blanco.",
+                    Text = pedidoFijo
+                        ? "Comparación de lo pedido (Cut Order del cliente) contra lo embarcado. Rojo = no cuadra. Para cambiar lo pedido, regresa al Cut Order."
+                        : "Escribe lo pedido (ORDER QTY) de cada talla. Si no lo tienes, déjalo vacío y el renglón sale en blanco.",
                     Location = new Point(12, 10),
                     Size = new Size(430, 40)
                 };
@@ -195,15 +203,33 @@ namespace Inventario
                 grid.Columns.Add("talla", "Talla");
                 grid.Columns.Add("enviado", "Enviado");
                 grid.Columns.Add("pedido", "Pedido (ORDER QTY)");
+                grid.Columns.Add("diferencia", "Diferencia");
                 grid.Columns["talla"].ReadOnly = true;
                 grid.Columns["enviado"].ReadOnly = true;
+                grid.Columns["diferencia"].ReadOnly = true;
+                grid.Columns["pedido"].ReadOnly = pedidoFijo;
                 grid.Columns["talla"].DefaultCellStyle.BackColor = grid.Columns["enviado"].DefaultCellStyle.BackColor = Color.FromArgb(235, 238, 242);
+                if (pedidoFijo) grid.Columns["pedido"].DefaultCellStyle.BackColor = Color.FromArgb(235, 238, 242);
                 foreach (string t in tallas)
                 {
                     int enviado = filas.Where(r => NormalizarTalla(r.Size) == t).Sum(r => r.Qty);
                     int p;
                     grid.Rows.Add(t, enviado, pedido.TryGetValue(t, out p) ? (object)p : null);
                 }
+                // Diferencia = embarcado - pedido; verde si cuadra, rojo si no
+                Action calcular = () =>
+                {
+                    foreach (DataGridViewRow r in grid.Rows)
+                    {
+                        int env = Convert.ToInt32(r.Cells["enviado"].Value), ped;
+                        bool hayPedido = int.TryParse(Convert.ToString(r.Cells["pedido"].Value).Trim(), out ped);
+                        var celda = r.Cells["diferencia"];
+                        celda.Value = hayPedido ? (env - ped).ToString("+#,##0;-#,##0;0") : "";
+                        celda.Style.BackColor = !hayPedido ? Color.Empty : env == ped ? Color.FromArgb(226, 239, 218) : Color.FromArgb(255, 199, 199);
+                    }
+                };
+                calcular();
+                grid.CellValueChanged += (s, e) => { if (e.ColumnIndex == grid.Columns["pedido"].Index) calcular(); };
 
                 var lblBruto = new Label { Text = "Peso bruto (kg por prenda):", Location = new Point(12, 400), AutoSize = true };
                 var txtBruto = new TextBox { Text = pesoBrutoBENS.ToString(CultureInfo.InvariantCulture), Location = new Point(250, 397), Width = 80 };
@@ -369,7 +395,27 @@ namespace Inventario
                 if (pedido.Count > 0) hoja.Cell(qOrder, cTotal).Value = pedido.Where(kv => tallas.Contains(kv.Key)).Sum(kv => kv.Value);
                 hoja.Cell(qShip, cTotal).Value = totalPiezas;
 
-                var cuadro = hoja.Range(q1, 4, qShip, cTotal);
+                // DIFF = SHIPPED - ORDER QTY (solo si hay pedido): verde si cuadra, rojo si no
+                int qFin = qShip;
+                if (pedido.Count > 0)
+                {
+                    int qDiff = qShip + 1;
+                    qFin = qDiff;
+                    hoja.Range(qDiff, 4, qDiff, 5).Merge().Value = "DIFF";
+                    for (int i = 0; i <= nT; i++)
+                    {
+                        int col = i < nT ? cTalla1 + i : cTotal;
+                        int envio = hoja.Cell(qShip, col).GetValue<int>();
+                        int ped = hoja.Cell(qOrder, col).IsEmpty() ? 0 : hoja.Cell(qOrder, col).GetValue<int>();
+                        var celda = hoja.Cell(qDiff, col);
+                        celda.Value = envio - ped;
+                        celda.Style.NumberFormat.Format = "+#,##0;-#,##0;0";
+                        celda.Style.Fill.BackgroundColor = envio == ped ? XLColor.FromArgb(226, 239, 218) : XLColor.FromArgb(255, 199, 199);
+                    }
+                    hoja.Range(qDiff, 4, qDiff, cTotal).Style.Font.Bold = true;
+                }
+
+                var cuadro = hoja.Range(q1, 4, qFin, cTotal);
                 cuadro.Style.Border.OutsideBorder = XLBorderStyleValues.Thin;
                 cuadro.Style.Border.InsideBorder = XLBorderStyleValues.Thin;
                 cuadro.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Center;
@@ -379,9 +425,9 @@ namespace Inventario
                 hoja.Range(qShip, 4, qShip, cTotal).Style.Font.Bold = true;
 
                 // ---------- SUMMARY por inseam (pantalones: renglon = largo, columna = cintura) ----------
-                int ultimaFila = qShip;
+                int ultimaFila = qFin;
                 if (tallas.All(t => t.Contains(" x ")))
-                    ultimaFila = SummaryPorInseam(hoja, rangos, qShip + 3);
+                    ultimaFila = SummaryPorInseam(hoja, rangos, qFin + 3);
 
                 // ---------- Anchos e impresion ----------
                 hoja.Column(1).Width = 11;

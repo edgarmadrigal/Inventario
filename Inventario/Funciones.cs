@@ -1335,6 +1335,40 @@ namespace Inventario
             consulta.ExecuteQuery<int>("EXEC dbo.GuardarSugerenciaPesoBENS {0}, {1}, {2}, {3}", po, bruto, neto, iduser).FirstOrDefault();
         }
 
+        // ---- Cut Order de Ben Davis (captura de la foto que manda el cliente) ----
+        public class CutOrderBENS
+        {
+            public int id { get; set; }
+            public DateTime fecha { get; set; }
+            public string po { get; set; }
+            public string estilo { get; set; }
+            public int totalUnits { get; set; }
+            public int totalCapturado { get; set; }
+            public string detalle { get; set; }
+            public byte[] foto { get; set; }
+            public string fotoNombre { get; set; }
+            public string usuario { get; set; }
+        }
+
+        public CutOrderBENS ConsultaUltimoCutOrderBENS(string po)
+        {
+            BDDataContext consulta = new BDDataContext();
+            return consulta.ExecuteQuery<CutOrderBENS>("EXEC dbo.ConsultaUltimoCutOrderBENS {0}", po).FirstOrDefault();
+        }
+
+        public void GuardarCutOrderBENS(string po, string estilo, int totalUnits, int totalCapturado, string detalle, byte[] foto, string fotoNombre, int iduser)
+        {
+            string[] equipo = EquipoActual();
+            BDDataContext consulta = new BDDataContext();
+            // ExecuteQuery no acepta parametros null: sin foto se manda NULL directo
+            if (foto != null)
+                consulta.ExecuteQuery<int>("EXEC dbo.GuardarCutOrderBENS {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9}, {10}",
+                    po, estilo ?? "", totalUnits, totalCapturado, detalle ?? "", foto, fotoNombre ?? "", iduser, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+            else
+                consulta.ExecuteQuery<int>("EXEC dbo.GuardarCutOrderBENS {0}, {1}, {2}, {3}, {4}, NULL, NULL, {5}, {6}, {7}, {8}",
+                    po, estilo ?? "", totalUnits, totalCapturado, detalle ?? "", iduser, equipo[0], equipo[1], equipo[2]).FirstOrDefault();
+        }
+
         public void RegistrarBitacoraBaja(string tipo, string po, int iduser)
         {
             string[] equipo = EquipoActual();

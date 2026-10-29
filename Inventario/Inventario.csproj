@@ -31,7 +31,7 @@
     <InstallUrl>\\192.168.128.245\Sistemas\InventarioV2\</InstallUrl>
     <WebPage>publish.htm</WebPage>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>1166</ApplicationRevision>
+    <ApplicationRevision>1167</ApplicationRevision>
     <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -211,6 +211,10 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Escaneo.Almacen.cs">
+      <DependentUpon>Escaneo.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Escaneo.CutOrderBENS.cs">
       <DependentUpon>Escaneo.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
