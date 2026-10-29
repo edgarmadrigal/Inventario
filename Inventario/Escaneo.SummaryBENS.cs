@@ -22,7 +22,9 @@ namespace Inventario
         {
             public string Estilo, Color;
             public int Desde, Hasta, Cajas;
+            public List<int> Numeros = new List<int>();   // numeros de carton reales del renglon
             public Dictionary<string, int> PorTalla;   // piezas por carton de cada talla
+            public bool Seguidos { get { return Hasta - Desde + 1 == Cajas; } }
             public int PorCarton { get { return PorTalla.Values.Sum(); } }
             public int Total { get { return PorCarton * Cajas; } }
         }
@@ -63,7 +65,7 @@ namespace Inventario
                 pedidoBENS[poAI] = pedido;
                 GuardarSugerenciasBENS(poAI, tallas, pedido);
 
-                List<RangoCartones> rangos = ArmarRangos(filas);
+                List<RangoCartones> rangos = ArmarRangos(filas, tallas);
 
                 using (var dlg = new SaveFileDialog { Filter = "Excel (*.xlsx)|*.xlsx", FileName = poAI + " Summary Ben Davis " + DateTime.Now.ToString("yyyy-MM-dd") + ".xlsx" })
                 {
@@ -133,8 +135,63 @@ namespace Inventario
                 .ToList();
         }
 
-        // Cartones en orden; se juntan los consecutivos del mismo estilo/color con el mismo contenido
-        private static List<RangoCartones> ArmarRangos(List<Funciones.PackingBENS> filas)
+        // Un renglon por estilo/color y contenido de caja (misma talla y piezas), aunque los cartones no sean seguidos
+        // (las cajas se empacan con tallas alternadas). En orden de talla; las mixtas al final.
+        private static List<RangoCartones> ArmarRangos(List<Funciones.PackingBENS> filas, List<string> tallas)
+        {
+            var cajas = filas.GroupBy(r => r.idCaja)
+                .Select(g => new
+                {
+                    Box = g.First().Box,
+                    Estilo = g.First().Style,
+                    Color = (g.First().Color ?? "").Trim(),
+                    PorTalla = g.GroupBy(r => NormalizarTalla(r.Size)).ToDictionary(t => t.Key, t => t.Sum(r => r.Qty))
+                })
+                .ToList();
+
+            var rangos = cajas
+                .GroupBy(c => c.Estilo + "|" + c.Color + "|" + string.Join(";", c.PorTalla.OrderBy(kv => kv.Key).Select(kv => kv.Key + "=" + kv.Value)))
+                .Select(g =>
+                {
+                    var numeros = g.Select(c => c.Box).OrderBy(n => n).ToList();
+                    var primera = g.First();
+                    return new RangoCartones
+                    {
+                        Estilo = primera.Estilo, Color = primera.Color, PorTalla = primera.PorTalla,
+                        Numeros = numeros, Desde = numeros.First(), Hasta = numeros.Last(), Cajas = numeros.Count
+                    };
+                })
+                .ToList();
+
+            Func<RangoCartones, int> posTalla = r =>
+            {
+                var idx = r.PorTalla.Keys.Select(t => tallas.IndexOf(t)).Where(i => i >= 0).ToList();
+                return idx.Count == 0 ? int.MaxValue : idx.Min();
+            };
+            return rangos
+                .OrderBy(r => r.Estilo)
+                .ThenBy(r => r.PorTalla.Count > 1 ? 1 : 0)     // mixtas al final
+                .ThenBy(posTalla)
+                .ThenByDescending(r => r.PorCarton)
+                .ThenBy(r => r.Desde)
+                .ToList();
+        }
+
+        // 1,2,3,5,7,8 -> "1-3, 5, 7-8"
+        private static string ComprimirNumeros(List<int> numeros)
+        {
+            var partes = new List<string>();
+            for (int i = 0; i < numeros.Count; i++)
+            {
+                int ini = numeros[i];
+                while (i + 1 < numeros.Count && numeros[i + 1] == numeros[i] + 1) i++;
+                partes.Add(ini == numeros[i] ? ini.ToString() : ini + "-" + numeros[i]);
+            }
+            return string.Join(", ", partes);
+        }
+
+        // (anterior) Solo junta cartones consecutivos; se deja por si se numeran las cajas por talla
+        private static List<RangoCartones> ArmarRangosConsecutivos(List<Funciones.PackingBENS> filas)
         {
             var cajas = filas.GroupBy(r => r.idCaja)
                 .Select(g => new
@@ -163,6 +220,7 @@ namespace Inventario
                 {
                     rangos.Add(new RangoCartones { Estilo = c.Estilo, Color = c.Color, Desde = c.Box, Hasta = c.Box, Cajas = 1, PorTalla = c.PorTalla });
                 }
+                rangos.Last().Numeros.Add(c.Box);
             }
             return rangos;
         }
@@ -334,8 +392,27 @@ namespace Inventario
                     int inicio = fila;
                     foreach (var r in estilo)
                     {
-                        hoja.Cell(fila, 2).Value = r.Desde;
-                        hoja.Cell(fila, 3).Value = r.Hasta;
+                        if (r.Seguidos)
+                        {
+                            // Cartones seguidos: desde / hasta, igual que el ejemplo de Ben Davis
+                            hoja.Cell(fila, 2).Value = r.Desde;
+                            hoja.Cell(fila, 3).Value = r.Hasta;
+                        }
+                        else
+                        {
+                            // Cartones salteados: la lista real de numeros en las dos columnas
+                            string lista = ComprimirNumeros(r.Numeros);
+                            var celdas = hoja.Range(fila, 2, fila, 3);
+                            celdas.Merge();
+                            celdas.FirstCell().Value = lista;
+                            celdas.Style.Alignment.WrapText = true;
+                            celdas.Style.Alignment.Horizontal = XLAlignmentHorizontalValues.Left;
+                            celdas.Style.Alignment.Vertical = XLAlignmentVerticalValues.Center;
+                            celdas.Style.Font.FontSize = 9;
+                            // Excel no ajusta solo el alto de celdas combinadas
+                            int lineas = (int)Math.Ceiling(lista.Length / 30.0);
+                            if (lineas > 1) hoja.Row(fila).Height = 12.5 * lineas;
+                        }
                         hoja.Cell(fila, 4).Value = r.Cajas;
                         for (int i = 0; i < nT; i++)
                         {
@@ -431,7 +508,8 @@ namespace Inventario
 
                 // ---------- Anchos e impresion ----------
                 hoja.Column(1).Width = 11;
-                hoja.Columns(2, 4).Width = 7;
+                hoja.Columns(2, 3).Width = 16;   // CTN NO. (lista de cartones)
+                hoja.Column(4).Width = 7;
                 hoja.Column(5).Width = 14;
                 hoja.Columns(cTalla1, cPorCarton - 1).Width = 7.5;
                 hoja.Columns(cPorCarton, cNW).Width = 9;
