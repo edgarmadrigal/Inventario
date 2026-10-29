@@ -180,10 +180,10 @@ namespace Inventario
                 btnHoja.Click += (s, e) => HojaCliente();
 
                 btnGuardar.Text = modoSummary ? "GUARDAR Y CONTINUAR" : "GUARDAR";
-                btnGuardar.Location = modoSummary ? new Point(855, 748) : new Point(925, 748);
-                btnGuardar.Size = modoSummary ? new Size(190, 34) : new Size(120, 34);
+                btnGuardar.Location = modoSummary ? new Point(815, 748) : new Point(925, 748);
+                btnGuardar.Size = modoSummary ? new Size(230, 34) : new Size(120, 34);
                 btnGuardar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-                btnGuardar.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold);
+                btnGuardar.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold);
                 btnGuardar.Click += (s, e) => Guardar();
                 var btnCerrar = new Button { Text = "Cerrar", Location = new Point(1050, 748), Size = new Size(100, 34), Anchor = AnchorStyles.Bottom | AnchorStyles.Right, DialogResult = DialogResult.Cancel };
                 CancelButton = btnCerrar;
@@ -191,7 +191,7 @@ namespace Inventario
                 if (modoSummary)
                 {
                     // Por si todavia no tienen la hoja del cliente
-                    var btnSin = new Button { Text = "Seguir sin ORDER QTY", Location = new Point(680, 748), Size = new Size(165, 34), Anchor = AnchorStyles.Bottom | AnchorStyles.Right };
+                    var btnSin = new Button { Text = "Seguir sin ORDER QTY", Location = new Point(640, 748), Size = new Size(165, 34), Anchor = AnchorStyles.Bottom | AnchorStyles.Right };
                     btnSin.Click += (s, e) =>
                     {
                         if (MessageBox.Show("El Summary saldrá sin el renglón ORDER QTY (no se podrá comparar contra lo pedido).\r\n\r\n¿Continuar así?", "Cut Order", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
@@ -381,9 +381,10 @@ namespace Inventario
                     lblResultado.ForeColor = Color.FromArgb(190, 30, 30);
                     lblResultado.Text = "✘ Suma capturada " + suma.ToString("N0") + "  ≠  TOTAL UNITS " + total.ToString("N0") + "   (diferencia " + (suma - total).ToString("+#,##0;-#,##0") + ")";
                 }
-                txtTotal.BackColor = !hayTotal ? Color.White : total == suma ? Color.FromArgb(226, 239, 218) : Color.FromArgb(255, 199, 199);
+                // Sin TOTAL UNITS se pinta amarillo para que se note que falta
+                txtTotal.BackColor = !hayTotal ? Color.FromArgb(255, 242, 157) : total == suma ? Color.FromArgb(226, 239, 218) : Color.FromArgb(255, 199, 199);
                 lblAvisos.Text = string.Join("\r\n", avisos);
-                btnGuardar.Enabled = cuadra && PoConAI(txtPO.Text) != "";
+                // El boton siempre se puede presionar: si falta algo, Guardar explica que
             }
 
             // ---------- Foto ----------
@@ -537,7 +538,11 @@ namespace Inventario
             private void Guardar()
             {
                 Recalcular(false);
-                if (!cuadra) return;
+                if (!cuadra)
+                {
+                    ExplicarPorQueNoCuadra();
+                    return;
+                }
                 // Desde el Summary, si ya estaba guardado y no se cambio nada, solo se continua
                 if (modoSummary && !cambios) { DialogResult = DialogResult.OK; return; }
                 string po = PoConAI(txtPO.Text);
@@ -570,6 +575,42 @@ namespace Inventario
                 {
                     Cursor.Current = Cursors.Default;
                     MessageBox.Show("No se pudo guardar: " + ex.Message, "Cut Order");
+                }
+            }
+
+            private void ExplicarPorQueNoCuadra()
+            {
+                List<string> invalidas;
+                var cap = Capturado(out invalidas);
+                int suma = cap.Values.Sum(), total;
+                bool hayTotal = int.TryParse(txtTotal.Text.Trim().Replace(",", ""), out total);
+
+                if (PoConAI(txtPO.Text) == "")
+                {
+                    MessageBox.Show("Escribe el CUT # (la PO).", "Cut Order");
+                    txtPO.Focus();
+                }
+                else if (invalidas.Count > 0)
+                {
+                    MessageBox.Show("Estas casillas no son número: " + string.Join(", ", invalidas.Select(t => t.Replace(" x ", "x"))) + ".", "Cut Order");
+                    cajas[invalidas[0]].Focus();
+                }
+                else if (suma == 0)
+                {
+                    MessageBox.Show("No hay cantidades capturadas. Cópialas de la foto o usa \"Importar Excel de la PO\".", "Cut Order");
+                }
+                else if (!hayTotal)
+                {
+                    MessageBox.Show("Falta el TOTAL UNITS.\r\n\r\nEscribe el total que viene escrito en la hoja del cliente (dice \"TOTAL UNITS:\"). " +
+                        "Sirve para comprobar que lo capturado cuadra con lo que pidió el cliente.\r\n\r\nLo capturado suma " + suma.ToString("N0") + ".", "Cut Order");
+                    txtTotal.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("No cuadra: lo capturado suma " + suma.ToString("N0") + " y el TOTAL UNITS de la hoja dice " + total.ToString("N0") +
+                        " (diferencia " + (suma - total).ToString("+#,##0;-#,##0") + ").\r\n\r\nRevisa casilla por casilla contra la foto, o confirma el TOTAL UNITS.", "Cut Order",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtTotal.Focus();
                 }
             }
 
